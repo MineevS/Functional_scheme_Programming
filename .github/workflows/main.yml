@@ -17,10 +17,12 @@ jobs:
     - name: step-six
       run: cd ..
     - name: step-seven
-      run: pwd | ls -l
+      run: pwd 
     - name: step-eight
-      run: cd "2. Lesson № 2 - 19.02.24" # /1. HomeWorks № 1 - 20.02.24/
+      run: ls -l
     - name: step-nine
-      run: ls 
+      run: cd "2. Lesson № 2 - 19.02.24" # /1. HomeWorks № 1 - 20.02.24/
     - name: step-ten
+      run: ls 
+    - name: step-eleven
       run: make makefile
