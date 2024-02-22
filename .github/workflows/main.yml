@@ -6,3 +6,7 @@ jobs:
     steps:
     - name: step-one
       run: echo "Hello world!"
+    - name: step-two
+      run: sudo apt-get install -y guile
+    - name: step-three
+      run: guile -c "(display \"Hello world!\")"
