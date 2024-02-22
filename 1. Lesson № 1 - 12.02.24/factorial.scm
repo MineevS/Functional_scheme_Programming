@@ -1,0 +1,39 @@
+; #lang scheme
+
+(define param 1000)
+
+; classical recursion
+
+(define factorial 
+ (lambda (x)
+  (if (= x 1)
+   1
+   (* x (factorial (- x 1)))
+  )
+ )
+)
+
+;(display param)
+
+(format #t "Factorial ~a = ~a\n" param (factorial param))
+
+; iterative(tail) recursion
+
+(define factorial-body
+ (lambda (n acc)
+  (if (= n 1)
+   acc
+   (factorial-body (- n 1) (* acc n))
+  )
+ )
+)
+
+(define factorial-tailrec
+ (lambda (n)
+  (factorial-body n 1)
+ )
+)
+
+(format #t "Factorial-tailrec ~a = ~a\n" param (factorial-tailrec param))
+
+
