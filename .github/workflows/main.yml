@@ -17,7 +17,7 @@ jobs:
     - name: step-six
       run: pwd
     - name: step-seven
-      run: cd \"/2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24/\"
+      run: cd "\2. Lesson № 2 - 19.02.24\1. HomeWorks № 1 - 20.02.24\"
     - name: step-eight
       run: ls -l
     - name: step-seven
