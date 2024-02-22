@@ -25,6 +25,8 @@ jobs:
     - name: step-nine
       run: cd "2. Lesson № 2 - 19.02.24" # /1. HomeWorks № 1 - 20.02.24/
     - name: step-ten
+      working-directory: "./2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24"
       run: ls 
     - name: step-eleven
-      run: make "2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24/makefile" 
+      working-directory: "./2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24"
+      run: make "/makefile" 
