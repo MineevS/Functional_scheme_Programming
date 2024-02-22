@@ -18,5 +18,5 @@ jobs:
       run: make --version
     - name: step-six
       working-directory: "./2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24"
-      run: make makefile all
+      run: make all
 
