@@ -15,7 +15,7 @@ jobs:
     - name: step-five
       run: make --version
     - name: step-six
-      run: cd ..
+      run: cd ../
     - name: step-seven
       run: pwd 
     - name: step-eight
