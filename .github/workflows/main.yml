@@ -7,6 +7,6 @@ jobs:
     - name: step-one
       run: echo "Hello world!"
     - name: step-two
-      run: sudo apt-get install -y guile
+      run: sudo apt-get install -y guile-3.0
     - name: step-three
       run: guile -c "(display \"Hello world!\")"
