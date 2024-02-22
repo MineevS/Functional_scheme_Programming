@@ -167,7 +167,7 @@
 
 (define print-table
  (lambda (start_grad end_grad step)
-  (if (>= (- end_grad (+ start_grad)) 0.0)
+  (if (>= (- end_grad start_grad) 0.0)
    (begin
     (format #t "\x1B[0;33m ~4,0f \x1B[0m| ~a  |\n" start_grad (raw-table ListTrigonomFunc start_grad (list)))
     (print-table (+ start_grad step) end_grad step)
