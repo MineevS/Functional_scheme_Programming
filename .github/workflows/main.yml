@@ -15,4 +15,6 @@ jobs:
     - name: step-five
       run: make --version
     - name: step-six
+      run: pwd
+    - name: step-seven
       run: make '2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24/makefile'
