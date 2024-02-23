@@ -144,11 +144,13 @@
  (lambda (listtable grad str)
   (if (eqv? listtable (list))
    (string-join str "  ") ; str
-   (raw-table (cdr listtable) grad (append str (list 
-    (if (> ((car listtable) grad) 0.0)
-     (format #f "\x1B[0;32m~8,2f\x1B[0m" ((car listtable) grad))
-     (format #f "\x1B[0;31m~8,2f\x1B[0m" ((car listtable) grad))
-	)))
+   (let ( (value ((car listtable) grad)) )
+	(raw-table (cdr listtable) grad (append str (list 
+     (if (> value 0.0)
+      (format #f "\x1B[0;32m~8,2f\x1B[0m" value)
+      (format #f "\x1B[0;31m~8,2f\x1B[0m" value)
+	 )))
+    )
    )
   )
  )
