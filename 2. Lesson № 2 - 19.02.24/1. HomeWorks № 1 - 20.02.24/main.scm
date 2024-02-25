@@ -2,7 +2,10 @@
 ; @author mineeff20@yandex.ru
 ; @brief ...
 
-(use-modules (ice-9 format))
+(use-modules 
+	(ice-9 format)
+	(system vm trace)
+)
 
 ;; (format #t "Запуск программы!\n")
 
@@ -164,8 +167,8 @@
 
 ; (format #t "RES = ~a\n" (raw-table (list 1 2 3) (list)))
 
-(format #t "\x1B[0;36m grd \x1B[0m | \x1B[0;36m    sin       cos       tan       ctg \x1B[0m  |\n")
-(format #t "__________________________________________________\n")
+; (format #t "\x1B[0;36m grd \x1B[0m | \x1B[0;36m    sin       cos       tan       ctg \x1B[0m  |\n")
+; (format #t "__________________________________________________\n")
 
 (define print-table
  (lambda (start_grad end_grad step)
@@ -178,7 +181,75 @@
  )
 )
 
-(print-table 0.0 10.0 1.0)
+; (print-table 0.0 10.0 1.0)
 
+; SECTION № 10 - let:
 
+(define print-head-table (lambda ()
+ (begin
+  (format #t "\x1B[0;36m grd \x1B[0m | \x1B[0;36m   sin     cos     tan     ctg \x1B[0m |\n")
+  (format #t "_________________________________________\n")
+ )
+))
 
+(format #t "\n SECTION 10 - let: \n")
+
+(print-head-table)
+
+(let print-tableC 
+ (
+	(listtable (list sin cos tan ctg))
+	(start_grad 0.0)
+	(end_grad  10.0)
+	(step_grad 	1.0)
+ )
+ (if (<= start_grad end_grad)
+  (begin
+   (format #t "\x1B[0;33m ~4,0f \x1B[0m|" start_grad) 
+   (map
+    (lambda (func)  
+     (let ((val (func start_grad)))
+	  (cond
+		((> val 0.0) (format #t "\x1B[0;32m~8,2f\x1B[0m" val))
+		(else 		 (format #t "\x1B[0;31m~8,2f\x1B[0m" val))
+	  )
+     )
+    ) listtable)
+   (format #t " | \n")
+   (print-tableC listtable (+ start_grad step_grad)  end_grad step_grad)
+  )
+ )
+)
+
+; let Не требуется вызывать через (print-table)
+
+; SECTION № 11: - letrec;
+
+(format #t "\nSECTION № 11 - letrec: \n")
+
+(print-head-table)
+
+((letrec 
+ ((print-tableD
+   (lambda (listtable start_grad end_grad step_grad)
+	(if (<= start_grad end_grad)
+	 (begin
+	  (format #t "\x1B[0;33m ~4,0f \x1B[0m|" start_grad)
+	  (map
+	   (lambda (func)
+		(let ((val (func start_grad)))
+		 (cond
+		  ((> val 0.0) (format #t "\x1B[0;32m~8,2f\x1B[0m" val))
+		  (else 	   (format #t "\x1B[0;31m~8,2f\x1B[0m" val))
+		 )
+		)
+	   ) listtable)
+	  (format #t " | \n")
+	  (print-tableD listtable (+ start_grad step_grad) end_grad step_grad)
+	 )
+	)
+   )
+ ))
+print-tableD) (list sin cos tan ctg) 0.0 10.0 1.0)
+
+(format #t "Завершение программы!")
