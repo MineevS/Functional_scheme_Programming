@@ -192,7 +192,7 @@
  )
 ))
 
-(format #t "\n SECTION 10 - let: \n")
+(format #t "\n SECTION № 10 - let: \n")
 
 (print-head-table)
 
