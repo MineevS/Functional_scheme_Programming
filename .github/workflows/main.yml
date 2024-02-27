@@ -16,7 +16,10 @@ jobs:
       run: sudo apt-get install -y build-essential # for make;
     - name: step-five
       run: make --version
-    - name: step-six-Result
+    - name: step-six-Result_HomeWorks_1
       working-directory: "./2. Lesson № 2 - 19.02.24/1. HomeWorks № 1 - 20.02.24"
+      run: make all
+    - name: step-seven-Result_HomeWorks_2
+      working-directory: "./3. Lesson № 3 - 26.02.24/1. HomeWorks № 2 - 26.02.24"
       run: make all
 
