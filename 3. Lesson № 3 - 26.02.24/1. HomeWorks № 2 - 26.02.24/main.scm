@@ -192,7 +192,7 @@
 			(pre_post_form (append pre_x (list (car cdr_lst))) post_x (cdr cdr_lst) x )
 		   )
 		 ) 
-		 (else 	; Значения больше x кладем в post_x;
+		 (else 	; Значения больше или равное x кладем в post_x;
 		  (begin 
 		  ;(display post_x)
 		   (pre_post_form pre_x (append post_x (list (car cdr_lst)) ) (cdr cdr_lst) x )
