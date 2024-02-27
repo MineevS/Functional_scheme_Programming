@@ -253,3 +253,6 @@
 print-tableD) (list sin cos tan ctg) 0.0 10.0 1.0)
 
 (format #t "Завершение программы!")
+
+
+
