@@ -19,10 +19,10 @@
    (define (GetX)  X)
    (define (GetY)  Y)
    (define (Plus rw)
-	(Matrix (map + (rw 'GetX) X) (map + (rw 'GetY) Y) )
+	(Matrix (map + X (rw 'GetX)) (map + Y (rw 'GetY)) )
    )
    (define (Diff rw)
-	(Matrix (map - (rw 'GetX) X) (map - (rw 'GetY) Y))
+	(Matrix (map - X (rw 'GetX)) (map - Y (rw 'GetY)))
    )
    (define (Transp) 
 	(Matrix (list (car X) (car Y)) (append (cdr X) (cdr Y)))
@@ -90,8 +90,8 @@
 (begin (format #t "~aM1^T~a:    " yellow end)  ((M1 'Transp) 'Display) (newline))
 
 (begin (format #t "~aM1 ~a~a+~a~a M2~a: " yellow end cyan end yellow end) ((M1 'Plus M2) 'Display)  (newline))
-(begin (format #t "~aM1 ~a~a-~a~a M2~a: " yellow end cyan end yellow end) ((M2 'Diff M1) 'Display)  (newline))
-(begin (format #t "~aM1 ~a~a*~a~a M2~a: " yellow end cyan end yellow end) ((M2 'Mult M1) 'Display)  (newline))
+(begin (format #t "~aM1 ~a~a-~a~a M2~a: " yellow end cyan end yellow end) ((M1 'Diff M2) 'Display)  (newline))
+(begin (format #t "~aM1 ~a~a*~a~a M2~a: " yellow end cyan end yellow end) ((M1 'Mult M2) 'Display)  (newline))
 
 (begin (format #t "~aM1_Det~a: ~a ~a ~a" yellow end red (M1 'Det) end) (newline))
 (begin (format #t "~aM2_Det~a: ~a ~a ~a" yellow end red (M2 'Det) end) (newline))
