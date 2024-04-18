@@ -28,4 +28,7 @@ jobs:
     - name: step-eighth-Result_HomeWorks_4
       working-directory: "./5. Lesson № 5 - 18.03.24/5. HomeWorks № 5 - 19.03.24"
       run: make all
+    - name: step-nine-Result_HomeWorks_5
+      working-directory: "./6. Lesson № 6 - 15.04.24/6. HomeWork № 6 - 16.04.24"
+      run: make all
 
