@@ -1,0 +1,12 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,81,121,107"/>
+<area shape="rect" id="Node000001" href="$d0/d9a/classAMainWindow.html" title=" " alt="" coords="169,5,284,31"/>
+<area shape="poly" id="edge59_Node000000_Node000001" title=" " alt="" coords="103,73,197,28,199,33,105,78"/>
+<area shape="rect" id="Node000002" href="$d6/d1a/classMainWindow.html" title=" " alt="" coords="332,31,439,56"/>
+<area shape="poly" id="edge62_Node000000_Node000002" title=" " alt="" coords="134,80,331,49,332,54,135,86"/>
+<area shape="rect" id="Node000003" href="$db/db6/classBaseWindow.html" title=" " alt="" coords="173,107,280,132"/>
+<area shape="poly" id="edge61_Node000000_Node000003" title=" " alt="" coords="135,102,174,108,173,114,135,108"/>
+<area shape="rect" id="Node000004" href="$d0/d57/classWSettings.html" title=" " alt="" coords="183,156,271,181"/>
+<area shape="poly" id="edge63_Node000000_Node000004" title=" " alt="" coords="105,110,170,141,198,153,196,158,168,146,102,115"/>
+<area shape="poly" id="edge60_Node000001_Node000002" title=" " alt="" coords="298,27,332,32,331,38,297,32"/>
+</map>

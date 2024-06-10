@@ -1,0 +1,80 @@
+\doxysection{Класс Qt\+Abstract\+Editor\+Factory\+Base}
+\hypertarget{classQtAbstractEditorFactoryBase}{}\label{classQtAbstractEditorFactoryBase}\index{QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}}
+
+
+Граф наследования\+:Qt\+Abstract\+Editor\+Factory\+Base\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/ddf/classQtAbstractEditorFactoryBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Qt\+Abstract\+Editor\+Factory\+Base\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{db/d02/classQtAbstractEditorFactoryBase__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+virtual QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactoryBase_aecea70732c941a1d992a61179389e9a2}{create\+Editor}} (\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}property, QWidget \texorpdfstring{$\ast$}{*}parent)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные слоты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classQtAbstractEditorFactoryBase_a23b6035f2a6b0d4415969146bd01a0ec}\label{classQtAbstractEditorFactoryBase_a23b6035f2a6b0d4415969146bd01a0ec} 
+virtual void {\bfseries manager\+Destroyed} (QObject \texorpdfstring{$\ast$}{*}manager)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQtAbstractEditorFactoryBase_af75f911c4f773b7fc9adcff15a0b3ed3}{Qt\+Abstract\+Editor\+Factory\+Base}} (QObject \texorpdfstring{$\ast$}{*}parent=0)
+\item 
+\Hypertarget{classQtAbstractEditorFactoryBase_a0608f6600aab1e8c8fc7cf1476452321}\label{classQtAbstractEditorFactoryBase_a0608f6600aab1e8c8fc7cf1476452321} 
+virtual void {\bfseries break\+Connection} (\mbox{\hyperlink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager}} \texorpdfstring{$\ast$}{*}manager)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classQtAbstractEditorFactoryBase_ae38c9285b332188b28b54dbf290d682f}\label{classQtAbstractEditorFactoryBase_ae38c9285b332188b28b54dbf290d682f} 
+class {\bfseries Qt\+Abstract\+Property\+Browser}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classQtAbstractEditorFactoryBase_af75f911c4f773b7fc9adcff15a0b3ed3}\label{classQtAbstractEditorFactoryBase_af75f911c4f773b7fc9adcff15a0b3ed3} 
+\index{QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}!QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}}
+\index{QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}!QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}}
+\doxysubsubsection{\texorpdfstring{QtAbstractEditorFactoryBase()}{QtAbstractEditorFactoryBase()}}
+{\footnotesize\ttfamily Qt\+Abstract\+Editor\+Factory\+Base\+::\+Qt\+Abstract\+Editor\+Factory\+Base (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Creates an abstract editor factory with the given {\itshape parent}. 
+
+\doxysubsection{Методы}
+\Hypertarget{classQtAbstractEditorFactoryBase_aecea70732c941a1d992a61179389e9a2}\label{classQtAbstractEditorFactoryBase_aecea70732c941a1d992a61179389e9a2} 
+\index{QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}!createEditor@{createEditor}}
+\index{createEditor@{createEditor}!QtAbstractEditorFactoryBase@{QtAbstractEditorFactoryBase}}
+\doxysubsubsection{\texorpdfstring{createEditor()}{createEditor()}}
+{\footnotesize\ttfamily QWidget \texorpdfstring{$\ast$}{*} Qt\+Abstract\+Editor\+Factory\+Base\+::create\+Editor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}}]{property,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates an editing widget (with the given {\itshape parent}) for the given {\itshape property}.
+
+This function is reimplemented in \doxylink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory} template class which also provides a pure virtual convenience overload of this function enabling access to the property\textquotesingle{}s manager.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory\+::create\+Editor()} 
+\end{DoxySeeAlso}
+
+
+Замещается в \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Bool\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Char\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Color\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Cursor\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Date\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Date\+Time\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Double\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Enum\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Font\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Int\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Key\+Sequence\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+String\+Property\+Manager $>$}}, \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Time\+Property\+Manager $>$}} и \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{Qt\+Abstract\+Editor\+Factory$<$ Qt\+Variant\+Property\+Manager $>$}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QProperty\+Browser/inc/qtpropertybrowser.\+h\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QProperty\+Browser/src/qtpropertybrowser.\+cpp\end{DoxyCompactItemize}

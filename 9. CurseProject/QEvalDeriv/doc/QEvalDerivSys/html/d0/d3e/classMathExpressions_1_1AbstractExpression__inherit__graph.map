@@ -1,0 +1,87 @@
+<map id="MathExpressions::AbstractExpression" name="MathExpressions::AbstractExpression">
+<area shape="rect" id="Node000001" title=" " alt="" coords="4306,5,4493,565"/>
+<area shape="rect" id="Node000002" href="$df/df8/classMathExpressions_1_1AbstractParentExpression.html" title=" " alt="" coords="1881,646,2097,926"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="4293,311,2097,765,2096,760,4292,306"/>
+<area shape="rect" id="Node000027" href="$d9/d99/classMathExpressions_1_1CharacterExpression.html" title=" " alt="" coords="3653,656,3849,916"/>
+<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="4295,337,4198,387,4087,451,3974,528,3920,570,3869,615,3832,658,3828,654,3865,611,3916,566,3971,523,4084,446,4195,382,4292,332"/>
+<area shape="rect" id="Node000033" href="$d5/de2/classMathExpressions_1_1EmptyExpression.html" title=" " alt="" coords="3880,733,4127,839"/>
+<area shape="poly" id="edge32_Node000001_Node000033" title=" " alt="" coords="4299,415,4140,615,4046,735,4041,732,4136,612,4295,412"/>
+<area shape="rect" id="Node000034" href="$d5/db4/classMathExpressions_1_1NullExpression.html" title=" " alt="" coords="4151,743,4381,829"/>
+<area shape="poly" id="edge33_Node000001_Node000034" title=" " alt="" coords="4324,579,4280,744,4275,742,4319,578"/>
+<area shape="rect" id="Node000035" href="$d9/d99/classMathExpressions_1_1NumberExpression.html" title=" " alt="" coords="4406,613,4662,959"/>
+<area shape="poly" id="edge34_Node000001_Node000035" title=" " alt="" coords="4481,578,4490,612,4485,613,4476,579"/>
+<area shape="rect" id="Node000037" href="$d0/dc8/classMathExpressions_1_1SimpleExpression.html" title=" " alt="" coords="4687,693,4936,879"/>
+<area shape="poly" id="edge36_Node000001_Node000037" title=" " alt="" coords="4504,405,4676,612,4741,692,4737,695,4672,615,4500,409"/>
+<area shape="rect" id="Node000042" href="$dc/dbd/classMathExpressions_1_1SpaceExpression.html" title=" " alt="" coords="4961,713,5203,859"/>
+<area shape="poly" id="edge41_Node000001_Node000042" title=" " alt="" coords="4506,333,4605,383,4720,448,4838,525,4949,611,4997,660,5037,711,5033,715,4993,663,4946,615,4835,529,4717,452,4603,388,4504,337"/>
+<area shape="rect" id="Node000043" href="$dd/d5a/classMathExpressions_1_1StrokesExpression.html" title=" " alt="" coords="5227,696,5409,876"/>
+<area shape="poly" id="edge42_Node000001_Node000043" title=" " alt="" coords="4507,304,4659,341,4749,369,4845,403,4943,443,5039,491,5132,547,5217,611,5253,650,5281,695,5277,697,5249,654,5214,615,5129,552,5037,496,4940,448,4843,408,4747,374,4657,347,4506,309"/>
+<area shape="rect" id="Node000003" href="$d1/d40/classMathExpressions_1_1AbstractBigParentExpression.html" title=" " alt="" coords="457,1119,694,1399"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1867,800,1682,821,1447,860,1319,888,1190,921,1062,962,939,1009,874,1041,810,1079,696,1159,693,1155,807,1074,871,1036,937,1004,1060,957,1188,916,1318,883,1446,855,1681,816,1867,794"/>
+<area shape="rect" id="Node000009" href="$d4/d48/classMathExpressions_1_1AbstractTwinParentExpression.html" title=" " alt="" coords="950,1079,1195,1439"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="1867,795,1721,812,1637,827,1548,849,1458,876,1370,912,1286,955,1209,1009,1175,1042,1147,1080,1143,1077,1171,1038,1206,1005,1283,951,1368,907,1457,871,1547,843,1636,822,1721,807,1866,790"/>
+<area shape="rect" id="Node000016" href="$dd/d24/classMathExpressions_1_1CapExpression.html" title=" " alt="" coords="1219,1097,1449,1422"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="1868,815,1772,842,1664,883,1610,908,1558,937,1508,971,1463,1009,1426,1050,1396,1098,1392,1095,1422,1047,1459,1005,1505,967,1555,933,1608,903,1662,878,1770,837,1866,809"/>
+<area shape="rect" id="Node000017" href="$de/d16/classMathExpressions_1_1CaseExpression.html" title=" " alt="" coords="1473,1197,1709,1322"/>
+<area shape="poly" id="edge16_Node000002_Node000017" title=" " alt="" coords="1871,870,1794,934,1757,970,1723,1008,1690,1055,1661,1105,1617,1198,1612,1195,1656,1102,1685,1052,1719,1005,1753,967,1790,930,1868,866"/>
+<area shape="rect" id="Node000018" href="$d9/d95/classMathExpressions_1_1ChainExpression.html" title=" " alt="" coords="1733,1147,1975,1372"/>
+<area shape="poly" id="edge17_Node000002_Node000018" title=" " alt="" coords="1948,940,1889,1147,1883,1146,1943,938"/>
+<area shape="rect" id="Node000023" href="$d0/d09/classMathExpressions_1_1FrameExpression.html" title=" " alt="" coords="1999,1007,2245,1512"/>
+<area shape="poly" id="edge22_Node000002_Node000023" title=" " alt="" coords="2034,939,2053,1006,2048,1007,2029,940"/>
+<area shape="rect" id="Node000024" href="$d2/dd8/classMathExpressions_1_1LimitExpression.html" title=" " alt="" coords="2269,1157,2506,1362"/>
+<area shape="poly" id="edge23_Node000002_Node000024" title=" " alt="" coords="2110,866,2187,930,2225,967,2259,1005,2309,1079,2348,1155,2344,1158,2304,1082,2255,1008,2221,970,2183,934,2106,870"/>
+<area shape="rect" id="Node000025" href="$dc/d8d/classMathExpressions_1_1MatrixExpression.html" title=" " alt="" coords="2529,1157,2776,1362"/>
+<area shape="poly" id="edge24_Node000002_Node000025" title=" " alt="" coords="2111,810,2207,838,2315,879,2369,904,2423,934,2473,967,2520,1005,2551,1038,2578,1076,2619,1155,2615,1157,2574,1079,2547,1042,2516,1009,2470,971,2420,938,2367,909,2313,883,2206,843,2109,815"/>
+<area shape="rect" id="Node000026" href="$df/dd1/classMathExpressions_1_1StandExpression.html" title=" " alt="" coords="2800,1177,3041,1342"/>
+<area shape="poly" id="edge25_Node000002_Node000026" title=" " alt="" coords="2110,789,2260,805,2347,820,2438,841,2531,869,2622,905,2709,950,2789,1005,2826,1042,2857,1086,2881,1132,2899,1176,2894,1178,2876,1134,2852,1088,2822,1045,2786,1009,2706,954,2620,910,2529,874,2437,846,2346,825,2259,810,2110,794"/>
+<area shape="rect" id="Node000004" href="$dd/d1f/classMathExpressions_1_1AtValueExpression.html" title=" " alt="" coords="5,1653,188,1893"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,1345,385,1389,320,1441,258,1499,201,1562,171,1606,145,1654,141,1651,166,1603,197,1558,254,1495,317,1437,382,1385,443,1340"/>
+<area shape="rect" id="Node000005" href="$db/d83/classMathExpressions_1_1CommonFunctionExpression.html" title=" " alt="" coords="212,1653,459,1893"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="507,1413,394,1654,389,1651,502,1411"/>
+<area shape="rect" id="Node000007" href="$d7/db9/classMathExpressions_1_1FractionExpression.html" title=" " alt="" coords="483,1643,668,1903"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="578,1413,578,1643,573,1643,573,1413"/>
+<area shape="rect" id="Node000008" href="$d8/dbc/classMathExpressions_1_1RootExpression.html" title=" " alt="" coords="693,1670,927,1875"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="647,1411,766,1669,761,1671,642,1413"/>
+<area shape="rect" id="Node000006" href="$da/da3/classMathExpressions_1_1FunctionExpression.html" title=" " alt="" coords="241,2063,429,2143"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="338,1906,338,2063,333,2063,333,1906"/>
+<area shape="rect" id="Node000010" href="$d3/d3d/classMathExpressions_1_1GroupExpression.html" title=" " alt="" coords="951,1600,1194,1945"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1075,1453,1075,1600,1070,1600,1070,1453"/>
+<area shape="rect" id="Node000015" href="$d6/dc3/classMathExpressions_1_1IndexExpression.html" title=" " alt="" coords="1218,1560,1458,1985"/>
+<area shape="poly" id="edge14_Node000009_Node000015" title=" " alt="" coords="1174,1450,1230,1559,1226,1561,1169,1453"/>
+<area shape="rect" id="Node000011" href="$d2/df8/classMathExpressions_1_1CirculationExpression.html" title=" " alt="" coords="570,2053,773,2153"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="973,1958,941,1987,901,2010,866,2017,829,2022,786,2036,747,2056,745,2051,784,2031,828,2017,865,2012,899,2005,938,1983,970,1954"/>
+<area shape="rect" id="Node000012" href="$d9/d45/classMathExpressions_1_1IntegralExpression.html" title=" " alt="" coords="797,2043,980,2163"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="972,1959,924,2045,919,2042,967,1956"/>
+<area shape="rect" id="Node000013" href="$d4/d18/classMathExpressions_1_1ProductExpression.html" title=" " alt="" coords="1004,2063,1187,2143"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="1088,1959,1095,2063,1090,2063,1083,1959"/>
+<area shape="rect" id="Node000014" href="$dd/da4/classMathExpressions_1_1SummaExpression.html" title=" " alt="" coords="1211,2071,1465,2136"/>
+<area shape="poly" id="edge13_Node000010_Node000014" title=" " alt="" coords="1185,1955,1208,1984,1253,2030,1298,2068,1295,2073,1249,2034,1204,1987,1181,1958"/>
+<area shape="rect" id="Node000019" href="$d9/dad/classMathExpressions_1_1BracketedExpression.html" title=" " alt="" coords="1755,1583,1953,1963"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="1857,1386,1857,1582,1851,1582,1851,1386"/>
+<area shape="rect" id="Node000020" href="$d7/d81/classMathExpressions_1_1ArgumentExpression.html" title=" " alt="" coords="1514,2033,1711,2173"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="1748,1922,1666,2035,1661,2031,1744,1919"/>
+<area shape="rect" id="Node000021" href="$d5/dd0/classMathExpressions_1_1BaseExpression.html" title=" " alt="" coords="1736,2061,1972,2146"/>
+<area shape="poly" id="edge20_Node000019_Node000021" title=" " alt="" coords="1857,1977,1857,2060,1851,2060,1851,1977"/>
+<area shape="rect" id="Node000022" href="$d5/d9b/classMathExpressions_1_1RoundBracketedExpression.html" title=" " alt="" coords="1996,2053,2235,2153"/>
+<area shape="poly" id="edge21_Node000019_Node000022" title=" " alt="" coords="1964,1908,2078,2051,2074,2055,1960,1911"/>
+<area shape="rect" id="Node000028" href="$da/d15/classMathExpressions_1_1CommaExpression.html" title=" " alt="" coords="3065,1207,3320,1312"/>
+<area shape="poly" id="edge27_Node000027_Node000028" title=" " alt="" coords="3642,827,3568,859,3487,899,3407,949,3335,1009,3294,1056,3260,1109,3233,1161,3213,1208,3209,1206,3229,1159,3256,1106,3290,1053,3331,1005,3404,945,3484,895,3565,854,3640,822"/>
+<area shape="rect" id="Node000029" href="$d8/dac/classMathExpressions_1_1LambdaExpression.html" title=" " alt="" coords="3345,1217,3601,1302"/>
+<area shape="poly" id="edge28_Node000027_Node000029" title=" " alt="" coords="3663,929,3615,1008,3497,1218,3493,1215,3610,1005,3659,927"/>
+<area shape="rect" id="Node000030" href="$dd/db1/classMathExpressions_1_1NablaExpression.html" title=" " alt="" coords="3625,1227,3867,1292"/>
+<area shape="poly" id="edge29_Node000027_Node000030" title=" " alt="" coords="3752,930,3749,1226,3744,1226,3747,930"/>
+<area shape="rect" id="Node000031" href="$da/d5a/classMathExpressions_1_1PlanckExpression.html" title=" " alt="" coords="3892,1197,4139,1322"/>
+<area shape="poly" id="edge30_Node000027_Node000031" title=" " alt="" coords="3837,926,3882,1005,3985,1195,3980,1198,3877,1008,3832,929"/>
+<area shape="rect" id="Node000032" href="$d6/d09/classMathExpressions_1_1SignExpression.html" title=" " alt="" coords="4163,1177,4395,1342"/>
+<area shape="poly" id="edge31_Node000027_Node000032" title=" " alt="" coords="3831,924,3869,956,3907,975,3942,982,3977,982,4010,978,4044,974,4078,974,4114,983,4152,1005,4190,1041,4220,1084,4244,1130,4261,1175,4256,1177,4239,1133,4216,1087,4186,1044,4148,1009,4112,988,4077,980,4044,979,4011,983,3977,987,3942,987,3905,980,3866,961,3828,928"/>
+<area shape="rect" id="Node000036" href="$df/d8b/classMathExpressions_1_1ExtendedNumberExpresssion.html" title=" " alt="" coords="4419,1139,4649,1379"/>
+<area shape="poly" id="edge35_Node000035_Node000036" title=" " alt="" coords="4537,973,4537,1139,4531,1139,4531,973"/>
+<area shape="rect" id="Node000038" href="$d6/d06/classMathExpressions_1_1AsterixExpression.html" title=" " alt="" coords="4673,1209,4851,1309"/>
+<area shape="poly" id="edge37_Node000037_Node000038" title=" " alt="" coords="4803,893,4770,1209,4764,1209,4798,893"/>
+<area shape="rect" id="Node000039" href="$df/d2b/classMathExpressions_1_1CustomTextExpression.html" title=" " alt="" coords="4875,1199,5086,1319"/>
+<area shape="poly" id="edge38_Node000037_Node000039" title=" " alt="" coords="4852,891,4962,1198,4957,1200,4847,893"/>
+<area shape="rect" id="Node000040" href="$d7/d57/classMathExpressions_1_1FunctionNameExpression.html" title=" " alt="" coords="5111,1209,5315,1309"/>
+<area shape="poly" id="edge39_Node000037_Node000040" title=" " alt="" coords="4879,888,4912,925,4950,956,4970,968,4989,974,5026,977,5061,983,5080,991,5100,1005,5121,1027,5140,1052,5170,1106,5192,1161,5205,1209,5200,1210,5187,1162,5166,1108,5136,1055,5117,1030,5096,1009,5078,995,5060,988,5025,983,4988,979,4968,973,4947,961,4909,929,4875,891"/>
+<area shape="rect" id="Node000041" href="$d8/d1e/classMathExpressions_1_1VariableExpression.html" title=" " alt="" coords="5339,1169,5526,1349"/>
+<area shape="poly" id="edge40_Node000037_Node000041" title=" " alt="" coords="4875,888,4909,926,4950,956,5003,978,5051,984,5098,981,5142,973,5187,966,5232,965,5279,976,5304,988,5329,1005,5363,1039,5389,1080,5408,1125,5421,1168,5416,1170,5403,1127,5385,1083,5359,1042,5326,1009,5301,992,5277,981,5232,970,5187,971,5143,978,5098,986,5051,989,5001,983,4947,961,4906,930,4871,892"/>
+</map>

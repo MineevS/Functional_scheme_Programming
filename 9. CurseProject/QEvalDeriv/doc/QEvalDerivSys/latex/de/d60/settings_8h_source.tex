@@ -1,0 +1,134 @@
+\doxysection{settings.\+h}
+\hypertarget{settings_8h_source}{}\label{settings_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/backend/settings/settings.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/backend/settings/settings.h}}
+\mbox{\hyperlink{settings_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ SETTINGS\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SETTINGS\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QSettings>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QApplication>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QUrl>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QDesktopServices>}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\#include\ "{}amainwindow.h"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSettings}{Settings}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classSettings}{Settings}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classSettings}{Settings}}(QApplication*\ app);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ @brief\ \ Проверка\ наличия\ настроек\ в\ реестре\ и\ установка\ в\ случае\ их\ отсутствия.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ loadSettingsApp()\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(settingsApp-\/>allKeys().count()\ ==\ 0)\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ createSettingsApp();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ loadSettingsApp();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetStatus()\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(currentThemeApp.compare(\textcolor{stringliteral}{"{}theme\_first"{}})\ ==\ 0);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ @brief\ \ Создание\ настроек\ приложения}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ createSettingsApp()\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ settingsApp-\/>beginGroup(\textcolor{stringliteral}{"{}BaseSettings"{}});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ settingsApp-\/>setValue(\textcolor{stringliteral}{"{}NameApp"{}},\ \ \ \ QString(APPLICATION\_NAME));}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ settingsApp-\/>setValue(\textcolor{stringliteral}{"{}VersionApp"{}},\ QString(APPLICATION\_VERSION));}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ settingsApp-\/>endGroup();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ settingsApp-\/>beginGroup(\textcolor{stringliteral}{"{}StyleSettings"{}});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ settingsApp-\/>setValue(\textcolor{stringliteral}{"{}theme\_current"{}},\ \textcolor{stringliteral}{"{}theme\_first"{}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ settingsApp-\/>endGroup();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ settingsApp-\/>sync();\ \ \textcolor{comment}{//\ Фиксация\ настроек\ приложения}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ @brief\ Загрузка\ из\ реестра\ информации\ по\ текущей\ теме\ приложения.}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00069\ \ \ \ \ QString\&\ loadThemeCurrentApp()\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ settingsApp-\/>beginGroup(\textcolor{stringliteral}{"{}StyleSettings"{}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ currentThemeApp\ =\ QString(settingsApp-\/>value(\textcolor{stringliteral}{"{}theme\_current"{}}).toString());}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ settingsApp-\/>endGroup();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentThemeApp;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ loadStyleCurrentApp()\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QString\ pathStyle\ =\ (currentThemeApp.compare(\textcolor{stringliteral}{"{}theme\_first"{}})\ ==\ 0)\ ?\ THEME\_FIRST\_PATH\ :\ THEME\_SECOND\_PATH;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ qApp-\/>setStyleSheet(loadStyle(pathStyle));}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ pathStyle;}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ loadStyle(pathStyle);}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ QString\&\ loadStyle(\textcolor{keyword}{const}\ QString\&\ pathStyle)\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ QFile\ file;\textcolor{comment}{//=\ QFile(pathStyle);\ //"{}style.css"{}}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ file.setFileName(pathStyle);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!file.exists())}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Error\ file\ style\ App!"{}};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Реализовать\ проверку\ наличия/отсутствия\ тем\ в\ путях.}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file.open(QFile::OpenModeFlag::ReadOnly\ |\ QFile::OpenModeFlag::Text))\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ currentStyleApp\ =\ file.readAll();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ "{}|||"{}\ <<\ currentStyleApp;}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ file.close();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentStyleApp;}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ changeTheme()\{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ QString\ pathStyle\ =\ (currentThemeApp.compare(\textcolor{stringliteral}{"{}theme\_first"{}})\ ==\ 0)\ ?\ \ THEME\_SECOND\_PATH\ :\ THEME\_FIRST\_PATH;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ qApp-\/>setStyleSheet(loadStyle(pathStyle));}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ currentThemeApp\ =\ (currentThemeApp.compare(\textcolor{stringliteral}{"{}theme\_first"{}})\ ==\ 0)\ ?\ \textcolor{stringliteral}{"{}theme\_second"{}}\ :\ \textcolor{stringliteral}{"{}theme\_first"{}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ settingsApp-\/>beginGroup(\textcolor{stringliteral}{"{}StyleSettings"{}});}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ settingsApp-\/>setValue(\textcolor{stringliteral}{"{}theme\_current"{}},\ currentThemeApp);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ settingsApp-\/>endGroup();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ settingsApp-\/>sync();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ QString\ getCurrentThemeApp()\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentThemeApp;}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00131\ \ \ \ \ QSettings*\ settingsApp;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ QString\ currentThemeApp;}
+\DoxyCodeLine{00134\ \ \ \ \ QString\ currentStyleApp;}
+\DoxyCodeLine{00135\ \};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SETTINGS\_H}}
+
+\end{DoxyCode}

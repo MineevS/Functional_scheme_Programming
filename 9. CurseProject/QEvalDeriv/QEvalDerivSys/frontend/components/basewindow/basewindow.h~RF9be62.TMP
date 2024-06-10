@@ -1,0 +1,76 @@
+#ifndef BASEWINDOW_H
+#define BASEWINDOW_H
+
+#include <QMainWindow>
+#include <QButtonGroup>
+#include <QString>
+#include <QPlainTextEdit>
+#include <QTextEdit>
+#include <QLineEdit>
+
+
+//#include "expression_widget.h"
+#include "expression_builder.h"
+
+#include "qexprwidget.h"
+
+#include "QTelnet.h"
+
+#include <QDebug>
+
+#ifdef Q_OS_LINUX
+#include <libguile.h>
+#endif
+
+namespace Ui {
+class BaseWindow;
+}
+
+class BaseWindow : public QMainWindow
+{
+    Q_OBJECT
+public:
+    explicit BaseWindow(QWidget *parent = nullptr);
+    ~BaseWindow();
+
+    static QLineEdit *m_line_edit2;
+
+    static void* register_functions(void *);
+
+    static SCM print(SCM msg);
+    static SCM deriv(SCM msg);
+
+public slots:
+    void addTextTelnet(const char *msg, int count);
+signals:
+    void errorMessage(const QString&);
+
+private slots:
+    void _q_font_size_changed(int );
+    void _q_font_name_changed(const QString& );
+    void _q_align_changed(int );
+    void _q_text_changed(const QString& );
+    void _q_builder_flag_changed(bool);
+
+    void on_btConnect_clicked();
+
+public slots:
+    void on_teOutput_textChanged();
+
+private:
+    Ui::BaseWindow *ui;
+    
+    ///*
+    QExprWidget* m_expr_widget;
+    QExprWidget* m_expr_widget_deriv;
+
+    std::unique_ptr<MathExpressions::AbstractExpression> m_expression;
+    //*/
+
+    QButtonGroup *m_aling_buttons;
+
+    QTelnet telnet;
+    QString input;
+};
+
+#endif // BASEWINDOW_H

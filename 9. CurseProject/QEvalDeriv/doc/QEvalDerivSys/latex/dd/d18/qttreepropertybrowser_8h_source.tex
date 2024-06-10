@@ -1,0 +1,96 @@
+\doxysection{qttreepropertybrowser.\+h}
+\hypertarget{qttreepropertybrowser_8h_source}{}\label{qttreepropertybrowser_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qttreepropertybrowser.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qttreepropertybrowser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ (C)\ 2016\ The\ Qt\ Company\ Ltd.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ LicenseRef-\/Qt-\/Commercial\ OR\ LGPL-\/3.0-\/only\ OR\ GPL-\/2.0-\/only\ OR\ GPL-\/3.0-\/only}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ QTTREEPROPERTYBROWSER\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ QTTREEPROPERTYBROWSER\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}qtpropertybrowser.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }QTreeWidgetItem;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtTreePropertyBrowserPrivate}{QtTreePropertyBrowserPrivate}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtTreePropertyBrowser}{QtTreePropertyBrowser}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyBrowser}{QtAbstractPropertyBrowser}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtTreePropertyBrowser_abcb5e0f9818d4b7222bca104eb3d5957}{indentation}}\ READ\ \mbox{\hyperlink{classQtTreePropertyBrowser_abcb5e0f9818d4b7222bca104eb3d5957}{indentation}}\ WRITE\ setIndentation)}
+\DoxyCodeLine{00018\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a8815034e1bf5a152844e92463d709733}{rootIsDecorated}}\ READ\ \mbox{\hyperlink{classQtTreePropertyBrowser_a8815034e1bf5a152844e92463d709733}{rootIsDecorated}}\ WRITE\ setRootIsDecorated)}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_ab09f23d5d4699ad25e202c65b7b4dd36}{alternatingRowColors}}\ READ\ \mbox{\hyperlink{classQtTreePropertyBrowser_ab09f23d5d4699ad25e202c65b7b4dd36}{alternatingRowColors}}\ WRITE\ setAlternatingRowColors)}
+\DoxyCodeLine{00020\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a8944d281bd420813b760e97cc3f7660d}{headerVisible}}\ READ\ isHeaderVisible\ WRITE\ setHeaderVisible)}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_PROPERTY(\mbox{\hyperlink{classQtTreePropertyBrowser_ab79b17fc1b8470b04672ce000bcc5d74}{ResizeMode}}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a0a6775d56a98ebfda0bb7a91bc4d08a2}{resizeMode}}\ READ\ \mbox{\hyperlink{classQtTreePropertyBrowser_a0a6775d56a98ebfda0bb7a91bc4d08a2}{resizeMode}}\ WRITE\ setResizeMode)}
+\DoxyCodeLine{00022\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtTreePropertyBrowser_aca01c9e9ea14feacc83fc47c11e39fe9}{splitterPosition}}\ READ\ \mbox{\hyperlink{classQtTreePropertyBrowser_aca01c9e9ea14feacc83fc47c11e39fe9}{splitterPosition}}\ WRITE\ setSplitterPosition)}
+\DoxyCodeLine{00023\ \ \ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a7ac42a5f5a78b1aa6dcd4de7ec65a80e}{propertiesWithoutValueMarked}}\ READ\ \mbox{\hyperlink{classQtTreePropertyBrowser_a7ac42a5f5a78b1aa6dcd4de7ec65a80e}{propertiesWithoutValueMarked}}\ WRITE\ setPropertiesWithoutValueMarked)}
+\DoxyCodeLine{00024\ public:}
+\DoxyCodeLine{00025\ \ \ \ \ enum\ \mbox{\hyperlink{classQtTreePropertyBrowser_ab79b17fc1b8470b04672ce000bcc5d74}{ResizeMode}}}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Interactive,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ Stretch,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ Fixed,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ ResizeToContents}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_ENUM(\mbox{\hyperlink{classQtTreePropertyBrowser_ab79b17fc1b8470b04672ce000bcc5d74}{ResizeMode}})}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classQtTreePropertyBrowser}{QtTreePropertyBrowser}}(QWidget\ *parent\ =\ 0);}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classQtTreePropertyBrowser_a09351737f9636e6fa7d836024a5e0612}{\string~QtTreePropertyBrowser}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtTreePropertyBrowser_abcb5e0f9818d4b7222bca104eb3d5957}{indentation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setIndentation(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a8815034e1bf5a152844e92463d709733}{rootIsDecorated}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setRootIsDecorated(\textcolor{keywordtype}{bool}\ show);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_ab09f23d5d4699ad25e202c65b7b4dd36}{alternatingRowColors}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setAlternatingRowColors(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ isHeaderVisible()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setHeaderVisible(\textcolor{keywordtype}{bool}\ visible);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classQtTreePropertyBrowser_ab79b17fc1b8470b04672ce000bcc5d74}{ResizeMode}}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a0a6775d56a98ebfda0bb7a91bc4d08a2}{resizeMode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ setResizeMode(\mbox{\hyperlink{classQtTreePropertyBrowser_ab79b17fc1b8470b04672ce000bcc5d74}{ResizeMode}}\ mode);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtTreePropertyBrowser_aca01c9e9ea14feacc83fc47c11e39fe9}{splitterPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ setSplitterPosition(\textcolor{keywordtype}{int}\ position);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a581853e8b11c7f417df6ac334d2e5ee9}{setExpanded}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item,\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a88aa9e2be385a8eca8fd10dc55911817}{expanded}});}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a1c1966ecde82b212a4fba10dce3cf684}{isExpanded}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_ae3371466f1a962c93a5a7e0f19500c7c}{isItemVisible}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a4142953a5fc2de6b5cedb2a2b05d505f}{setItemVisible}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item,\ \textcolor{keywordtype}{bool}\ visible);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a23d397a3e40680cea6ec300e3b6f71ef}{setBackgroundColor}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item,\ \textcolor{keyword}{const}\ QColor\ \&color);}
+\DoxyCodeLine{00062\ \ \ \ \ QColor\ \mbox{\hyperlink{classQtTreePropertyBrowser_a93f28c5f45b4103d92b37f9772e8cf79}{backgroundColor}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ QColor\ \mbox{\hyperlink{classQtTreePropertyBrowser_a090285d610fe3861c799d97a0d6ce596}{calculatedBackgroundColor}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ setPropertiesWithoutValueMarked(\textcolor{keywordtype}{bool}\ mark);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a7ac42a5f5a78b1aa6dcd4de7ec65a80e}{propertiesWithoutValueMarked}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a228298ab9726e9b827cb80cf39445c7e}{editItem}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ Q\_SIGNALS:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_ad61e06d505cfcbb6f8423e3b47304784}{collapsed}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item);}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a88aa9e2be385a8eca8fd10dc55911817}{expanded}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a190a26de0c762c6976f20f81066c5a0a}{itemInserted}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item,\ \mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *afterItem)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a86ba73207819af65c7c161bf3b36abcb}{itemRemoved}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTreePropertyBrowser_a8337ad05084c3896b33d5e72ab2a02ab}{itemChanged}}(\mbox{\hyperlink{classQtBrowserItem}{QtBrowserItem}}\ *item)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ QScopedPointer<QtTreePropertyBrowserPrivate>\ d\_ptr;}
+\DoxyCodeLine{00081\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtTreePropertyBrowser}{QtTreePropertyBrowser}})}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051000}}
+\DoxyCodeLine{00084\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtTreePropertyBrowser}{QtTreePropertyBrowser}})}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

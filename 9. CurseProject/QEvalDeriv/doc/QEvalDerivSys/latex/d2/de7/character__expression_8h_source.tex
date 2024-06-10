@@ -1,0 +1,42 @@
+\doxysection{character\+\_\+expression.\+h}
+\hypertarget{character__expression_8h_source}{}\label{character__expression_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/character\_expression.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/character\_expression.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHAREXPRESSION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHAREXPRESSION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QChar>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}abstract\_expression.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }MathExpressions\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }MATH\_EXPRESSIONS\_EXPORT\ \mbox{\hyperlink{classMathExpressions_1_1CharacterExpression}{CharacterExpression}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{AbstractExpression}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classMathExpressions_1_1CharacterExpression}{CharacterExpression}}(\textcolor{keyword}{const}\ QChar\&\ character,\ \textcolor{keywordtype}{bool}\ read\_only\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ QChar\&\ character()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_character;\ \}}
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{void}\ setCharacter(\textcolor{keyword}{const}\ QChar\&\ value);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ isReadOnly()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_read\_only;\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00021\ \ \ \textcolor{comment}{//\ AbstractExpression\ interface}}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{void}\ paint(QPainter*\ painter,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{int}\ calcWidth()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{int}\ calcHeight()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{int}\ calcSuperscriptX()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{int}\ calcCapDY()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ calcCapDX(\textcolor{keywordtype}{int}\&\ dxLeft,\ \textcolor{keywordtype}{int}\&\ dxRight)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ QChar\ m\_character;}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{bool}\ m\_read\_only;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ namespace\ MathExpressions}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHAREXPRESSION\_H}}
+
+\end{DoxyCode}

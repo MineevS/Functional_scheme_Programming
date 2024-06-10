@@ -1,0 +1,9 @@
+<map id="/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/basewindow/basewindow.h" name="/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/basewindow/basewindow.h">
+<area shape="rect" id="Node000001" title="Основное объявление графического компонента BaseWindow." alt="" coords="173,5,460,75"/>
+<area shape="rect" id="Node000002" href="$dd/d48/basewindow_8cpp.html" title="Содержит реализацию графического компонента BaseWindow." alt="" coords="5,123,308,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,85,205,124,202,120,257,81"/>
+<area shape="rect" id="Node000003" href="$de/d59/mainwindow_2mainwindow_8h.html" title="Содержит объявление графичесокго компонента MainWindow." alt="" coords="333,123,623,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="376,81,432,120,429,124,373,85"/>
+<area shape="rect" id="Node000004" href="$d8/d24/mainwindow_2mainwindow_8cpp.html" title="Содержит реализацию графического компонента MainWindow." alt="" coords="325,240,631,309"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="481,206,481,240,475,240,475,206"/>
+</map>

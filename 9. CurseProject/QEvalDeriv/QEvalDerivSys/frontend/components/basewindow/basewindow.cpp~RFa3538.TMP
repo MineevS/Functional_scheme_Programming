@@ -1,0 +1,364 @@
+#include "basewindow.h"
+#include "ui_basewindow.h"
+
+#include <QCheckBox>
+#include <QToolButton>
+#include <QButtonGroup>
+#include <QScrollBar>
+#include <QTextBlock>
+#include <QVariant>
+
+QLineEdit* BaseWindow::m_line_edit2 = NULL;
+
+BaseWindow::BaseWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::BaseWindow)
+{
+    ui->setupUi(this);
+
+    ///m_line_edit2 = new QLineEdit();
+
+    /*m_expr_widget = new QExprWidget();
+
+    m_expr_widget->setVisibleAxisX(true);
+    m_expr_widget->setVisibleAxisY(true);
+
+
+    ui->gridLayout_2->addWidget(m_expr_widget, 1, 0, 1, 1);
+    m_expr_widget->setAlignment(Qt::AlignCenter);*/
+
+    //ui->gridLayout_2->addStretch(1);
+
+    // Font
+    /*ui->m_font_name = new QFontComboBox(this);
+    ui->m_font_name->setCurrentText("MV Boli");
+    ui->m_font_size = new QSpinBox(this);
+    ui->m_font_size->setMaximumWidth(50);
+    ui->m_font_size->setMinimum(8);
+    ui->m_font_size->setMaximum(200);
+    ui->m_font_size->setValue(18);
+    QHBoxLayout* lay_font = new QHBoxLayout();
+    lay_font->addWidget(ui->m_font_name);
+    lay_font->addWidget(ui->m_font_size);*/
+
+    // * CheckX, CheckY
+    /*
+    QCheckBox* axisX = new QCheckBox(this);
+    axisX->setText(tr("axis X"));
+    QCheckBox* axisY = new QCheckBox(this);
+    axisY->setText(tr("axis Y"));
+    QHBoxLayout* lay_axis = new QHBoxLayout();
+    lay_axis->addWidget(axisX);
+    lay_axis->addWidget(axisY);
+    lay_axis->addStretch(1);
+    //*/
+
+    //
+    ui->m_checkbox_variable_auto_index = new QCheckBox(tr("variable auto index"), this);
+    ui->m_checkbox_variable_auto_index->setChecked(true);
+    ui->m_checkbox_function_auto_index = new QCheckBox(tr("function auto index"), this);
+    ui->m_checkbox_function_auto_index->setChecked(true);
+    ui->m_checkbox_post_symbols = new QCheckBox(tr("post symbols"), this);
+    ui->m_checkbox_post_symbols->setChecked(true);
+    ui->m_checkbox_wrap_to_frame = new QCheckBox(tr("wrap empty expression to frame"), this);
+    ui->m_checkbox_wrap_to_frame->setChecked(true);
+    ui->lay_checkboxs->addWidget(ui->m_checkbox_variable_auto_index);
+    ui->lay_checkboxs->addWidget(ui->m_checkbox_function_auto_index);
+    ui->lay_checkboxs->addWidget(ui->m_checkbox_post_symbols);
+    ui->lay_checkboxs->addWidget(ui->m_checkbox_wrap_to_frame);
+
+    //   QButtonGroup
+
+    m_aling_buttons = new QButtonGroup(this);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignLeft | Qt::AlignTop);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignHCenter | Qt::AlignTop);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignRight | Qt::AlignTop);
+
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignLeft | Qt::AlignVCenter);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignCenter);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignRight | Qt::AlignVCenter);
+
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignLeft | Qt::AlignBottom);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignHCenter | Qt::AlignBottom);
+    m_aling_buttons->addButton(new QToolButton(this), Qt::AlignRight | Qt::AlignBottom);
+
+    QList<QAbstractButton*> buttons_list = m_aling_buttons->buttons();
+    for (int i = 0; i < buttons_list.size(); ++i) {
+        buttons_list.at(i)->setCheckable(true);
+    }
+
+    //QGridLayout* lay_buttons = new QGridLayout();
+    ui->lay_buttons->setContentsMargins(5, 5, 5, 5);
+
+    ui->lay_buttons->setSpacing(3);
+
+    QAbstractButton* button = m_aling_buttons->button(Qt::AlignLeft | Qt::AlignTop);
+    button->setText(QStringLiteral("↖"));
+    ui->lay_buttons->addWidget(button,0,0);
+    button = m_aling_buttons->button(Qt::AlignHCenter | Qt::AlignTop);
+    button->setText(QStringLiteral("↥"));
+    ui->lay_buttons->addWidget(button,0,1);
+    button = m_aling_buttons->button(Qt::AlignRight | Qt::AlignTop);
+    button->setText(QStringLiteral("↗"));
+    ui->lay_buttons->addWidget(button,0,2);
+
+    button = m_aling_buttons->button(Qt::AlignLeft | Qt::AlignVCenter);
+    button->setText(QStringLiteral("↤"));
+    ui->lay_buttons->addWidget(button,1,0);
+    button = m_aling_buttons->button(Qt::AlignCenter);
+    button->setText(QStringLiteral("┼"));
+    ui->lay_buttons->addWidget(button,1,1);
+    button = m_aling_buttons->button(Qt::AlignRight | Qt::AlignVCenter);
+    button->setText(QStringLiteral("↦"));
+    ui->lay_buttons->addWidget(button,1,2);
+
+    button = m_aling_buttons->button(Qt::AlignLeft | Qt::AlignBottom);
+    button->setText(QStringLiteral("↙"));
+    ui->lay_buttons->addWidget(button,2,0);
+    button = m_aling_buttons->button(Qt::AlignHCenter | Qt::AlignBottom);
+    button->setText(QStringLiteral("↧"));
+    ui->lay_buttons->addWidget(button,2,1);
+    button = m_aling_buttons->button(Qt::AlignRight | Qt::AlignBottom);
+    button->setText(QStringLiteral("↘"));
+    ui->lay_buttons->addWidget(button,2,2);
+
+    //QVBoxLayout* lay_rigth = new QVBoxLayout();
+    /*
+    ui->lay_rigth->setContentsMargins(5, 5, 5, 5);
+    ui->lay_rigth->setSpacing(3);
+    ///ui->lay_rigth->addLayout(lay_font);
+    ui->lay_rigth->addLayout(lay_axis);
+    ui->lay_rigth->addLayout(ui->lay_checkboxs);
+    ui->lay_rigth->addStretch(1);
+    ui->lay_rigth->addLayout(ui->lay_buttons);
+    ui->lay_rigth->addStretch(100);
+    ui->lay_rigth->setSizeConstraint(QLayout::SetMinimumSize);
+    */
+
+
+    //ui->m_line_edit = new QLineEdit(this);
+    ///*
+    m_expr_widget = new QExprWidget();
+    m_expr_widget_deriv = new QExprWidget();
+    m_expr_widget->setAlignment(Qt::AlignCenter);
+
+    //QVBoxLayout* lay_left = new QVBoxLayout();
+
+    ui->lay_left->insert
+
+    ui->lay_left->addWidget(m_expr_widget);
+    //ui->lay_left->addWidget(m_expr_widget_deriv);
+    ui->lay_left->addWidget(m_line_edit2);
+
+    ui->lay_left->setContentsMargins(5, 5, 5, 5);
+    ui->lay_left->setSpacing(10);
+    //*/
+
+    QFrame* v_line = new QFrame(this);
+    v_line->setFrameShape(QFrame::VLine);
+    v_line->setFrameShadow(QFrame::Sunken);
+    v_line->setLineWidth(1);
+
+    //QHBoxLayout* lay_this = new QHBoxLayout();
+    ///ui->lay_this->addLayout(ui->lay_left, 10);
+    ///ui->lay_this->addWidget(v_line);
+    //ui->lay_this->addLayout(ui->lay_rigth);
+
+    //this->setLayout(ui->lay_this);
+
+    // Signals & Slots
+    ///*
+
+    connect(ui->result, &QLineEdit::textChanged, this, &BaseWindow::_q_text_changed);
+    connect(ui->axisX, &QCheckBox::clicked, m_expr_widget, &QExprWidget::setVisibleAxisX);
+    connect(ui->axisY, &QCheckBox::clicked, m_expr_widget, &QExprWidget::setVisibleAxisY);
+    connect(ui->m_font_name, &QFontComboBox::currentTextChanged, this, &BaseWindow::_q_font_name_changed);//
+    connect(ui->m_font_size, SIGNAL(valueChanged(int)), this, SLOT(_q_font_size_changed(int)));//
+    connect(m_aling_buttons, SIGNAL(buttonClicked(int)), this, SLOT(_q_align_changed(int)));
+
+    connect(ui->m_checkbox_variable_auto_index, &QCheckBox::clicked,
+            this, &BaseWindow::_q_builder_flag_changed);
+    connect(ui->m_checkbox_function_auto_index, &QCheckBox::clicked,
+            this, &BaseWindow::_q_builder_flag_changed);
+    connect(ui->m_checkbox_post_symbols, &QCheckBox::clicked,
+            this, &BaseWindow::_q_builder_flag_changed);
+    connect(ui->m_checkbox_wrap_to_frame, &QCheckBox::clicked,
+            this, &BaseWindow::_q_builder_flag_changed);
+    //*/
+
+    //ui->telnet;
+    connect( &telnet, SIGNAL(newData(const char*,int)), this, SLOT(addTextTelnet(const char*,int)) );
+    connect( &telnet, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this, SLOT(onStateChanged(QAbstractSocket::SocketState)) );
+    //connect( ui->cbCmd, SIGNAL(command(QString)), this, SLOT(onCommand(QString)));
+}
+
+BaseWindow::~BaseWindow(){
+    delete ui;
+}
+
+void BaseWindow::_q_font_size_changed(int size)
+{
+
+    if (m_expression) {
+        QFont font = m_expression->font();
+        font.setPointSize(size);
+        m_expression->setFont(font);
+
+        m_expr_widget->repaint();
+    }
+
+}
+
+void BaseWindow::_q_font_name_changed(const QString &name)
+{
+    ///*
+    if (m_expression) {
+        QFont font = m_expression->font();
+        font.setFamily(name);
+        m_expression->setFont(font);
+
+        m_expr_widget->repaint();
+    }
+    //*/
+}
+
+void BaseWindow::_q_align_changed(int align)
+{
+    QAbstractButton* button = m_aling_buttons->button(align);
+    ///*
+    if (button && button->isChecked()) {
+        m_expr_widget->setExpressionAlignment( Qt::Alignment(align));
+    }
+    //*/
+}
+
+void BaseWindow::_q_text_changed(const QString &text)
+{
+    MathExpressions::ExpressionBuilder builder;
+    builder.variableAutoIndex(ui->m_checkbox_variable_auto_index->isChecked());
+
+    builder.functionAutoIndex(ui->m_checkbox_function_auto_index->isChecked());
+    builder.postSymbols(ui->m_checkbox_post_symbols->isChecked());
+    builder.wrapEmptyExpressionToFrame(ui->m_checkbox_wrap_to_frame->isChecked());
+
+    QFont font;
+    //font.setFamily(ui->m_font_name->currentText());
+    //font.setPointSize(ui->m_font_size->value());
+    ///*
+    m_expression = builder.exec(text);
+    m_expression->setFont(font);
+
+    m_expr_widget->setExpression(m_expression.get());
+    m_expr_widget_deriv->setExpression(m_expression.get()); ///
+    //*/
+
+    if (builder.lastError().isValid()) {
+        emit errorMessage(builder.lastError().text());
+
+        qDebug() << QString("Error(%1): %2").arg(builder.lastError().number()).arg(builder.lastError().text());
+        qDebug() << text;
+        QString str;
+        str.reserve(builder.lastError().position());
+        for (int i = 1; i < builder.lastError().position(); ++i) {
+            str.append(' ');
+        }
+        str.append('^');
+        qDebug() << str;
+    }
+    else {
+        qDebug() << "No error";
+        qDebug() << text;
+    }
+    qDebug() << "************************************************************";
+    qDebug() << "";
+}
+
+void BaseWindow::_q_builder_flag_changed(bool)
+{
+    //_q_text_changed(ui->m_line_edit->text());
+}
+
+
+void BaseWindow::addTextTelnet(const char *msg, int count)
+{
+    ui->teOutput->insertPlainText( QByteArray(msg, count) );
+    ui->teOutput->verticalScrollBar()->setValue(0xFFFFFFF);
+}
+
+
+void BaseWindow::on_btConnect_clicked()
+{
+    if( telnet.isConnected() )
+        telnet.disconnectFromHost();
+    else
+        telnet.connectToHost(ui->leAddr->text(), ui->sbPort->value());
+}
+
+
+void BaseWindow::on_teOutput_textChanged()
+{
+    qDebug() << ui->teOutput->blockCount();
+
+    QTextBlock text = ui->teOutput->document()->findBlockByNumber(ui->teOutput->blockCount() - 1);
+
+    if(text.text().split(">").count() > 1){
+
+        setProperty("textA", text.text().split(">")[0] + ">");
+
+        qDebug() << text.text().split('>')[1].removeFirst();
+
+        setProperty("text", text.text().split(">")[1].removeFirst());
+
+    }else {
+        // qDebug() << text.text();
+    }
+
+    if(text.text().isEmpty()){
+        if(property("text").toString().compare("(clear)") == 0){
+            setProperty("text", ""); // Сброс обязателен.
+            ui->teOutput->setPlainText(property("textA").toString());
+
+        }
+        else if(telnet.isConnected())
+        {
+            telnet.sendData(property("text").toString().toLatin1());
+            telnet.sendData("\n");
+        }
+    }
+}
+
+
+// ----------------------------------------------------------------------------------------//
+
+SCM BaseWindow::print(SCM msg)
+{
+    qDebug() << scm_to_locale_string(msg);
+
+    //emit ui->m_line_edit->textChanged(msg);
+
+    BaseWindow::m_line_edit2->setText(scm_to_locale_string(msg));
+
+    //this->_q_text_changed(scm_to_locale_string(msg));
+
+    //BaseWindow::_q_text_changed(scm_to_locale_string(msg));
+
+    return SCM_UNSPECIFIED;
+}
+
+SCM BaseWindow::deriv(SCM msg)
+{
+    qDebug() << scm_to_locale_string(msg);
+
+    return SCM_UNSPECIFIED;
+}
+
+void* BaseWindow::register_functions(void*)
+{
+    scm_c_define_gsubr("print", 1, 0, 0, (scm_t_subr)&print);
+
+    scm_c_define_gsubr("deriv", 1, 0, 0, (scm_t_subr)&deriv);
+
+    return NULL;
+}
+
+

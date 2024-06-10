@@ -1,0 +1,90 @@
+\doxysection{Файл /home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/main.cpp@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/main.cpp}}
+
+
+Содержит точку входа в программу  
+
+
+{\ttfamily \#include "{}settings.\+h"{}}\newline
+{\ttfamily \#include "{}mainwindow.\+h"{}}\newline
+{\ttfamily \#include $<$QApplication$>$}\newline
+{\ttfamily \#include $<$QDesktop\+Widget$>$}\newline
+{\ttfamily \#include $<$QRect$>$}\newline
+{\ttfamily \#include $<$QScreen$>$}\newline
+Граф включаемых заголовочных файлов для main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dce/main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Содержит точку входа в программу 
+
+\begin{DoxyDate}{Дата}
+09.\+05.\+24 \mbox{[}Создан\mbox{]}; 10.\+06.\+24 \mbox{[}Изменен\+: Внесены коментарии Doxygen\mbox{]} 
+\end{DoxyDate}
+\begin{DoxyVersion}{Версия}
+v1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Автор}
+Mineev S. A. \mbox{[}\href{mailto:mineeff20@yandex.ru}{\texttt{ mineeff20@yandex.\+ru}}\mbox{]} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Авторство}
+Free\+Soft.
+\end{DoxyCopyright}
+Отсутсвуют 
+
+\doxysubsection{Функции}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em argv} & Кл.\+во принимаемых параметров из командной строки. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argc} & Массив принимаемых параметров из командной строки.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\{ Ничего не возвращает\} 
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])\{}
+\DoxyCodeLine{\ \ \ \ QCoreApplication::setOrganizationName(ORGANIZATION\_NAME);}
+\DoxyCodeLine{\ \ \ \ QCoreApplication::setOrganizationDomain(ORGANIZATION\_DOMAIN);}
+\DoxyCodeLine{\ \ \ \ QCoreApplication::setApplicationName(APPLICATION\_NAME);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ QApplication\ a(argc,\ argv);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ qApp-\/>setProperty(\textcolor{stringliteral}{"{}settingsApp"{}},\ QVariant::fromValue(\textcolor{keyword}{new}\ \mbox{\hyperlink{classSettings}{Settings}}()));}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}\ mw;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#if\ QT\_VERSION\ <=\ 0x051500}}
+\DoxyCodeLine{\ \ \ \ QRect\ rect\ =\ QApplication::primaryScreen()-\/>availableGeometry();}
+\DoxyCodeLine{\ \ \ \ mw.setGeometry(0,\ 0,\ rect.width(),\ rect.height());}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ mw.show();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ a.exec();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ \mbox{[}main\mbox{]} 
+\end{DoxyReturn}

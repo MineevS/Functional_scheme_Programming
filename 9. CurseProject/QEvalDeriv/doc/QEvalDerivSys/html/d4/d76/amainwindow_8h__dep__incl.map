@@ -1,0 +1,7 @@
+<map id="/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/amainwindow/amainwindow.h" name="/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/amainwindow/amainwindow.h">
+<area shape="rect" id="Node000001" title="Содержит объявление класса Amainwindow." alt="" coords="58,5,259,89"/>
+<area shape="rect" id="Node000002" href="$de/d59/mainwindow_2mainwindow_8h.html" title="Содержит объявление графичесокго компонента MainWindow." alt="" coords="13,137,304,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,103,161,137,156,137,156,103"/>
+<area shape="rect" id="Node000003" href="$d8/d24/mainwindow_2mainwindow_8cpp.html" title="Содержит реализацию графического компонента MainWindow." alt="" coords="5,255,312,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,221,161,254,156,254,156,221"/>
+</map>

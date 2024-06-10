@@ -1,0 +1,771 @@
+\doxysection{qtpropertymanager.\+h}
+\hypertarget{qtpropertymanager_8h_source}{}\label{qtpropertymanager_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qtpropertymanager.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qtpropertymanager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ (C)\ 2016\ The\ Qt\ Company\ Ltd.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ LicenseRef-\/Qt-\/Commercial\ OR\ LGPL-\/3.0-\/only\ OR\ GPL-\/2.0-\/only\ OR\ GPL-\/3.0-\/only}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ QTPROPERTYMANAGER\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ QTPROPERTYMANAGER\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}qtpropertybrowser.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }QDate;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }QTime;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }QDateTime;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }QLocale;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }QRegularExpression;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtGroupPropertyManager}{QtGroupPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classQtGroupPropertyManager}{QtGroupPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classQtGroupPropertyManager_a9a5f626ec6949568c9a79ef1f28d28d1}{\string~QtGroupPropertyManager}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtGroupPropertyManager_a19f3790b59d9be2c2ce646d6b1b6ebac}{hasValue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtGroupPropertyManager_a603972810bfad75652679848de254d8d}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtGroupPropertyManager_a69d7bf1616035e07b17048972bb5cbad}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtIntPropertyManagerPrivate}{QtIntPropertyManagerPrivate}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager_a29740b5a22332096ac0365d6f23fa418}{\string~QtIntPropertyManager}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtIntPropertyManager_a8aa042ad88ed2682302d45ecc76ba2c4}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtIntPropertyManager_a43e4d3860036e0895e79041e93d633f1}{minimum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtIntPropertyManager_ac3367f7005ec52b19e8cfc64e82b0cce}{maximum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtIntPropertyManager_a3c4c037b9dd5b8cca6cbb0b8d05da60f}{singleStep}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_af918e1e91c69de900a3ce3fe8fb4291f}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_abb419f45a387832a3b74f8c9180dd176}{setMinimum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ minVal);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_aa09805459434ad6e58274c8213293f89}{setMaximum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ maxVal);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_a313c2054fa57dda4e39bfaa6ee64cc38}{setRange}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ minVal,\ \textcolor{keywordtype}{int}\ maxVal);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_ae8139311ffcabd74b10c3c9ecdad1703}{setSingleStep}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ step);}
+\DoxyCodeLine{00051\ Q\_SIGNALS:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_a524990cc950be2174854c0150f906776}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_a2e89b90fb975144bad068d9eee7c2095}{rangeChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ minVal,\ \textcolor{keywordtype}{int}\ maxVal);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_a3b15fd1424c8207ac9b4823bd35770bd}{singleStepChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ step);}
+\DoxyCodeLine{00055\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00056\ \ \ \ \ QString\ \mbox{\hyperlink{classQtIntPropertyManager_a49ea506fce3dc25477c74fea2d490b74}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_aea006fd00675fd320fe407538133c499}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtIntPropertyManager_a24a49c4dbd5403265389eeafca3d2923}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ QScopedPointer<QtIntPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00061\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}})}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00063\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}})}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtBoolPropertyManagerPrivate}{QtBoolPropertyManagerPrivate}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00070\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{classQtBoolPropertyManager_a8f99aed0c3e230c3c3d6ea69e9cce1b9}{\string~QtBoolPropertyManager}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQtBoolPropertyManager_a82860dfedfbdb3de44a1efee3fb940c8}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtBoolPropertyManager_a046b39b8d8554b599bd50592967fa97d}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{bool}\ val);}
+\DoxyCodeLine{00080\ Q\_SIGNALS:}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtBoolPropertyManager_a9eeb24deb23452d7ad572abeeae1a455}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{bool}\ val);}
+\DoxyCodeLine{00082\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00083\ \ \ \ \ QString\ \mbox{\hyperlink{classQtBoolPropertyManager_ab77819475f845d4cda1f50968c0ec6d2}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00084\ \ \ \ \ QIcon\ \mbox{\hyperlink{classQtBoolPropertyManager_a25fdd478bd5ce529731dce37d377705f}{valueIcon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtBoolPropertyManager_accd3ab26382ed250f9074cd2046b4899}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtBoolPropertyManager_aeddf044ee4549933ba70bc258700a655}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ QScopedPointer<QtBoolPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00089\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}})}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00092\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}})}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDoublePropertyManagerPrivate}{QtDoublePropertyManagerPrivate}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00101\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{classQtDoublePropertyManager_a8080cb2cf6ae314580db58337f9b4360}{\string~QtDoublePropertyManager}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classQtDoublePropertyManager_a8672699ded5f6e921839faeea9ea118b}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classQtDoublePropertyManager_a800d40f22df3e3a923cc586b2be2d936}{minimum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classQtDoublePropertyManager_ad8c320d045b764643a000fce9f6422fe}{maximum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classQtDoublePropertyManager_a437fc5cee3099f9d405a0054a233adf7}{singleStep}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtDoublePropertyManager_a44b92b74c637adfe61ebe22b5d7111ca}{decimals}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_ac38dda79cdc700a6484d6a6cdd234d75}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ val);}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_ac303052e95e61e4bbce4e0b70efe35eb}{setMinimum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ minVal);}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a5f5bde901cbcab806e8b75d05c0230e4}{setMaximum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ maxVal);}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_af272ed9deea94559169f2553eb127007}{setRange}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ minVal,\ \textcolor{keywordtype}{double}\ maxVal);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a8b1a1ad21c1ebbfe7ed02652cfcd70d2}{setSingleStep}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ step);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a7eedb9fc0d6e1cbb7900a1a6635d9514}{setDecimals}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00118\ Q\_SIGNALS:}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a3b088a6be8424a7aaed6b78df4d1c430}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ val);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_ac724186dcc4b2eea6598dace14a7d498}{rangeChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ minVal,\ \textcolor{keywordtype}{double}\ maxVal);}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a4e4584fee57e23d34428bbc3d27021c2}{singleStepChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{double}\ step);}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a64846b2480a151acfa18106adad43f79}{decimalsChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00123\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00124\ \ \ \ \ QString\ \mbox{\hyperlink{classQtDoublePropertyManager_a0246dbbbbc8a6e88d5592a16ef802101}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a9b99721ef19562e4b71b24f0fb9d54ba}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDoublePropertyManager_a612bae8340010cee1f77e8990dc1b90b}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00127\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00128\ \ \ \ \ QScopedPointer<QtDoublePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00129\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}})}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00132\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}})}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtStringPropertyManagerPrivate}{QtStringPropertyManagerPrivate}};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00139\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00141\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{classQtStringPropertyManager_a79a3f7b67318904c5f260bae19afc129}{\string~QtStringPropertyManager}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ QString\ \mbox{\hyperlink{classQtStringPropertyManager_a02a4f6665e563f94ea3aa7f727ae79c8}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00146\ \ \ \ \ QRegularExpression\ \mbox{\hyperlink{classQtStringPropertyManager_a046f374d593bfb51b62a24fcef5cd21f}{regExp}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtStringPropertyManager_afa1d5070c04ece70e5908ff4234484a4}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QString\ \&val);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtStringPropertyManager_a564c64adaa9886cfe060c1ed4840d06d}{setRegExp}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRegularExpression\ \&\mbox{\hyperlink{classQtStringPropertyManager_a046f374d593bfb51b62a24fcef5cd21f}{regExp}});}
+\DoxyCodeLine{00151\ Q\_SIGNALS:}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtStringPropertyManager_a39f5e49a80f66a410eeb20c762436a82}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QString\ \&val);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtStringPropertyManager_afb496c8963e0203f466216e4f810f383}{regExpChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRegularExpression\ \&\mbox{\hyperlink{classQtStringPropertyManager_a046f374d593bfb51b62a24fcef5cd21f}{regExp}});}
+\DoxyCodeLine{00154\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00155\ \ \ \ \ QString\ \mbox{\hyperlink{classQtStringPropertyManager_a83a334a01b2a70b4004332473b6c8404}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtStringPropertyManager_a824e9c52590e3d800daa9e1d9c030d84}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtStringPropertyManager_ab37f22bcd6255f9a2c1435b07a517ff9}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00158\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00159\ \ \ \ \ QScopedPointer<QtStringPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00160\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}})}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00164\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}})}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00166\ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDatePropertyManagerPrivate}{QtDatePropertyManagerPrivate}};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00171\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00173\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{classQtDatePropertyManager_a8fa02569253a21b9c3f50e786ec43342}{\string~QtDatePropertyManager}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ QDate\ \mbox{\hyperlink{classQtDatePropertyManager_affd190337e9a8a68480f7ebba7dfa41a}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00178\ \ \ \ \ QDate\ \mbox{\hyperlink{classQtDatePropertyManager_ac89ca0d6f2c79b4f2d4fd332df2702da}{minimum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00179\ \ \ \ \ QDate\ \mbox{\hyperlink{classQtDatePropertyManager_afd8681779b99b48415e87b9b88a70136}{maximum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a36421d680fe22b25d42b7dc529389dfc}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QDate\ val);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a88e32a1edfcd4313bd7136cfc851ca6b}{setMinimum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QDate\ minVal);}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a2f29ab05c79074bebce0a84a01ab6269}{setMaximum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QDate\ maxVal);}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_aa5d6b52939ea5c800be77c2410cf3278}{setRange}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QDate\ minVal,\ QDate\ maxVal);}
+\DoxyCodeLine{00186\ Q\_SIGNALS:}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a383156b59ec0ab023c74739afd4b6ef2}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QDate\ val);}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a1c785679bd99226d426ef90eb292f3ed}{rangeChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QDate\ minVal,\ QDate\ maxVal);}
+\DoxyCodeLine{00189\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00190\ \ \ \ \ QString\ \mbox{\hyperlink{classQtDatePropertyManager_a6a44e7517568cbaf73e3d4176c7502e7}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a668bab7027ab2b58084235bd45504ab1}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDatePropertyManager_a4e7958245646d467f4e00591209c6c53}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00193\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00194\ \ \ \ \ QScopedPointer<QtDatePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00195\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}})}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00199\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}})}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00201\ \};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtTimePropertyManagerPrivate}{QtTimePropertyManagerPrivate}};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00206\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00208\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00209\ \ \ \ \ \mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{classQtTimePropertyManager_a3e66b690f991026feccfaa7590f1ae67}{\string~QtTimePropertyManager}}();}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ QTime\ \mbox{\hyperlink{classQtTimePropertyManager_a517205aa297d2623fca6a55595fda2ed}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTimePropertyManager_a5142e2c497db39dc7b59fe3a19c1a950}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QTime\ val);}
+\DoxyCodeLine{00216\ Q\_SIGNALS:}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTimePropertyManager_ab1333894c41c54350b61fa9aa0649be1}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ QTime\ val);}
+\DoxyCodeLine{00218\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00219\ \ \ \ \ QString\ \mbox{\hyperlink{classQtTimePropertyManager_af0af8661db17e54e6730ad0fc5d33371}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTimePropertyManager_a31c973486aaa6133c5bbb4e0b9bcac80}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtTimePropertyManager_a5b769f48fed56a7cfe6e0e9372fbfa28}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00222\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00223\ \ \ \ \ QScopedPointer<QtTimePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00224\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}})}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00228\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}})}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00230\ \};}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDateTimePropertyManagerPrivate}{QtDateTimePropertyManagerPrivate}};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00235\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00237\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00239\ \ \ \ \ \mbox{\hyperlink{classQtDateTimePropertyManager_a40d47309fb6471a22cc685995eec4c49}{\string~QtDateTimePropertyManager}}();}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ QDateTime\ \mbox{\hyperlink{classQtDateTimePropertyManager_a1dfac94a5abd3652fb64278ad6a97532}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDateTimePropertyManager_ac9b9b353bdabc0ab25c3b3aaae54acba}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QDateTime\ \&val);}
+\DoxyCodeLine{00245\ Q\_SIGNALS:}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDateTimePropertyManager_ad9b2fdd107e0ec207110762a7f62e53d}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QDateTime\ \&val);}
+\DoxyCodeLine{00247\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00248\ \ \ \ \ QString\ \mbox{\hyperlink{classQtDateTimePropertyManager_a73593873cd50bd45c930d639f38a89c1}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDateTimePropertyManager_a1d639dc1e47c40d646fe64acc320dbe0}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtDateTimePropertyManager_a0dfd91c267f8ab7a006e3244f38fe769}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00251\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00252\ \ \ \ \ QScopedPointer<QtDateTimePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00253\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}})}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00257\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}})}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00259\ \};}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtKeySequencePropertyManagerPrivate}{QtKeySequencePropertyManagerPrivate}};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00264\ \{}
+\DoxyCodeLine{00265\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00266\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00268\ \ \ \ \ \mbox{\hyperlink{classQtKeySequencePropertyManager_acbee53270edeff9f0140455d62f751f8}{\string~QtKeySequencePropertyManager}}();}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ QKeySequence\ \mbox{\hyperlink{classQtKeySequencePropertyManager_a563dc309719d37eea5d02e45d178b8e2}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtKeySequencePropertyManager_a5c2de188e9025f7d9f6d4545ca95b0b7}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QKeySequence\ \&val);}
+\DoxyCodeLine{00274\ Q\_SIGNALS:}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtKeySequencePropertyManager_a13afad4a446d765b39cd9c39f2bd0698}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QKeySequence\ \&val);}
+\DoxyCodeLine{00276\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00277\ \ \ \ \ QString\ \mbox{\hyperlink{classQtKeySequencePropertyManager_aa877900fae28e1903666cfbffd3acb84}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtKeySequencePropertyManager_a540790a855f1844e780160edb5e89377}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtKeySequencePropertyManager_a06e32b9624d299d02c06985e6b86027f}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00280\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00281\ \ \ \ \ QScopedPointer<QtKeySequencePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00282\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}})}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00286\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}})}
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00288\ \};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCharPropertyManagerPrivate}{QtCharPropertyManagerPrivate}};}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00293\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00295\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00296\ \ \ \ \ \mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00297\ \ \ \ \ \mbox{\hyperlink{classQtCharPropertyManager_aa6c27f911e78a9f008101019e31177cb}{\string~QtCharPropertyManager}}();}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ QChar\ \mbox{\hyperlink{classQtCharPropertyManager_aa2012f98f36dc09cc08f7bdeb9a37b24}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCharPropertyManager_a941031804f25b000cfa753621500ac05}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QChar\ \&val);}
+\DoxyCodeLine{00303\ Q\_SIGNALS:}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCharPropertyManager_af2e821059dd0826dd0449bf9d0f9259e}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QChar\ \&val);}
+\DoxyCodeLine{00305\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00306\ \ \ \ \ QString\ \mbox{\hyperlink{classQtCharPropertyManager_ab87ff1a4cba3166ea8b60d7ee3d49b39}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCharPropertyManager_a8fae86b8054daa3540ea7d4d751566da}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCharPropertyManager_a2950d4455971d201b55383c1a15367f7}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00309\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00310\ \ \ \ \ QScopedPointer<QtCharPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00311\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}})}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00315\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}})}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00317\ \};}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}};}
+\DoxyCodeLine{00320\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtLocalePropertyManagerPrivate}{QtLocalePropertyManagerPrivate}};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtLocalePropertyManager}{QtLocalePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00323\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00325\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{classQtLocalePropertyManager}{QtLocalePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00327\ \ \ \ \ \mbox{\hyperlink{classQtLocalePropertyManager_a359723d9b075fed5a414af242b0523de}{\string~QtLocalePropertyManager}}();}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ *\mbox{\hyperlink{classQtLocalePropertyManager_a782819c3e41588918ab2277434fb4309}{subEnumPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \ \ \ \ QLocale\ \mbox{\hyperlink{classQtLocalePropertyManager_ab4505d3d6be7f96a74f850153ba51fcb}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtLocalePropertyManager_acc0660fa1d6e9bb101b8617ad586f519}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QLocale\ \&val);}
+\DoxyCodeLine{00335\ Q\_SIGNALS:}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtLocalePropertyManager_a19237ddbcec233ecb7d68549398650bf}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QLocale\ \&val);}
+\DoxyCodeLine{00337\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00338\ \ \ \ \ QString\ \mbox{\hyperlink{classQtLocalePropertyManager_a718b7de8b6062e8db26f497f112972fb}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtLocalePropertyManager_a8d410af1bf7ad0815255d2ddc82cbea9}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtLocalePropertyManager_a3227e95f7fe61c7805d0b81fc1567001}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00341\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00342\ \ \ \ \ QScopedPointer<QtLocalePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00343\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtLocalePropertyManager}{QtLocalePropertyManager}})}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00347\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtLocalePropertyManager}{QtLocalePropertyManager}})}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00349\ \};}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtPointPropertyManagerPrivate}{QtPointPropertyManagerPrivate}};}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtPointPropertyManager}{QtPointPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00354\ \{}
+\DoxyCodeLine{00355\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00356\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00357\ \ \ \ \ \mbox{\hyperlink{classQtPointPropertyManager}{QtPointPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00358\ \ \ \ \ \mbox{\hyperlink{classQtPointPropertyManager_a20f3848178c58668308ca4d8eadce8d6}{\string~QtPointPropertyManager}}();}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *\mbox{\hyperlink{classQtPointPropertyManager_a077b7d7541a37ea7fd9d6d6b9977a6d2}{subIntPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ QPoint\ \mbox{\hyperlink{classQtPointPropertyManager_adf004edc0d8642d3ebdae0a6a67a86a7}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointPropertyManager_afcb764ec969c22f0131ac1151d669896}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QPoint\ \&val);}
+\DoxyCodeLine{00366\ Q\_SIGNALS:}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointPropertyManager_aa3a62c11c816a93684449ae1128ff933}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QPoint\ \&val);}
+\DoxyCodeLine{00368\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00369\ \ \ \ \ QString\ \mbox{\hyperlink{classQtPointPropertyManager_a707b232a1cb226a7a671aed2f9922111}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointPropertyManager_a22f431ee608e7398681e82c3556ca894}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointPropertyManager_a23d9ba03e3a7ed49b74d45ea97f917de}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00372\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00373\ \ \ \ \ QScopedPointer<QtPointPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00374\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtPointPropertyManager}{QtPointPropertyManager}})}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00378\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtPointPropertyManager}{QtPointPropertyManager}})}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00380\ \};}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtPointFPropertyManagerPrivate}{QtPointFPropertyManagerPrivate}};}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtPointFPropertyManager}{QtPointFPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00385\ \{}
+\DoxyCodeLine{00386\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00387\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00388\ \ \ \ \ \mbox{\hyperlink{classQtPointFPropertyManager}{QtPointFPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00389\ \ \ \ \ \mbox{\hyperlink{classQtPointFPropertyManager_ad90ca69a2a3346e8448e6528fce14e6d}{\string~QtPointFPropertyManager}}();}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ *\mbox{\hyperlink{classQtPointFPropertyManager_ad2acb9564ad38e6cd599fb9ce3e2dda5}{subDoublePropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \ \ QPointF\ \mbox{\hyperlink{classQtPointFPropertyManager_aa88254266e530bf2cefc4fb4a794efcb}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtPointFPropertyManager_adeec0f13dd7b0aede2d8b953d9edb41b}{decimals}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointFPropertyManager_a6a6c35723f2eb0598052a29078f78a18}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QPointF\ \&val);}
+\DoxyCodeLine{00398\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointFPropertyManager_a39cd901ee0bbfaafeba3b0b44b8a407e}{setDecimals}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00399\ Q\_SIGNALS:}
+\DoxyCodeLine{00400\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointFPropertyManager_a30f3c6bcce08c1d011bfa3fafe3bff10}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QPointF\ \&val);}
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointFPropertyManager_a34eb23ceff54c1326314446d5f5153c0}{decimalsChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00402\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00403\ \ \ \ \ QString\ \mbox{\hyperlink{classQtPointFPropertyManager_a9a8109bbbe73edff1b951943220e7917}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointFPropertyManager_a0be4c83b0e44be37ab38613cb74a3ff1}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtPointFPropertyManager_a57c63f6a2b8389af1bf42fe38fd6cb39}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00406\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00407\ \ \ \ \ QScopedPointer<QtPointFPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00408\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtPointFPropertyManager}{QtPointFPropertyManager}})}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00411\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00412\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtPointFPropertyManager}{QtPointFPropertyManager}})}
+\DoxyCodeLine{00413\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00414\ \};}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSizePropertyManagerPrivate}{QtSizePropertyManagerPrivate}};}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSizePropertyManager}{QtSizePropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00419\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00421\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00422\ \ \ \ \ \mbox{\hyperlink{classQtSizePropertyManager}{QtSizePropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00423\ \ \ \ \ \mbox{\hyperlink{classQtSizePropertyManager_aeb5cb986fb4d704554694f9cd7ce97bc}{\string~QtSizePropertyManager}}();}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *\mbox{\hyperlink{classQtSizePropertyManager_afcad6ae447b97ca4c89b1dae6322e37b}{subIntPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00427\ \ \ \ \ QSize\ \mbox{\hyperlink{classQtSizePropertyManager_a0b56be2d1966c47362f06c065fffdab3}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00428\ \ \ \ \ QSize\ \mbox{\hyperlink{classQtSizePropertyManager_ae61b1ffb7f661c24b2822e7382b7ad7c}{minimum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00429\ \ \ \ \ QSize\ \mbox{\hyperlink{classQtSizePropertyManager_a916ad228128c8fbfbb26a77ea52170b5}{maximum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00431\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_a61be90b7c37d4c5194cfc469f43b20a7}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSize\ \&val);}
+\DoxyCodeLine{00433\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_aa476ac5c003190f9d9c5fc2c6ad8ecde}{setMinimum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSize\ \&minVal);}
+\DoxyCodeLine{00434\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_ae61e1d1ace1aa09791d1eeed92489a80}{setMaximum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSize\ \&maxVal);}
+\DoxyCodeLine{00435\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_ae33ffb20e71a6c0d543650ce60ec529c}{setRange}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSize\ \&minVal,\ \textcolor{keyword}{const}\ QSize\ \&maxVal);}
+\DoxyCodeLine{00436\ Q\_SIGNALS:}
+\DoxyCodeLine{00437\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_a747c0437bcba80a49393f58489f9a9bc}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSize\ \&val);}
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_ade832b6b1b40c086b73771f8f8a3a5c4}{rangeChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSize\ \&minVal,\ \textcolor{keyword}{const}\ QSize\ \&maxVal);}
+\DoxyCodeLine{00439\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00440\ \ \ \ \ QString\ \mbox{\hyperlink{classQtSizePropertyManager_ae0120272e7cee5a0ff6ec71d29fbc8df}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00441\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_a8e5c196baae62a252a1d8e74d266c6ab}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00442\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePropertyManager_a439d03039ff6d08c4c4eb7853e67c564}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00443\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00444\ \ \ \ \ QScopedPointer<QtSizePropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00445\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtSizePropertyManager}{QtSizePropertyManager}})}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00449\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtSizePropertyManager}{QtSizePropertyManager}})}
+\DoxyCodeLine{00450\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00451\ \};}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSizeFPropertyManagerPrivate}{QtSizeFPropertyManagerPrivate}};}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSizeFPropertyManager}{QtSizeFPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00456\ \{}
+\DoxyCodeLine{00457\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00458\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00459\ \ \ \ \ \mbox{\hyperlink{classQtSizeFPropertyManager}{QtSizeFPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00460\ \ \ \ \ \mbox{\hyperlink{classQtSizeFPropertyManager_a10a71ba194f58f07e9cd06e16e6f0024}{\string~QtSizeFPropertyManager}}();}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \ \ \ \ \mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ *\mbox{\hyperlink{classQtSizeFPropertyManager_aa2755cddb54590a0456ba60b46164595}{subDoublePropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ \ \ \ \ QSizeF\ \mbox{\hyperlink{classQtSizeFPropertyManager_a07515ab528d87d92de48943bc6387f9c}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00465\ \ \ \ \ QSizeF\ \mbox{\hyperlink{classQtSizeFPropertyManager_a8edf1fa7db3625e0649976910a6365c3}{minimum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00466\ \ \ \ \ QSizeF\ \mbox{\hyperlink{classQtSizeFPropertyManager_a638c23673d46f36cca25ef923083a0bb}{maximum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00467\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtSizeFPropertyManager_a6f4f4dbdcc0a4ee70747d99e9180a027}{decimals}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00469\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00470\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_a6b3169a7538a5ddbdd5ab4d8dc6b797e}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizeF\ \&val);}
+\DoxyCodeLine{00471\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_ac5a3c8115053f0726d5e4fa00ac5d20d}{setMinimum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizeF\ \&minVal);}
+\DoxyCodeLine{00472\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_adcbfce551d01f723c30bd27f713ed137}{setMaximum}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizeF\ \&maxVal);}
+\DoxyCodeLine{00473\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_aa5c648cc2c6cf30eb5702d398798f0e4}{setRange}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizeF\ \&minVal,\ \textcolor{keyword}{const}\ QSizeF\ \&maxVal);}
+\DoxyCodeLine{00474\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_a532ae68c09acc7544b8ea8000bf72d0c}{setDecimals}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00475\ Q\_SIGNALS:}
+\DoxyCodeLine{00476\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_a31e5636413f3dadcc13bf90f4b937704}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizeF\ \&val);}
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_ae32b4931e4ab2e95b448b7ecb4befd17}{rangeChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizeF\ \&minVal,\ \textcolor{keyword}{const}\ QSizeF\ \&maxVal);}
+\DoxyCodeLine{00478\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_afd7de1a30a90b2d9f0ccc04b45275e9d}{decimalsChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00479\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00480\ \ \ \ \ QString\ \mbox{\hyperlink{classQtSizeFPropertyManager_a82b58375b81673c3de41e93eb52e3d1e}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00481\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_a74e42a2f369696614bd943143e66a37a}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00482\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizeFPropertyManager_aabb493e0b3ef13b7a3510cc1b6aae612}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00483\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00484\ \ \ \ \ QScopedPointer<QtSizeFPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00485\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtSizeFPropertyManager}{QtSizeFPropertyManager}})}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00488\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00489\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtSizeFPropertyManager}{QtSizeFPropertyManager}})}
+\DoxyCodeLine{00490\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00491\ \};}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtRectPropertyManagerPrivate}{QtRectPropertyManagerPrivate}};}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtRectPropertyManager}{QtRectPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00496\ \{}
+\DoxyCodeLine{00497\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00498\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00499\ \ \ \ \ \mbox{\hyperlink{classQtRectPropertyManager}{QtRectPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00500\ \ \ \ \ \mbox{\hyperlink{classQtRectPropertyManager_a36e60e2235b74b5b9b7e48db7e6b6170}{\string~QtRectPropertyManager}}();}
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00502\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *\mbox{\hyperlink{classQtRectPropertyManager_a2ec4d8f527f63158c78c0284e2243a07}{subIntPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \ \ QRect\ \mbox{\hyperlink{classQtRectPropertyManager_a05f3353a53298c3ad9d7f5ed6f5a5d85}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00505\ \ \ \ \ QRect\ \mbox{\hyperlink{classQtRectPropertyManager_a5d5d2c25968ecc66622f67ca235a4b95}{constraint}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00508\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectPropertyManager_a407029ec29077e974452c1a3318cb261}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRect\ \&val);}
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectPropertyManager_a1c3f251de141136dbd5feafd485652b1}{setConstraint}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRect\ \&\mbox{\hyperlink{classQtRectPropertyManager_a5d5d2c25968ecc66622f67ca235a4b95}{constraint}});}
+\DoxyCodeLine{00510\ Q\_SIGNALS:}
+\DoxyCodeLine{00511\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectPropertyManager_af1aff19ae99196778d6b545ba01908f0}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRect\ \&val);}
+\DoxyCodeLine{00512\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectPropertyManager_a4de6d6274fb1124a2d8f71e3436645e0}{constraintChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRect\ \&\mbox{\hyperlink{classQtRectPropertyManager_a5d5d2c25968ecc66622f67ca235a4b95}{constraint}});}
+\DoxyCodeLine{00513\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00514\ \ \ \ \ QString\ \mbox{\hyperlink{classQtRectPropertyManager_a4c0dce107645340fee0e322f599e8b65}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectPropertyManager_a2ad22d9631acd483b14a8ee755c90b10}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00516\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectPropertyManager_a827d74c9d62138a13f5014e48bd6458c}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00517\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00518\ \ \ \ \ QScopedPointer<QtRectPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00519\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtRectPropertyManager}{QtRectPropertyManager}})}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00523\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtRectPropertyManager}{QtRectPropertyManager}})}
+\DoxyCodeLine{00524\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00525\ \};}
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00527\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtRectFPropertyManagerPrivate}{QtRectFPropertyManagerPrivate}};}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00529\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtRectFPropertyManager}{QtRectFPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00530\ \{}
+\DoxyCodeLine{00531\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00532\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00533\ \ \ \ \ \mbox{\hyperlink{classQtRectFPropertyManager}{QtRectFPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00534\ \ \ \ \ \mbox{\hyperlink{classQtRectFPropertyManager_aeb1109d39c8d19ebfdf114a12a172f94}{\string~QtRectFPropertyManager}}();}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \ \ \mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ *\mbox{\hyperlink{classQtRectFPropertyManager_a1d8882a7a2e607088035dfd87295a763}{subDoublePropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \ \ \ \ QRectF\ \mbox{\hyperlink{classQtRectFPropertyManager_a07e0e252751e20abc43733e939168e23}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00539\ \ \ \ \ QRectF\ \mbox{\hyperlink{classQtRectFPropertyManager_a07ce223a4fee13b0e821b8fe5ced3fcf}{constraint}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00540\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtRectFPropertyManager_a4badeecb38cdba50f9fb2f79154ad649}{decimals}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00543\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_afa348e09778f9490586e13135b5843f1}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRectF\ \&val);}
+\DoxyCodeLine{00544\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_ad287f58f48260a00de5d29e7f6252c53}{setConstraint}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRectF\ \&\mbox{\hyperlink{classQtRectFPropertyManager_a07ce223a4fee13b0e821b8fe5ced3fcf}{constraint}});}
+\DoxyCodeLine{00545\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_a9a420c1499f1d26d4449da3cc77a5e17}{setDecimals}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00546\ Q\_SIGNALS:}
+\DoxyCodeLine{00547\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_a865fc49f5579fd737103dc3c7fd4ea48}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRectF\ \&val);}
+\DoxyCodeLine{00548\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_a0761a9cb651208ea3a4c907ade062ff1}{constraintChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QRectF\ \&\mbox{\hyperlink{classQtRectFPropertyManager_a07ce223a4fee13b0e821b8fe5ced3fcf}{constraint}});}
+\DoxyCodeLine{00549\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_a811ce1d168d102a7450e0bd830bf124e}{decimalsChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ prec);}
+\DoxyCodeLine{00550\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00551\ \ \ \ \ QString\ \mbox{\hyperlink{classQtRectFPropertyManager_a6ca25796efaf507251280e4877ef1bf2}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00552\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_a57457feebf1b50fb5e8b4d5c36ca93b4}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00553\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtRectFPropertyManager_a4479ea6535ca2afa7f8f70d05873593a}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00554\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00555\ \ \ \ \ QScopedPointer<QtRectFPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00556\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtRectFPropertyManager}{QtRectFPropertyManager}})}
+\DoxyCodeLine{00557\ }
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00560\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtRectFPropertyManager}{QtRectFPropertyManager}})}
+\DoxyCodeLine{00561\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00562\ \};}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00564\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtEnumPropertyManagerPrivate}{QtEnumPropertyManagerPrivate}};}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00567\ \{}
+\DoxyCodeLine{00568\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00569\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00570\ \ \ \ \ \mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00571\ \ \ \ \ \mbox{\hyperlink{classQtEnumPropertyManager_af44367b7953cf373b05b462759e390e1}{\string~QtEnumPropertyManager}}();}
+\DoxyCodeLine{00572\ }
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtEnumPropertyManager_afe3d820af367097cc630fa03a0cb31de}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00574\ \ \ \ \ QStringList\ \mbox{\hyperlink{classQtEnumPropertyManager_a5232490499e582da590e6290b1da0441}{enumNames}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00575\ \ \ \ \ QMap<int,\ QIcon>\ \mbox{\hyperlink{classQtEnumPropertyManager_a42526b0c4fa84cc14b3b5f146415f030}{enumIcons}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_a2687a8ff63fdfe89290f330aa9f71ccb}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00579\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_a6cdbee64ff4e2174e68e8a52acfd6a49}{setEnumNames}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QStringList\ \&names);}
+\DoxyCodeLine{00580\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_a14a47ec5109c7a333cb83971aeb8f835}{setEnumIcons}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QMap<int,\ QIcon>\ \&icons);}
+\DoxyCodeLine{00581\ Q\_SIGNALS:}
+\DoxyCodeLine{00582\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_aa18c16533e9d538faa78411a4d1b3191}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00583\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_a479c11e32a02eda3461e9b573c79dde5}{enumNamesChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QStringList\ \&names);}
+\DoxyCodeLine{00584\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_a43e80c877ef4509d21dbb8a516d186e4}{enumIconsChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QMap<int,\ QIcon>\ \&icons);}
+\DoxyCodeLine{00585\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00586\ \ \ \ \ QString\ \mbox{\hyperlink{classQtEnumPropertyManager_a5b8d23b870a02dcbe76d6470caed625d}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00587\ \ \ \ \ QIcon\ \mbox{\hyperlink{classQtEnumPropertyManager_a686714f470801de55a8c98ed8a44137c}{valueIcon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00588\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_a8e1853c29b035a078c4e3a1ddc530468}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00589\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtEnumPropertyManager_aacd91a2ff642d30b4aa627005760f551}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00590\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00591\ \ \ \ \ QScopedPointer<QtEnumPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00592\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}})}
+\DoxyCodeLine{00593\ }
+\DoxyCodeLine{00594\ }
+\DoxyCodeLine{00595\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00596\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}})}
+\DoxyCodeLine{00597\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00598\ \};}
+\DoxyCodeLine{00599\ }
+\DoxyCodeLine{00600\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtFlagPropertyManagerPrivate}{QtFlagPropertyManagerPrivate}};}
+\DoxyCodeLine{00601\ }
+\DoxyCodeLine{00602\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtFlagPropertyManager}{QtFlagPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00603\ \{}
+\DoxyCodeLine{00604\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00605\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00606\ \ \ \ \ \mbox{\hyperlink{classQtFlagPropertyManager}{QtFlagPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00607\ \ \ \ \ \mbox{\hyperlink{classQtFlagPropertyManager_a25a5f9cd0f8d88bdab5c5b20bc0d890d}{\string~QtFlagPropertyManager}}();}
+\DoxyCodeLine{00608\ }
+\DoxyCodeLine{00609\ \ \ \ \ \mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}\ *\mbox{\hyperlink{classQtFlagPropertyManager_abb4ce53b63685f6db527b5292690dacb}{subBoolPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00610\ }
+\DoxyCodeLine{00611\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQtFlagPropertyManager_aec771a278ac5a2f6ef87cdc7170eb198}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00612\ \ \ \ \ QStringList\ \mbox{\hyperlink{classQtFlagPropertyManager_aeb1ef841793f1c99b6dca9eaa894f124}{flagNames}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00614\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00615\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFlagPropertyManager_aad7c51a700c985b1bbad8aa6cfcbf22a}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00616\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFlagPropertyManager_ac9a69f02f5b95265dde11182b22584b1}{setFlagNames}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QStringList\ \&names);}
+\DoxyCodeLine{00617\ Q\_SIGNALS:}
+\DoxyCodeLine{00618\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFlagPropertyManager_ac503903cd623bd5b2a02883b490b0859}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00619\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFlagPropertyManager_a5392ae06be8dee42100e8a159dadd135}{flagNamesChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QStringList\ \&names);}
+\DoxyCodeLine{00620\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00621\ \ \ \ \ QString\ \mbox{\hyperlink{classQtFlagPropertyManager_a92ff5a45bf6768a717a4b8900fda472b}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00622\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFlagPropertyManager_ace567e66777f5f54889b01bbbba3eedb}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00623\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFlagPropertyManager_a3215aeaa683f4123e50143da2338fd23}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00624\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00625\ \ \ \ \ QScopedPointer<QtFlagPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00626\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtFlagPropertyManager}{QtFlagPropertyManager}})}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00629\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00630\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtFlagPropertyManager}{QtFlagPropertyManager}})}
+\DoxyCodeLine{00631\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00632\ \};}
+\DoxyCodeLine{00633\ }
+\DoxyCodeLine{00634\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSizePolicyPropertyManagerPrivate}{QtSizePolicyPropertyManagerPrivate}};}
+\DoxyCodeLine{00635\ }
+\DoxyCodeLine{00636\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSizePolicyPropertyManager}{QtSizePolicyPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00637\ \{}
+\DoxyCodeLine{00638\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00639\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00640\ \ \ \ \ \mbox{\hyperlink{classQtSizePolicyPropertyManager}{QtSizePolicyPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00641\ \ \ \ \ \mbox{\hyperlink{classQtSizePolicyPropertyManager_a9a160e23a9a49880648c11c03dc6a5a3}{\string~QtSizePolicyPropertyManager}}();}
+\DoxyCodeLine{00642\ }
+\DoxyCodeLine{00643\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *\mbox{\hyperlink{classQtSizePolicyPropertyManager_a24317ef553f63e8a7573f75db58acc42}{subIntPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00644\ \ \ \ \ \mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ *\mbox{\hyperlink{classQtSizePolicyPropertyManager_a933a7cea4437c635a6013f3e4ca335fc}{subEnumPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00645\ }
+\DoxyCodeLine{00646\ \ \ \ \ QSizePolicy\ \mbox{\hyperlink{classQtSizePolicyPropertyManager_adbcd9a506f837a17129fed82385c99ac}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00647\ }
+\DoxyCodeLine{00648\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00649\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePolicyPropertyManager_a072ee2c346fc0097ec01adb1ac156cbe}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizePolicy\ \&val);}
+\DoxyCodeLine{00650\ Q\_SIGNALS:}
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePolicyPropertyManager_a1959382958a9b966a590607804d81644}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QSizePolicy\ \&val);}
+\DoxyCodeLine{00652\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00653\ \ \ \ \ QString\ \mbox{\hyperlink{classQtSizePolicyPropertyManager_af3ff5af013eb38c263828a2e8cebbc84}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00654\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePolicyPropertyManager_ad3806627b3be5d933fb9608c41b7a954}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00655\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtSizePolicyPropertyManager_aa384a16e68d5078c0ff355c9af5f9271}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00656\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00657\ \ \ \ \ QScopedPointer<QtSizePolicyPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00658\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtSizePolicyPropertyManager}{QtSizePolicyPropertyManager}})}
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00660\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00661\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtSizePolicyPropertyManager}{QtSizePolicyPropertyManager}})}
+\DoxyCodeLine{00662\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00663\ \};}
+\DoxyCodeLine{00664\ }
+\DoxyCodeLine{00665\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtFontPropertyManagerPrivate}{QtFontPropertyManagerPrivate}};}
+\DoxyCodeLine{00666\ }
+\DoxyCodeLine{00667\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00668\ \{}
+\DoxyCodeLine{00669\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00670\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00671\ \ \ \ \ \mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00672\ \ \ \ \ \mbox{\hyperlink{classQtFontPropertyManager_aed24c0ee11c71a262af6d0f7c71231be}{\string~QtFontPropertyManager}}();}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00674\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *\mbox{\hyperlink{classQtFontPropertyManager_aac9078b106ec0c9da1314799b180c79c}{subIntPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00675\ \ \ \ \ \mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ *\mbox{\hyperlink{classQtFontPropertyManager_a7d37a26e6512b1173aa4170b3fd122b5}{subEnumPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00676\ \ \ \ \ \mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}\ *\mbox{\hyperlink{classQtFontPropertyManager_a2cf40958f8bd8888cad1e536f371c243}{subBoolPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00677\ }
+\DoxyCodeLine{00678\ \ \ \ \ QFont\ \mbox{\hyperlink{classQtFontPropertyManager_a0b522a984fe7138cdebb28205c0c4efc}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00680\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00681\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFontPropertyManager_a3c6874b1134907b493b26fe8d9b42a64}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QFont\ \&val);}
+\DoxyCodeLine{00682\ Q\_SIGNALS:}
+\DoxyCodeLine{00683\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFontPropertyManager_a6e316ac371b5b03f203b3a0581be3c3a}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QFont\ \&val);}
+\DoxyCodeLine{00684\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00685\ \ \ \ \ QString\ \mbox{\hyperlink{classQtFontPropertyManager_a87077635f3ccc34fac3b4b68076ffe8a}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00686\ \ \ \ \ QIcon\ \mbox{\hyperlink{classQtFontPropertyManager_a428560efd30a012c91607190d85122e5}{valueIcon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00687\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFontPropertyManager_a1d95bb48f6f58fd42cd3ba1e4830c6fd}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00688\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtFontPropertyManager_a031738936e4c20a5c4cf63b97b4f0f1b}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00689\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00690\ \ \ \ \ QScopedPointer<QtFontPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00691\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}})}
+\DoxyCodeLine{00692\ }
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}})}
+\DoxyCodeLine{00696\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00697\ \};}
+\DoxyCodeLine{00698\ }
+\DoxyCodeLine{00699\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtColorPropertyManagerPrivate}{QtColorPropertyManagerPrivate}};}
+\DoxyCodeLine{00700\ }
+\DoxyCodeLine{00701\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00702\ \{}
+\DoxyCodeLine{00703\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00704\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00705\ \ \ \ \ \mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00706\ \ \ \ \ \mbox{\hyperlink{classQtColorPropertyManager_a365eb72e5df8f25ea526e4f8ea6bfd65}{\string~QtColorPropertyManager}}();}
+\DoxyCodeLine{00707\ }
+\DoxyCodeLine{00708\ \ \ \ \ \mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *\mbox{\hyperlink{classQtColorPropertyManager_ac81788c315cb574e71014890aefc617b}{subIntPropertyManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00709\ }
+\DoxyCodeLine{00710\ \ \ \ \ QColor\ \mbox{\hyperlink{classQtColorPropertyManager_adf2b31299470663a16ceecfd51c709de}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00712\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00713\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtColorPropertyManager_ab18ff6b769efadd18ec2f56b5ec396bf}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QColor\ \&val);}
+\DoxyCodeLine{00714\ Q\_SIGNALS:}
+\DoxyCodeLine{00715\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtColorPropertyManager_ad13c4dd85cb2e9f9b269f54a09781969}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QColor\ \&val);}
+\DoxyCodeLine{00716\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00717\ \ \ \ \ QString\ \mbox{\hyperlink{classQtColorPropertyManager_ae93b7beadabdb5f5c2353d22ed733fba}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00718\ \ \ \ \ QIcon\ \mbox{\hyperlink{classQtColorPropertyManager_ab4b3b9454b9054d96ff54591f4931cf6}{valueIcon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00719\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtColorPropertyManager_a48fb089da502c16099635804f99ece21}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00720\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtColorPropertyManager_ab7a18aac0d3ac10120874fcc3bf47e62}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00721\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00722\ \ \ \ \ QScopedPointer<QtColorPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00723\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}})}
+\DoxyCodeLine{00724\ }
+\DoxyCodeLine{00725\ }
+\DoxyCodeLine{00726\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}})}
+\DoxyCodeLine{00728\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00729\ \};}
+\DoxyCodeLine{00730\ }
+\DoxyCodeLine{00731\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCursorPropertyManagerPrivate}{QtCursorPropertyManagerPrivate}};}
+\DoxyCodeLine{00732\ }
+\DoxyCodeLine{00733\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractPropertyManager}{QtAbstractPropertyManager}}}
+\DoxyCodeLine{00734\ \{}
+\DoxyCodeLine{00735\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00736\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00737\ \ \ \ \ \mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00738\ \ \ \ \ \mbox{\hyperlink{classQtCursorPropertyManager_a91d6033104a11a297e9dfa7b1cf1ad7a}{\string~QtCursorPropertyManager}}();}
+\DoxyCodeLine{00739\ }
+\DoxyCodeLine{00740\ \textcolor{preprocessor}{\#ifndef\ QT\_NO\_CURSOR}}
+\DoxyCodeLine{00741\ \ \ \ \ QCursor\ \mbox{\hyperlink{classQtCursorPropertyManager_aaf636f967fbf2cc8f9b9fa17e0369b6a}{value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00742\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00743\ }
+\DoxyCodeLine{00744\ \textcolor{keyword}{public}\ Q\_SLOTS:}
+\DoxyCodeLine{00745\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCursorPropertyManager_a0079c81ab012781d1d8f495ed9987a2d}{setValue}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QCursor\ \&val);}
+\DoxyCodeLine{00746\ Q\_SIGNALS:}
+\DoxyCodeLine{00747\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCursorPropertyManager_aa770949898717977040fc1bebde78719}{valueChanged}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,\ \textcolor{keyword}{const}\ QCursor\ \&val);}
+\DoxyCodeLine{00748\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00749\ \ \ \ \ QString\ \mbox{\hyperlink{classQtCursorPropertyManager_a2fc285a73edad3a11a512a6a539e79cc}{valueText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00750\ \ \ \ \ QIcon\ \mbox{\hyperlink{classQtCursorPropertyManager_a80078a19054013f567899068f829c74b}{valueIcon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00751\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCursorPropertyManager_ae7fe7ed5ecf101ba8ea037917f3628e3}{initializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00752\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQtCursorPropertyManager_a9976b1f94461d3566aff699a27ff682b}{uninitializeProperty}}(\mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00753\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00754\ \ \ \ \ QScopedPointer<QtCursorPropertyManagerPrivate>\ d\_ptr;}
+\DoxyCodeLine{00755\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}})}
+\DoxyCodeLine{00756\ }
+\DoxyCodeLine{00757\ }
+\DoxyCodeLine{00758\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}})}
+\DoxyCodeLine{00760\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00761\ \};}
+\DoxyCodeLine{00762\ }
+\DoxyCodeLine{00763\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00764\ }
+\DoxyCodeLine{00765\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

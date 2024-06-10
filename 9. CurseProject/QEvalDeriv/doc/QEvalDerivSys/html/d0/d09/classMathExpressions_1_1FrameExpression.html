@@ -1,0 +1,793 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>QEvalDerivSys: Класс MathExpressions::FrameExpression</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">QEvalDerivSys<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Система вычисления производных</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MathExpressions</b></li><li class="navelem"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html">FrameExpression</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="../../dd/dc4/classMathExpressions_1_1FrameExpression-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс MathExpressions::FrameExpression</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:MathExpressions::FrameExpression:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d4e/classMathExpressions_1_1FrameExpression__inherit__graph.png" border="0" usemap="#aMathExpressions_1_1FrameExpression_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMathExpressions_1_1FrameExpression_inherit__map" id="aMathExpressions_1_1FrameExpression_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,941,251,1447"/>
+<area shape="rect" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html" title=" " alt="" coords="20,613,236,893"/>
+<area shape="poly" title=" " alt="" coords="131,907,131,941,125,941,125,907"/>
+<area shape="rect" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html" title=" " alt="" coords="35,5,221,565"/>
+<area shape="poly" title=" " alt="" coords="131,579,131,613,125,613,125,579"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса MathExpressions::FrameExpression:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d1f/classMathExpressions_1_1FrameExpression__coll__graph.png" border="0" usemap="#aMathExpressions_1_1FrameExpression_coll__map" alt="Collaboration graph"/></div>
+<map name="aMathExpressions_1_1FrameExpression_coll__map" id="aMathExpressions_1_1FrameExpression_coll__map">
+<area shape="rect" title=" " alt="" coords="5,941,251,1447"/>
+<area shape="rect" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html" title=" " alt="" coords="20,613,236,893"/>
+<area shape="poly" title=" " alt="" coords="131,907,131,941,125,941,125,907"/>
+<area shape="rect" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html" title=" " alt="" coords="35,5,221,565"/>
+<area shape="poly" title=" " alt="" coords="131,579,131,613,125,613,125,579"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aef534406f6aa21fb35701a53ca8d90e7" id="r_aef534406f6aa21fb35701a53ca8d90e7"><td class="memItemLeft" align="right" valign="top"><a id="aef534406f6aa21fb35701a53ca8d90e7" name="aef534406f6aa21fb35701a53ca8d90e7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FrameExpression</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression)</td></tr>
+<tr class="separator:aef534406f6aa21fb35701a53ca8d90e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a7b0340ea3890d4479232aef064d7a" id="r_aa9a7b0340ea3890d4479232aef064d7a"><td class="memItemLeft" align="right" valign="top"><a id="aa9a7b0340ea3890d4479232aef064d7a" name="aa9a7b0340ea3890d4479232aef064d7a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>frameWidth</b> () const</td></tr>
+<tr class="separator:aa9a7b0340ea3890d4479232aef064d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc208bd718c4ff7076e86c9cbfb1ecb" id="r_a8fc208bd718c4ff7076e86c9cbfb1ecb"><td class="memItemLeft" align="right" valign="top"><a id="a8fc208bd718c4ff7076e86c9cbfb1ecb" name="a8fc208bd718c4ff7076e86c9cbfb1ecb"></a>
+Qt::PenStyle&#160;</td><td class="memItemRight" valign="bottom"><b>frameStyle</b> () const</td></tr>
+<tr class="separator:a8fc208bd718c4ff7076e86c9cbfb1ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa37a3b79829cee5a48faa2760b7fc28" id="r_afa37a3b79829cee5a48faa2760b7fc28"><td class="memItemLeft" align="right" valign="top"><a id="afa37a3b79829cee5a48faa2760b7fc28" name="afa37a3b79829cee5a48faa2760b7fc28"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrameWidth</b> (int)</td></tr>
+<tr class="separator:afa37a3b79829cee5a48faa2760b7fc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168d2a0ea080a48b90a36d98b2a34c54" id="r_a168d2a0ea080a48b90a36d98b2a34c54"><td class="memItemLeft" align="right" valign="top"><a id="a168d2a0ea080a48b90a36d98b2a34c54" name="a168d2a0ea080a48b90a36d98b2a34c54"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrameStyle</b> (Qt::PenStyle)</td></tr>
+<tr class="separator:a168d2a0ea080a48b90a36d98b2a34c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d7466f571b31188a95fea11d244197" id="r_a15d7466f571b31188a95fea11d244197"><td class="memItemLeft" align="right" valign="top">QPen&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a15d7466f571b31188a95fea11d244197">pen</a> () const override</td></tr>
+<tr class="separator:a15d7466f571b31188a95fea11d244197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c76d490bd1b3c480301cfa2ecff6165" id="r_a9c76d490bd1b3c480301cfa2ecff6165"><td class="memItemLeft" align="right" valign="top">QBrush&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a9c76d490bd1b3c480301cfa2ecff6165">brush</a> () const override</td></tr>
+<tr class="separator:a9c76d490bd1b3c480301cfa2ecff6165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d850b415feb1032518e8b5743b5c5b" id="r_aa5d850b415feb1032518e8b5743b5c5b"><td class="memItemLeft" align="right" valign="top">MultiplicationFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#aa5d850b415feb1032518e8b5743b5c5b">multiplicationFlags</a> () const override</td></tr>
+<tr class="separator:aa5d850b415feb1032518e8b5743b5c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9ca94854ce6117cd6b15d607bfad16" id="r_abf9ca94854ce6117cd6b15d607bfad16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#abf9ca94854ce6117cd6b15d607bfad16">isArgNeedBrackets</a> () const override</td></tr>
+<tr class="separator:abf9ca94854ce6117cd6b15d607bfad16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5519d1c0c4338f817c0b182c2bfd2d0" id="r_ab5519d1c0c4338f817c0b182c2bfd2d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#ab5519d1c0c4338f817c0b182c2bfd2d0">isNeedBrackets</a> () const override</td></tr>
+<tr class="separator:ab5519d1c0c4338f817c0b182c2bfd2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMathExpressions_1_1AbstractParentExpression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMathExpressions_1_1AbstractParentExpression')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html">MathExpressions::AbstractParentExpression</a></td></tr>
+<tr class="memitem:a45862c46ac1716dcdea8d128852a2f8f inherit pub_methods_classMathExpressions_1_1AbstractParentExpression" id="r_a45862c46ac1716dcdea8d128852a2f8f"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSon</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> son)</td></tr>
+<tr class="separator:a45862c46ac1716dcdea8d128852a2f8f inherit pub_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bf311c1334fa8f72315a3d7389bc94 inherit pub_methods_classMathExpressions_1_1AbstractParentExpression" id="r_ac0bf311c1334fa8f72315a3d7389bc94"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>son</b> () const</td></tr>
+<tr class="separator:ac0bf311c1334fa8f72315a3d7389bc94 inherit pub_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0277b7b067d50fd5f0a00eaa06326898 inherit pub_methods_classMathExpressions_1_1AbstractParentExpression" id="r_a0277b7b067d50fd5f0a00eaa06326898"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasSon</b> () const</td></tr>
+<tr class="separator:a0277b7b067d50fd5f0a00eaa06326898 inherit pub_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c8eac86241e58efad7cbd907ca458d inherit pub_methods_classMathExpressions_1_1AbstractParentExpression" id="r_a89c8eac86241e58efad7cbd907ca458d"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cutOffSun</b> ()</td></tr>
+<tr class="separator:a89c8eac86241e58efad7cbd907ca458d inherit pub_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMathExpressions_1_1AbstractExpression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMathExpressions_1_1AbstractExpression')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a></td></tr>
+<tr class="memitem:a56320c7c2f1082b82b37c991c59ac320 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a56320c7c2f1082b82b37c991c59ac320"><td class="memItemLeft" align="right" valign="top">
+QPaintDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>paintDevice</b> () const</td></tr>
+<tr class="separator:a56320c7c2f1082b82b37c991c59ac320 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9416bf3ed375d7ce9f11dfcdd1aa6705 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a9416bf3ed375d7ce9f11dfcdd1aa6705"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> () const</td></tr>
+<tr class="separator:a9416bf3ed375d7ce9f11dfcdd1aa6705 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2213c78acea4779394255b984e20811d inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a2213c78acea4779394255b984e20811d"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> () const</td></tr>
+<tr class="separator:a2213c78acea4779394255b984e20811d inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f8b540a61a9a7fed90c329b6188e65 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a97f8b540a61a9a7fed90c329b6188e65"><td class="memItemLeft" align="right" valign="top">
+virtual QFont&#160;</td><td class="memItemRight" valign="bottom"><b>font</b> () const</td></tr>
+<tr class="separator:a97f8b540a61a9a7fed90c329b6188e65 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4bbd51b0a5c07ebbec82c9ef1387de inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_ada4bbd51b0a5c07ebbec82c9ef1387de"><td class="memItemLeft" align="right" valign="top">
+QColor&#160;</td><td class="memItemRight" valign="bottom"><b>color</b> () const</td></tr>
+<tr class="separator:ada4bbd51b0a5c07ebbec82c9ef1387de inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4411ca121c4dfd9f414364fb4d94fa1f inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a4411ca121c4dfd9f414364fb4d94fa1f"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasNext</b> () const</td></tr>
+<tr class="separator:a4411ca121c4dfd9f414364fb4d94fa1f inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca95baa621363e3ffb430fea87294d04 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_aca95baa621363e3ffb430fea87294d04"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasParent</b> () const</td></tr>
+<tr class="separator:aca95baa621363e3ffb430fea87294d04 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbc2b3aab9059d2ac7d36679896f74b inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_adcbc2b3aab9059d2ac7d36679896f74b"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> () const</td></tr>
+<tr class="separator:adcbc2b3aab9059d2ac7d36679896f74b inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174e3ff3a419bc73c87f05ec1a0e03ba inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a174e3ff3a419bc73c87f05ec1a0e03ba"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> () const</td></tr>
+<tr class="separator:a174e3ff3a419bc73c87f05ec1a0e03ba inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f0fc7df5ca2c3196ef81ee667e71a6 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_ab9f0fc7df5ca2c3196ef81ee667e71a6"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ascent</b> () const</td></tr>
+<tr class="separator:ab9f0fc7df5ca2c3196ef81ee667e71a6 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d61f1ce0213da87cf8e06ae02621560 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a6d61f1ce0213da87cf8e06ae02621560"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>descent</b> () const</td></tr>
+<tr class="separator:a6d61f1ce0213da87cf8e06ae02621560 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8061b390402437e25753a23f7302c4e inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_af8061b390402437e25753a23f7302c4e"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>superscriptX</b> () const</td></tr>
+<tr class="separator:af8061b390402437e25753a23f7302c4e inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1dda5dca29b1636d7044960843df32f inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_ad1dda5dca29b1636d7044960843df32f"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>superscriptY</b> () const</td></tr>
+<tr class="separator:ad1dda5dca29b1636d7044960843df32f inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078f545fd7303840eac005d00112887e inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a078f545fd7303840eac005d00112887e"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>subscriptX</b> () const</td></tr>
+<tr class="separator:a078f545fd7303840eac005d00112887e inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f914a5e4cb16f9659ab68b414efa365 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a0f914a5e4cb16f9659ab68b414efa365"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>subscriptY</b> () const</td></tr>
+<tr class="separator:a0f914a5e4cb16f9659ab68b414efa365 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89f9afc12b9e736081420089db2a90f inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_ac89f9afc12b9e736081420089db2a90f"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capDXLeft</b> () const</td></tr>
+<tr class="separator:ac89f9afc12b9e736081420089db2a90f inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94241ba18f8df1d0d3974a08f0615736 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a94241ba18f8df1d0d3974a08f0615736"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capDXRight</b> () const</td></tr>
+<tr class="separator:a94241ba18f8df1d0d3974a08f0615736 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13742477ba910c776bfea9f2c21c6f3 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_aa13742477ba910c776bfea9f2c21c6f3"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capDY</b> () const</td></tr>
+<tr class="separator:aa13742477ba910c776bfea9f2c21c6f3 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3765670faa002353f784eb188719ccf8 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a3765670faa002353f784eb188719ccf8"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (int x, int y, Qt::Alignment alignment) const</td></tr>
+<tr class="separator:a3765670faa002353f784eb188719ccf8 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71de16a61a82ea8fc625a8f9ca31bfee inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a71de16a61a82ea8fc625a8f9ca31bfee"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (QPainter *painter, int x, int y, Qt::Alignment alignment) const</td></tr>
+<tr class="separator:a71de16a61a82ea8fc625a8f9ca31bfee inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30b000cf22128fe6a6dfda9bba79c60 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_ad30b000cf22128fe6a6dfda9bba79c60"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPaintDevice</b> (QPaintDevice *paintDevice)</td></tr>
+<tr class="separator:ad30b000cf22128fe6a6dfda9bba79c60 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec893627d49d126b2f9768f4e018a8e9 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_aec893627d49d126b2f9768f4e018a8e9"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNext</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> next)</td></tr>
+<tr class="separator:aec893627d49d126b2f9768f4e018a8e9 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9085736d287b911d70a7ba0eed2c9c4e inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a9085736d287b911d70a7ba0eed2c9c4e"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFont</b> (const QFont &amp;font)</td></tr>
+<tr class="separator:a9085736d287b911d70a7ba0eed2c9c4e inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87006f89983db1ecbbcee882d773a5b5 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a87006f89983db1ecbbcee882d773a5b5"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (const QColor &amp;color)</td></tr>
+<tr class="separator:a87006f89983db1ecbbcee882d773a5b5 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db8bf798a8176c5be458cd63fbd48a5 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a2db8bf798a8176c5be458cd63fbd48a5"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addNext</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> next)</td></tr>
+<tr class="separator:a2db8bf798a8176c5be458cd63fbd48a5 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3812508fe328f135c65b77c0a8107b89 inherit pub_methods_classMathExpressions_1_1AbstractExpression" id="r_a3812508fe328f135c65b77c0a8107b89"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cutOff</b> ()</td></tr>
+<tr class="separator:a3812508fe328f135c65b77c0a8107b89 inherit pub_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:ab758e2839e0ecba66dffb56849cfbba8" id="r_ab758e2839e0ecba66dffb56849cfbba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#ab758e2839e0ecba66dffb56849cfbba8">paint</a> (QPainter *painter, int x, int y) const override</td></tr>
+<tr class="separator:ab758e2839e0ecba66dffb56849cfbba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1113dbaebbad2673d6c2c1a0060cff66" id="r_a1113dbaebbad2673d6c2c1a0060cff66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a1113dbaebbad2673d6c2c1a0060cff66">calcWidth</a> () const override</td></tr>
+<tr class="separator:a1113dbaebbad2673d6c2c1a0060cff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec6343664370d975cbce01bd246eaf3" id="r_aeec6343664370d975cbce01bd246eaf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#aeec6343664370d975cbce01bd246eaf3">calcHeight</a> () const override</td></tr>
+<tr class="separator:aeec6343664370d975cbce01bd246eaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec13e7b6a51e6451098dfdfc446e357d" id="r_aec13e7b6a51e6451098dfdfc446e357d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#aec13e7b6a51e6451098dfdfc446e357d">calcAscent</a> () const override</td></tr>
+<tr class="separator:aec13e7b6a51e6451098dfdfc446e357d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7de668ebe2f3c9ac3dedb6115c5af5" id="r_a2c7de668ebe2f3c9ac3dedb6115c5af5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a2c7de668ebe2f3c9ac3dedb6115c5af5">calcDescent</a> () const override</td></tr>
+<tr class="separator:a2c7de668ebe2f3c9ac3dedb6115c5af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca184744c39611c6ff5a1a1fdcf6a2a" id="r_aaca184744c39611c6ff5a1a1fdcf6a2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#aaca184744c39611c6ff5a1a1fdcf6a2a">calcSuperscriptX</a> () const override</td></tr>
+<tr class="separator:aaca184744c39611c6ff5a1a1fdcf6a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a8b73b8446703bfa93c0c20e1bd73b" id="r_af5a8b73b8446703bfa93c0c20e1bd73b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#af5a8b73b8446703bfa93c0c20e1bd73b">calcSuperscriptY</a> () const override</td></tr>
+<tr class="separator:af5a8b73b8446703bfa93c0c20e1bd73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11858cca2a5950a49d800cbe7c85ff4d" id="r_a11858cca2a5950a49d800cbe7c85ff4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a11858cca2a5950a49d800cbe7c85ff4d">calcSubscriptX</a> () const override</td></tr>
+<tr class="separator:a11858cca2a5950a49d800cbe7c85ff4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a472d7acd36d21f01d5da06916dd13b2a" id="r_a472d7acd36d21f01d5da06916dd13b2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a472d7acd36d21f01d5da06916dd13b2a">calcSubscriptY</a> () const override</td></tr>
+<tr class="separator:a472d7acd36d21f01d5da06916dd13b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd7baeef7e76311389df8b060c852d1" id="r_a6bd7baeef7e76311389df8b060c852d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a6bd7baeef7e76311389df8b060c852d1">calcCapDY</a> () const override</td></tr>
+<tr class="separator:a6bd7baeef7e76311389df8b060c852d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5d3020edf65f1ac85bca1c9336f578" id="r_a2d5d3020edf65f1ac85bca1c9336f578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a2d5d3020edf65f1ac85bca1c9336f578">calcCapDX</a> (int &amp;dxLeft, int &amp;dxRight) const override</td></tr>
+<tr class="separator:a2d5d3020edf65f1ac85bca1c9336f578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c0b035f19871d9fb8410091c30b5036" id="r_a3c0b035f19871d9fb8410091c30b5036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html#a3c0b035f19871d9fb8410091c30b5036">updateSonFont</a> () override</td></tr>
+<tr class="separator:a3c0b035f19871d9fb8410091c30b5036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classMathExpressions_1_1AbstractParentExpression"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMathExpressions_1_1AbstractParentExpression')"><img src="../../closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html">MathExpressions::AbstractParentExpression</a></td></tr>
+<tr class="memitem:a09bd0c0288a87133670d66f4fe934343 inherit pro_methods_classMathExpressions_1_1AbstractParentExpression" id="r_a09bd0c0288a87133670d66f4fe934343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html#a09bd0c0288a87133670d66f4fe934343">fontChanged</a> () override</td></tr>
+<tr class="separator:a09bd0c0288a87133670d66f4fe934343 inherit pro_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd51d0935d4a9054246a6dd42582c21b inherit pro_methods_classMathExpressions_1_1AbstractParentExpression" id="r_abd51d0935d4a9054246a6dd42582c21b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html#abd51d0935d4a9054246a6dd42582c21b">colorChanged</a> () override</td></tr>
+<tr class="separator:abd51d0935d4a9054246a6dd42582c21b inherit pro_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c3e160920ba93b8b803acd509d4176 inherit pro_methods_classMathExpressions_1_1AbstractParentExpression" id="r_a87c3e160920ba93b8b803acd509d4176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html#a87c3e160920ba93b8b803acd509d4176">paintDeviceChanged</a> () override</td></tr>
+<tr class="separator:a87c3e160920ba93b8b803acd509d4176 inherit pro_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1d2b9ac15db9df503ced7e3ee1d6c5 inherit pro_methods_classMathExpressions_1_1AbstractParentExpression" id="r_acf1d2b9ac15db9df503ced7e3ee1d6c5"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateSonColor</b> ()</td></tr>
+<tr class="separator:acf1d2b9ac15db9df503ced7e3ee1d6c5 inherit pro_methods_classMathExpressions_1_1AbstractParentExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classMathExpressions_1_1AbstractExpression"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMathExpressions_1_1AbstractExpression')"><img src="../../closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a></td></tr>
+<tr class="memitem:a8571a1d66480d7aba857551ddbb0f78c inherit pro_methods_classMathExpressions_1_1AbstractExpression" id="r_a8571a1d66480d7aba857551ddbb0f78c"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>convertCoords</b> (int &amp;x, int &amp;y, Qt::Alignment alignment) const</td></tr>
+<tr class="separator:a8571a1d66480d7aba857551ddbb0f78c inherit pro_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6601f6499ac7c603375a54a3e9aaadf3 inherit pro_methods_classMathExpressions_1_1AbstractExpression" id="r_a6601f6499ac7c603375a54a3e9aaadf3"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (<a class="el" href="../../d2/d49/global_8h.html#a9a1f4b211843aa1687d2e22ae291db81">CalculateFlag</a> flag, bool on=true) const</td></tr>
+<tr class="separator:a6601f6499ac7c603375a54a3e9aaadf3 inherit pro_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c3469419ce0d95463ea1de9aa4afaa inherit pro_methods_classMathExpressions_1_1AbstractExpression" id="r_ab4c3469419ce0d95463ea1de9aa4afaa"><td class="memItemLeft" align="right" valign="top">
+const <a class="el" href="../../d6/d80/classMathExpressions_1_1LineWidth.html">LineWidth</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>lineWidth</b> () const</td></tr>
+<tr class="separator:ab4c3469419ce0d95463ea1de9aa4afaa inherit pro_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2a8b21fc4fc875f7b2ed6dc6de6024 inherit pro_methods_classMathExpressions_1_1AbstractExpression" id="r_a7b2a8b21fc4fc875f7b2ed6dc6de6024"><td class="memItemLeft" align="right" valign="top">
+const <a class="el" href="../../d7/d0c/classMathExpressions_1_1CapMultiplier.html">CapMultiplier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>capMultiplier</b> () const</td></tr>
+<tr class="separator:a7b2a8b21fc4fc875f7b2ed6dc6de6024 inherit pro_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa433e797490046d6b7705eed7c8c1397 inherit pro_methods_classMathExpressions_1_1AbstractExpression" id="r_aa433e797490046d6b7705eed7c8c1397"><td class="memItemLeft" align="right" valign="top">
+const CalculateFlags &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> () const</td></tr>
+<tr class="separator:aa433e797490046d6b7705eed7c8c1397 inherit pro_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_static_methods_classMathExpressions_1_1AbstractExpression"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classMathExpressions_1_1AbstractExpression')"><img src="../../closed.png" alt="-"/>&#160;Защищенные статические члены унаследованные от <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a></td></tr>
+<tr class="memitem:a3e7e841e5b76926aa28a34b1c494f82d inherit pro_static_methods_classMathExpressions_1_1AbstractExpression" id="r_a3e7e841e5b76926aa28a34b1c494f82d"><td class="memItemLeft" align="right" valign="top">
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>assignFont</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression, const QFont &amp;font, const <a class="el" href="../../d6/d80/classMathExpressions_1_1LineWidth.html">LineWidth</a> &amp;line_width, const <a class="el" href="../../d7/d0c/classMathExpressions_1_1CapMultiplier.html">CapMultiplier</a> &amp;cap_multiplier)</td></tr>
+<tr class="separator:a3e7e841e5b76926aa28a34b1c494f82d inherit pro_static_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fdbafd0db31c36dd3812b91f292ea64 inherit pro_static_methods_classMathExpressions_1_1AbstractExpression" id="r_a8fdbafd0db31c36dd3812b91f292ea64"><td class="memItemLeft" align="right" valign="top">
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>assignParent</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression, <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> parent)</td></tr>
+<tr class="separator:a8fdbafd0db31c36dd3812b91f292ea64 inherit pro_static_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8483738df29774f33b3cb088e362108 inherit pro_static_methods_classMathExpressions_1_1AbstractExpression" id="r_ad8483738df29774f33b3cb088e362108"><td class="memItemLeft" align="right" valign="top">
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>assignPaintDevice</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression, QPaintDevice *paintDevice, const <a class="el" href="../../d6/d80/classMathExpressions_1_1LineWidth.html">LineWidth</a> &amp;line_width, const <a class="el" href="../../d7/d0c/classMathExpressions_1_1CapMultiplier.html">CapMultiplier</a> &amp;cap_multiplier)</td></tr>
+<tr class="separator:ad8483738df29774f33b3cb088e362108 inherit pro_static_methods_classMathExpressions_1_1AbstractExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Методы</h2>
+<a id="a9c76d490bd1b3c480301cfa2ecff6165" name="a9c76d490bd1b3c480301cfa2ecff6165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c76d490bd1b3c480301cfa2ecff6165">&#9670;&#160;</a></span>brush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QBrush MathExpressions::FrameExpression::brush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="aec13e7b6a51e6451098dfdfc446e357d" name="aec13e7b6a51e6451098dfdfc446e357d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec13e7b6a51e6451098dfdfc446e357d">&#9670;&#160;</a></span>calcAscent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcAscent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a2d5d3020edf65f1ac85bca1c9336f578" name="a2d5d3020edf65f1ac85bca1c9336f578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5d3020edf65f1ac85bca1c9336f578">&#9670;&#160;</a></span>calcCapDX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MathExpressions::FrameExpression::calcCapDX </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>dxLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>dxRight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a6bd7baeef7e76311389df8b060c852d1" name="a6bd7baeef7e76311389df8b060c852d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd7baeef7e76311389df8b060c852d1">&#9670;&#160;</a></span>calcCapDY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcCapDY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a2c7de668ebe2f3c9ac3dedb6115c5af5" name="a2c7de668ebe2f3c9ac3dedb6115c5af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7de668ebe2f3c9ac3dedb6115c5af5">&#9670;&#160;</a></span>calcDescent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcDescent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="aeec6343664370d975cbce01bd246eaf3" name="aeec6343664370d975cbce01bd246eaf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec6343664370d975cbce01bd246eaf3">&#9670;&#160;</a></span>calcHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a11858cca2a5950a49d800cbe7c85ff4d" name="a11858cca2a5950a49d800cbe7c85ff4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11858cca2a5950a49d800cbe7c85ff4d">&#9670;&#160;</a></span>calcSubscriptX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcSubscriptX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a472d7acd36d21f01d5da06916dd13b2a" name="a472d7acd36d21f01d5da06916dd13b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472d7acd36d21f01d5da06916dd13b2a">&#9670;&#160;</a></span>calcSubscriptY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcSubscriptY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="aaca184744c39611c6ff5a1a1fdcf6a2a" name="aaca184744c39611c6ff5a1a1fdcf6a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca184744c39611c6ff5a1a1fdcf6a2a">&#9670;&#160;</a></span>calcSuperscriptX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcSuperscriptX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="af5a8b73b8446703bfa93c0c20e1bd73b" name="af5a8b73b8446703bfa93c0c20e1bd73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a8b73b8446703bfa93c0c20e1bd73b">&#9670;&#160;</a></span>calcSuperscriptY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcSuperscriptY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a1113dbaebbad2673d6c2c1a0060cff66" name="a1113dbaebbad2673d6c2c1a0060cff66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1113dbaebbad2673d6c2c1a0060cff66">&#9670;&#160;</a></span>calcWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MathExpressions::FrameExpression::calcWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="abf9ca94854ce6117cd6b15d607bfad16" name="abf9ca94854ce6117cd6b15d607bfad16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9ca94854ce6117cd6b15d607bfad16">&#9670;&#160;</a></span>isArgNeedBrackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MathExpressions::FrameExpression::isArgNeedBrackets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="ab5519d1c0c4338f817c0b182c2bfd2d0" name="ab5519d1c0c4338f817c0b182c2bfd2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5519d1c0c4338f817c0b182c2bfd2d0">&#9670;&#160;</a></span>isNeedBrackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MathExpressions::FrameExpression::isNeedBrackets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="aa5d850b415feb1032518e8b5743b5c5b" name="aa5d850b415feb1032518e8b5743b5c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d850b415feb1032518e8b5743b5c5b">&#9670;&#160;</a></span>multiplicationFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MultiplicationFlags MathExpressions::FrameExpression::multiplicationFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="ab758e2839e0ecba66dffb56849cfbba8" name="ab758e2839e0ecba66dffb56849cfbba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab758e2839e0ecba66dffb56849cfbba8">&#9670;&#160;</a></span>paint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MathExpressions::FrameExpression::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a15d7466f571b31188a95fea11d244197" name="a15d7466f571b31188a95fea11d244197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d7466f571b31188a95fea11d244197">&#9670;&#160;</a></span>pen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPen MathExpressions::FrameExpression::pen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">MathExpressions::AbstractExpression</a>.</p>
+
+</div>
+</div>
+<a id="a3c0b035f19871d9fb8410091c30b5036" name="a3c0b035f19871d9fb8410091c30b5036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0b035f19871d9fb8410091c30b5036">&#9670;&#160;</a></span>updateSonFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MathExpressions::FrameExpression::updateSonFont </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html">MathExpressions::AbstractParentExpression</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/<a class="el" href="../../db/ddd/frame__expression_8h_source.html">frame_expression.h</a></li>
+<li>/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/src/<b>frame_expression.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

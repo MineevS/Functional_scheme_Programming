@@ -1,0 +1,128 @@
+\doxysection{abstract\+\_\+expression.\+h}
+\hypertarget{abstract__expression_8h_source}{}\label{abstract__expression_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/abstract\_expression.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/abstract\_expression.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ABSTRACTEXPRESSION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ABSTRACTEXPRESSION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QFont>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QColor>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QPen>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QBrush>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{global_8h}{global.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }QFont;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }QColor;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }QPainter;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }QPaintDevice;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }MathExpressions\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }AbstractExpression;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ AbstractExpression*\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ \ }MATH\_EXPRESSIONS\_EXPORT\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{AbstractExpression}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{AbstractExpression}}();}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{\string~AbstractExpression}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keyword}{inline}\ QPaintDevice*\ paintDevice()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_paint\_device;\ \}}
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ next()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_next;\ \}}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ parent()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_parent;\ \}}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{virtual}\ QFont\ font()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_font;\ \}}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{virtual}\ QPen\ pen()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{virtual}\ QBrush\ brush()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ QColor\ color()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ hasNext()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_next;\ \}}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ hasParent()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_parent;\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{int}\ width()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{int}\ height()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{int}\ ascent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{int}\ descent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{int}\ superscriptX()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{int}\ superscriptY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{int}\ subscriptX()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{int}\ subscriptY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{int}\ capDXLeft()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{int}\ capDXRight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{int}\ capDY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ draw(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ Qt::Alignment\ alignment)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ draw(QPainter*\ painter,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ Qt::Alignment\ alignment)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ setPaintDevice(QPaintDevice\ *paintDevice);}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ setNext(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ next);}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{void}\ setFont(\textcolor{keyword}{const}\ QFont\&\ font);}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ setColor(\textcolor{keyword}{const}\ QColor\&\ color);}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ addNext(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ next);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{virtual}\ MultiplicationFlags\ multiplicationFlags()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ isArgNeedBrackets()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ isNeedBrackets()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ cutOff();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ fontChanged();}
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ colorChanged();}
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ paintDeviceChanged();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ paint(QPainter*\ painter,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcHeight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcAscent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcDescent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcSuperscriptX()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcSuperscriptY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcSubscriptX()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcSubscriptY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ calcCapDY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ calcCapDX(\textcolor{keywordtype}{int}\&\ dxLeft,\ \textcolor{keywordtype}{int}\&\ dxRight)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{void}\ convertCoords(\textcolor{keywordtype}{int}\&\ x,\ \textcolor{keywordtype}{int}\&\ y,\ Qt::Alignment\ alignment)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{void}\ setFlag(\mbox{\hyperlink{global_8h_a9a1f4b211843aa1687d2e22ae291db81}{CalculateFlag}}\ flag,\ \textcolor{keywordtype}{bool}\ on\ =\ \textcolor{keyword}{true})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ assignFont(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expression,\ \textcolor{keyword}{const}\ QFont\&\ font,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{LineWidth}}\&\ line\_width,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{CapMultiplier}}\&\ cap\_multiplier);}
+\DoxyCodeLine{00085\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ assignParent(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expression,\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ parent);}
+\DoxyCodeLine{00086\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ assignPaintDevice(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expression,\ QPaintDevice\ *paintDevice,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{LineWidth}}\&\ line\_width,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{CapMultiplier}}\&\ cap\_multiplier);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{LineWidth}}\&\ lineWidth()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_line\_width;\ \}}
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{CapMultiplier}}\&\ capMultiplier()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_cap\_multiplier;\ \}}
+\DoxyCodeLine{00092\ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ CalculateFlags\&\ flags()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_flags;\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00095\ \ \ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ m\_parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00096\ \ \ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ m\_next\ \ \ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00097\ \ \ QPaintDevice*\ \ \ \ \ \ \ m\_paint\_device\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00098\ \ \ QFont\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_font;}
+\DoxyCodeLine{00099\ \ \ QColor\ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_color;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{LineWidth}}\ \ \ \ \ m\_line\_width;}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{CapMultiplier}}\ m\_cap\_multiplier;}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_width\ =\ 0;}
+\DoxyCodeLine{00105\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_height\ =\ 0;}
+\DoxyCodeLine{00106\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_ascent\ =\ 0;}
+\DoxyCodeLine{00107\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_descent\ =\ 0;}
+\DoxyCodeLine{00108\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_superscript\_x\ =\ 0;}
+\DoxyCodeLine{00109\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_superscript\_y\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_subscript\_x\ =\ 0;}
+\DoxyCodeLine{00111\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_subscript\_y\ =\ 0;}
+\DoxyCodeLine{00112\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_cap\_dy\ =\ 0;}
+\DoxyCodeLine{00113\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_cap\_dx\_left\ =\ 0;}
+\DoxyCodeLine{00114\ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_cap\_dx\_right\ =\ 0;}
+\DoxyCodeLine{00115\ \ \ \textcolor{keyword}{mutable}\ CalculateFlags\ m\_flags;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{void}\ setLineWidth();}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \}\ \textcolor{comment}{//\ namespace\ MathExpressions}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ABSTRACTEXPRESSION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,13 @@
+<map id="/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QTelnet/QTelnet.h" name="/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QTelnet/QTelnet.h">
+<area shape="rect" id="Node000001" title="Содержит объявление неграфического компонента QTelnet." alt="" coords="347,5,561,89"/>
+<area shape="rect" id="Node000002" href="$d2/d64/basewindow_8h.html" title="Основное объявление графического компонента BaseWindow." alt="" coords="173,145,460,214"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,101,354,146,351,142,399,97"/>
+<area shape="rect" id="Node000006" href="$d2/dfb/QTelnet_8cpp.html" title="Содержит реализация неграфического компонента QTelnet." alt="" coords="484,137,699,221"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="509,97,550,135,546,139,506,101"/>
+<area shape="rect" id="Node000003" href="$dd/d48/basewindow_8cpp.html" title="Содержит реализацию графического компонента BaseWindow." alt="" coords="5,269,308,339"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,224,203,271,199,267,261,220"/>
+<area shape="rect" id="Node000004" href="$de/d59/mainwindow_2mainwindow_8h.html" title="Содержит объявление графичесокго компонента MainWindow." alt="" coords="333,269,623,339"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="373,220,435,267,432,271,370,224"/>
+<area shape="rect" id="Node000005" href="$d8/d24/mainwindow_2mainwindow_8cpp.html" title="Содержит реализацию графического компонента MainWindow." alt="" coords="325,387,631,456"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="481,353,481,386,475,386,475,353"/>
+</map>

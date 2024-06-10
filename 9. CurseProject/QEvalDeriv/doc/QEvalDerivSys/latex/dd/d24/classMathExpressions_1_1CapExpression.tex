@@ -1,0 +1,294 @@
+\doxysection{Класс Math\+Expressions\+::Cap\+Expression}
+\hypertarget{classMathExpressions_1_1CapExpression}{}\label{classMathExpressions_1_1CapExpression}\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+
+
+Граф наследования\+:Math\+Expressions\+::Cap\+Expression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dc/d47/classMathExpressions_1_1CapExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Math\+Expressions\+::Cap\+Expression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dd/d00/classMathExpressions_1_1CapExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые типы}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMathExpressions_1_1CapExpression_abcede31dc990d12221590752b59d3c3b}\label{classMathExpressions_1_1CapExpression_abcede31dc990d12221590752b59d3c3b} 
+enum class {\bfseries Cap\+Style} \{ \newline
+{\bfseries Points}
+, {\bfseries Vector}
+, {\bfseries Cap}
+, {\bfseries Tilde}
+, \newline
+{\bfseries Line}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMathExpressions_1_1CapExpression_a760cd4264be30e7e243496f82e79511a}\label{classMathExpressions_1_1CapExpression_a760cd4264be30e7e243496f82e79511a} 
+{\bfseries Cap\+Expression} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} son, Cap\+Style cap\+Style)
+\item 
+Multiplication\+Flags \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a34478be85dd71afeaee2125ce6c743bf}{multiplication\+Flags}} () const override
+\item 
+\Hypertarget{classMathExpressions_1_1CapExpression_ad122c96e83f0ff58c3f46bef05d2d77f}\label{classMathExpressions_1_1CapExpression_ad122c96e83f0ff58c3f46bef05d2d77f} 
+Cap\+Style {\bfseries cap\+Style} () const
+\item 
+\Hypertarget{classMathExpressions_1_1CapExpression_a779f1fb198a05d0d6799f0fc99ccb153}\label{classMathExpressions_1_1CapExpression_a779f1fb198a05d0d6799f0fc99ccb153} 
+int {\bfseries point\+Count} () const
+\item 
+\Hypertarget{classMathExpressions_1_1CapExpression_a62ffb3c210a30bb54ad7a76810727b63}\label{classMathExpressions_1_1CapExpression_a62ffb3c210a30bb54ad7a76810727b63} 
+void {\bfseries set\+Point\+Count} (int count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression}{Math\+Expressions\+::\+Abstract\+Parent\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Son} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} son)
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries son} () const
+\item 
+bool {\bfseries has\+Son} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries cut\+Off\+Sun} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+QPaint\+Device \texorpdfstring{$\ast$}{*} {\bfseries paint\+Device} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries next} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries parent} () const
+\item 
+virtual QFont {\bfseries font} () const
+\item 
+virtual QPen {\bfseries pen} () const
+\item 
+virtual QBrush {\bfseries brush} () const
+\item 
+QColor {\bfseries color} () const
+\item 
+bool {\bfseries has\+Next} () const
+\item 
+bool {\bfseries has\+Parent} () const
+\item 
+int {\bfseries width} () const
+\item 
+int {\bfseries height} () const
+\item 
+int {\bfseries ascent} () const
+\item 
+int {\bfseries descent} () const
+\item 
+int {\bfseries superscriptX} () const
+\item 
+int {\bfseries superscriptY} () const
+\item 
+int {\bfseries subscriptX} () const
+\item 
+int {\bfseries subscriptY} () const
+\item 
+int {\bfseries cap\+DXLeft} () const
+\item 
+int {\bfseries cap\+DXRight} () const
+\item 
+int {\bfseries cap\+DY} () const
+\item 
+void {\bfseries draw} (int x, int y, Qt\+::\+Alignment alignment) const
+\item 
+void {\bfseries draw} (QPainter \texorpdfstring{$\ast$}{*}painter, int x, int y, Qt\+::\+Alignment alignment) const
+\item 
+void {\bfseries set\+Paint\+Device} (QPaint\+Device \texorpdfstring{$\ast$}{*}paint\+Device)
+\item 
+void {\bfseries set\+Next} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} next)
+\item 
+void {\bfseries set\+Font} (const QFont \&font)
+\item 
+void {\bfseries set\+Color} (const QColor \&color)
+\item 
+void {\bfseries add\+Next} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} next)
+\item 
+virtual bool {\bfseries is\+Arg\+Need\+Brackets} () const
+\item 
+virtual bool {\bfseries is\+Need\+Brackets} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries cut\+Off} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1CapExpression_acd59087f636d3a27e4ce4d2dade9cce3}{paint}} (QPainter \texorpdfstring{$\ast$}{*}painter, int x, int y) const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a1d4fbc2cb5b7b2fd22257f7eb3581fd4}{calc\+Width}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a46b29886c34f2c69f9347662f9e0cfcf}{calc\+Height}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a90597c6242caec9deb4b44f484a9d60a}{calc\+Ascent}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a420aadc46c58974eda9795a67070e10e}{calc\+Descent}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a016771b4877ab86a2e09971405af3351}{calc\+SuperscriptX}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_adf2eff2d8d9b2109b6f73de4c5619fcf}{calc\+SuperscriptY}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a4f0e4313c124dd04cdf3d71116d8f235}{calc\+SubscriptX}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1CapExpression_a5538fc9d200928a9a8f1dcaec313bf62}{calc\+Cap\+DY}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression}{Math\+Expressions\+::\+Abstract\+Parent\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression_a09bd0c0288a87133670d66f4fe934343}{font\+Changed}} () override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression_abd51d0935d4a9054246a6dd42582c21b}{color\+Changed}} () override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression_a87c3e160920ba93b8b803acd509d4176}{paint\+Device\+Changed}} () override
+\item 
+virtual void {\bfseries update\+Son\+Font} ()
+\item 
+virtual void {\bfseries update\+Son\+Color} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries calc\+SubscriptY} () const
+\item 
+virtual void {\bfseries calc\+Cap\+DX} (int \&dx\+Left, int \&dx\+Right) const
+\item 
+void {\bfseries convert\+Coords} (int \&x, int \&y, Qt\+::\+Alignment alignment) const
+\item 
+void {\bfseries set\+Flag} (\mbox{\hyperlink{global_8h_a9a1f4b211843aa1687d2e22ae291db81}{Calculate\+Flag}} flag, bool on=true) const
+\item 
+const \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{Line\+Width}} \& {\bfseries line\+Width} () const
+\item 
+const \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{Cap\+Multiplier}} \& {\bfseries cap\+Multiplier} () const
+\item 
+const Calculate\+Flags \& {\bfseries flags} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные статические члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries assign\+Font} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, const QFont \&font, const \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{Line\+Width}} \&line\+\_\+width, const \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{Cap\+Multiplier}} \&cap\+\_\+multiplier)
+\item 
+static void {\bfseries assign\+Parent} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} parent)
+\item 
+static void {\bfseries assign\+Paint\+Device} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, QPaint\+Device \texorpdfstring{$\ast$}{*}paint\+Device, const \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{Line\+Width}} \&line\+\_\+width, const \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{Cap\+Multiplier}} \&cap\+\_\+multiplier)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classMathExpressions_1_1CapExpression_a90597c6242caec9deb4b44f484a9d60a}\label{classMathExpressions_1_1CapExpression_a90597c6242caec9deb4b44f484a9d60a} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcAscent@{calcAscent}}
+\index{calcAscent@{calcAscent}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcAscent()}{calcAscent()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+Ascent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a5538fc9d200928a9a8f1dcaec313bf62}\label{classMathExpressions_1_1CapExpression_a5538fc9d200928a9a8f1dcaec313bf62} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcCapDY@{calcCapDY}}
+\index{calcCapDY@{calcCapDY}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcCapDY()}{calcCapDY()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+Cap\+DY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a420aadc46c58974eda9795a67070e10e}\label{classMathExpressions_1_1CapExpression_a420aadc46c58974eda9795a67070e10e} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcDescent@{calcDescent}}
+\index{calcDescent@{calcDescent}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcDescent()}{calcDescent()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+Descent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a46b29886c34f2c69f9347662f9e0cfcf}\label{classMathExpressions_1_1CapExpression_a46b29886c34f2c69f9347662f9e0cfcf} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcHeight@{calcHeight}}
+\index{calcHeight@{calcHeight}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcHeight()}{calcHeight()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a4f0e4313c124dd04cdf3d71116d8f235}\label{classMathExpressions_1_1CapExpression_a4f0e4313c124dd04cdf3d71116d8f235} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcSubscriptX@{calcSubscriptX}}
+\index{calcSubscriptX@{calcSubscriptX}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcSubscriptX()}{calcSubscriptX()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+SubscriptX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a016771b4877ab86a2e09971405af3351}\label{classMathExpressions_1_1CapExpression_a016771b4877ab86a2e09971405af3351} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcSuperscriptX@{calcSuperscriptX}}
+\index{calcSuperscriptX@{calcSuperscriptX}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcSuperscriptX()}{calcSuperscriptX()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+SuperscriptX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_adf2eff2d8d9b2109b6f73de4c5619fcf}\label{classMathExpressions_1_1CapExpression_adf2eff2d8d9b2109b6f73de4c5619fcf} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcSuperscriptY@{calcSuperscriptY}}
+\index{calcSuperscriptY@{calcSuperscriptY}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcSuperscriptY()}{calcSuperscriptY()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+SuperscriptY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a1d4fbc2cb5b7b2fd22257f7eb3581fd4}\label{classMathExpressions_1_1CapExpression_a1d4fbc2cb5b7b2fd22257f7eb3581fd4} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!calcWidth@{calcWidth}}
+\index{calcWidth@{calcWidth}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{calcWidth()}{calcWidth()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+Cap\+Expression\+::calc\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_a34478be85dd71afeaee2125ce6c743bf}\label{classMathExpressions_1_1CapExpression_a34478be85dd71afeaee2125ce6c743bf} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!multiplicationFlags@{multiplicationFlags}}
+\index{multiplicationFlags@{multiplicationFlags}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{multiplicationFlags()}{multiplicationFlags()}}
+{\footnotesize\ttfamily Multiplication\+Flags Math\+Expressions\+::\+Cap\+Expression\+::multiplication\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1CapExpression_acd59087f636d3a27e4ce4d2dade9cce3}\label{classMathExpressions_1_1CapExpression_acd59087f636d3a27e4ce4d2dade9cce3} 
+\index{MathExpressions::CapExpression@{MathExpressions::CapExpression}!paint@{paint}}
+\index{paint@{paint}!MathExpressions::CapExpression@{MathExpressions::CapExpression}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Math\+Expressions\+::\+Cap\+Expression\+::paint (\begin{DoxyParamCaption}\item[{QPainter \texorpdfstring{$\ast$}{*}}]{painter,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QMath\+Expr/src/inc/cap\+\_\+expression.\+h\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QMath\+Expr/src/src/cap\+\_\+expression.\+cpp\end{DoxyCompactItemize}

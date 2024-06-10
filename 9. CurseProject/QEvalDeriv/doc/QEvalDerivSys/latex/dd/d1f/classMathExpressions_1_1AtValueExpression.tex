@@ -1,0 +1,266 @@
+\doxysection{Класс Math\+Expressions\+::At\+Value\+Expression}
+\hypertarget{classMathExpressions_1_1AtValueExpression}{}\label{classMathExpressions_1_1AtValueExpression}\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+
+
+Граф наследования\+:Math\+Expressions\+::At\+Value\+Expression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/d52/classMathExpressions_1_1AtValueExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Math\+Expressions\+::At\+Value\+Expression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/d64/classMathExpressions_1_1AtValueExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMathExpressions_1_1AtValueExpression_ac97e56ef11029cc093cd981ae53a8574}\label{classMathExpressions_1_1AtValueExpression_ac97e56ef11029cc093cd981ae53a8574} 
+{\bfseries At\+Value\+Expression} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} condition)
+\item 
+Multiplication\+Flags \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_a78d5f0da1d28a7a1492003bc27f7f88c}{multiplication\+Flags}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractBigParentExpression}{Math\+Expressions\+::\+Abstract\+Big\+Parent\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries has\+Daughter} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries daughter} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries cut\+Off\+Daughter} ()
+\item 
+void {\bfseries set\+Daughter} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} daughter)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression}{Math\+Expressions\+::\+Abstract\+Parent\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Son} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} son)
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries son} () const
+\item 
+bool {\bfseries has\+Son} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries cut\+Off\+Sun} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+QPaint\+Device \texorpdfstring{$\ast$}{*} {\bfseries paint\+Device} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries next} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries parent} () const
+\item 
+virtual QFont {\bfseries font} () const
+\item 
+virtual QPen {\bfseries pen} () const
+\item 
+virtual QBrush {\bfseries brush} () const
+\item 
+QColor {\bfseries color} () const
+\item 
+bool {\bfseries has\+Next} () const
+\item 
+bool {\bfseries has\+Parent} () const
+\item 
+int {\bfseries width} () const
+\item 
+int {\bfseries height} () const
+\item 
+int {\bfseries ascent} () const
+\item 
+int {\bfseries descent} () const
+\item 
+int {\bfseries superscriptX} () const
+\item 
+int {\bfseries superscriptY} () const
+\item 
+int {\bfseries subscriptX} () const
+\item 
+int {\bfseries subscriptY} () const
+\item 
+int {\bfseries cap\+DXLeft} () const
+\item 
+int {\bfseries cap\+DXRight} () const
+\item 
+int {\bfseries cap\+DY} () const
+\item 
+void {\bfseries draw} (int x, int y, Qt\+::\+Alignment alignment) const
+\item 
+void {\bfseries draw} (QPainter \texorpdfstring{$\ast$}{*}painter, int x, int y, Qt\+::\+Alignment alignment) const
+\item 
+void {\bfseries set\+Paint\+Device} (QPaint\+Device \texorpdfstring{$\ast$}{*}paint\+Device)
+\item 
+void {\bfseries set\+Next} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} next)
+\item 
+void {\bfseries set\+Font} (const QFont \&font)
+\item 
+void {\bfseries set\+Color} (const QColor \&color)
+\item 
+void {\bfseries add\+Next} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} next)
+\item 
+virtual bool {\bfseries is\+Arg\+Need\+Brackets} () const
+\item 
+virtual bool {\bfseries is\+Need\+Brackets} () const
+\item 
+\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} {\bfseries cut\+Off} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_aa08b6f92e8bb2552017d51770baa786a}{paint}} (QPainter \texorpdfstring{$\ast$}{*}painter, int x, int y) const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_a334246b46b0c081307de8072ebef7061}{calc\+Width}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_a8dcbbf256348151b126f6ab7e4a9b961}{calc\+Height}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_a30640b1a20eece8a8f8b9c6035d34eec}{calc\+Ascent}} () const override
+\item 
+int \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_ab3860e14e6ee2be69dbf8b52b6a20876}{calc\+Descent}} () const override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AtValueExpression_aaa2521aa03dc85df305086c36bb8ffba}{update\+Daughter\+Font}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractBigParentExpression}{Math\+Expressions\+::\+Abstract\+Big\+Parent\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractBigParentExpression_a1a29173b023dba9b976a61b6723c7d29}{font\+Changed}} () override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractBigParentExpression_a5cabc321138ba6e1344cbc70b97606c1}{color\+Changed}} () override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractBigParentExpression_a763045028ab7a3927d6f87bba1bdc421}{paint\+Device\+Changed}} () override
+\item 
+virtual void {\bfseries update\+Daughter\+Color} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression}{Math\+Expressions\+::\+Abstract\+Parent\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression_a09bd0c0288a87133670d66f4fe934343}{font\+Changed}} () override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression_abd51d0935d4a9054246a6dd42582c21b}{color\+Changed}} () override
+\item 
+void \mbox{\hyperlink{classMathExpressions_1_1AbstractParentExpression_a87c3e160920ba93b8b803acd509d4176}{paint\+Device\+Changed}} () override
+\item 
+virtual void {\bfseries update\+Son\+Font} ()
+\item 
+virtual void {\bfseries update\+Son\+Color} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries calc\+SuperscriptX} () const
+\item 
+virtual int {\bfseries calc\+SuperscriptY} () const
+\item 
+virtual int {\bfseries calc\+SubscriptX} () const
+\item 
+virtual int {\bfseries calc\+SubscriptY} () const
+\item 
+virtual int {\bfseries calc\+Cap\+DY} () const
+\item 
+virtual void {\bfseries calc\+Cap\+DX} (int \&dx\+Left, int \&dx\+Right) const
+\item 
+void {\bfseries convert\+Coords} (int \&x, int \&y, Qt\+::\+Alignment alignment) const
+\item 
+void {\bfseries set\+Flag} (\mbox{\hyperlink{global_8h_a9a1f4b211843aa1687d2e22ae291db81}{Calculate\+Flag}} flag, bool on=true) const
+\item 
+const \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{Line\+Width}} \& {\bfseries line\+Width} () const
+\item 
+const \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{Cap\+Multiplier}} \& {\bfseries cap\+Multiplier} () const
+\item 
+const Calculate\+Flags \& {\bfseries flags} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные статические члены унаследованные от \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries assign\+Font} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, const QFont \&font, const \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{Line\+Width}} \&line\+\_\+width, const \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{Cap\+Multiplier}} \&cap\+\_\+multiplier)
+\item 
+static void {\bfseries assign\+Parent} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} parent)
+\item 
+static void {\bfseries assign\+Paint\+Device} (\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Expression\+Ptr}} expression, QPaint\+Device \texorpdfstring{$\ast$}{*}paint\+Device, const \mbox{\hyperlink{classMathExpressions_1_1LineWidth}{Line\+Width}} \&line\+\_\+width, const \mbox{\hyperlink{classMathExpressions_1_1CapMultiplier}{Cap\+Multiplier}} \&cap\+\_\+multiplier)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classMathExpressions_1_1AtValueExpression_a30640b1a20eece8a8f8b9c6035d34eec}\label{classMathExpressions_1_1AtValueExpression_a30640b1a20eece8a8f8b9c6035d34eec} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!calcAscent@{calcAscent}}
+\index{calcAscent@{calcAscent}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{calcAscent()}{calcAscent()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+At\+Value\+Expression\+::calc\+Ascent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1AtValueExpression_ab3860e14e6ee2be69dbf8b52b6a20876}\label{classMathExpressions_1_1AtValueExpression_ab3860e14e6ee2be69dbf8b52b6a20876} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!calcDescent@{calcDescent}}
+\index{calcDescent@{calcDescent}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{calcDescent()}{calcDescent()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+At\+Value\+Expression\+::calc\+Descent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1AtValueExpression_a8dcbbf256348151b126f6ab7e4a9b961}\label{classMathExpressions_1_1AtValueExpression_a8dcbbf256348151b126f6ab7e4a9b961} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!calcHeight@{calcHeight}}
+\index{calcHeight@{calcHeight}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{calcHeight()}{calcHeight()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+At\+Value\+Expression\+::calc\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1AtValueExpression_a334246b46b0c081307de8072ebef7061}\label{classMathExpressions_1_1AtValueExpression_a334246b46b0c081307de8072ebef7061} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!calcWidth@{calcWidth}}
+\index{calcWidth@{calcWidth}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{calcWidth()}{calcWidth()}}
+{\footnotesize\ttfamily int Math\+Expressions\+::\+At\+Value\+Expression\+::calc\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1AtValueExpression_a78d5f0da1d28a7a1492003bc27f7f88c}\label{classMathExpressions_1_1AtValueExpression_a78d5f0da1d28a7a1492003bc27f7f88c} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!multiplicationFlags@{multiplicationFlags}}
+\index{multiplicationFlags@{multiplicationFlags}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{multiplicationFlags()}{multiplicationFlags()}}
+{\footnotesize\ttfamily Multiplication\+Flags Math\+Expressions\+::\+At\+Value\+Expression\+::multiplication\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1AtValueExpression_aa08b6f92e8bb2552017d51770baa786a}\label{classMathExpressions_1_1AtValueExpression_aa08b6f92e8bb2552017d51770baa786a} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!paint@{paint}}
+\index{paint@{paint}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Math\+Expressions\+::\+At\+Value\+Expression\+::paint (\begin{DoxyParamCaption}\item[{QPainter \texorpdfstring{$\ast$}{*}}]{painter,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{Math\+Expressions\+::\+Abstract\+Expression}}.
+
+\Hypertarget{classMathExpressions_1_1AtValueExpression_aaa2521aa03dc85df305086c36bb8ffba}\label{classMathExpressions_1_1AtValueExpression_aaa2521aa03dc85df305086c36bb8ffba} 
+\index{MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}!updateDaughterFont@{updateDaughterFont}}
+\index{updateDaughterFont@{updateDaughterFont}!MathExpressions::AtValueExpression@{MathExpressions::AtValueExpression}}
+\doxysubsubsection{\texorpdfstring{updateDaughterFont()}{updateDaughterFont()}}
+{\footnotesize\ttfamily void Math\+Expressions\+::\+At\+Value\+Expression\+::update\+Daughter\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Переопределяет метод предка \mbox{\hyperlink{classMathExpressions_1_1AbstractBigParentExpression}{Math\+Expressions\+::\+Abstract\+Big\+Parent\+Expression}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QMath\+Expr/src/inc/at\+\_\+value\+\_\+expression.\+h\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QMath\+Expr/src/src/at\+\_\+value\+\_\+expression.\+cpp\end{DoxyCompactItemize}

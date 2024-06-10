@@ -1,0 +1,100 @@
+\doxysection{qtpropertybrowserutils\+\_\+p.\+h}
+\hypertarget{qtpropertybrowserutils__p_8h_source}{}\label{qtpropertybrowserutils__p_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qtpropertybrowserutils\_p.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qtpropertybrowserutils\_p.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ (C)\ 2016\ The\ Qt\ Company\ Ltd.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ LicenseRef-\/Qt-\/Commercial\ OR\ LGPL-\/3.0-\/only\ OR\ GPL-\/2.0-\/only\ OR\ GPL-\/3.0-\/only}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ W\ A\ R\ N\ I\ N\ G}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ This\ file\ is\ not\ part\ of\ the\ Qt\ API.\ \ It\ exists\ for\ the\ convenience}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ of\ Qt\ Designer.\ \ This\ header}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ file\ may\ change\ from\ version\ to\ version\ without\ notice,\ or\ even\ be\ removed.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ We\ mean\ it.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ QTPROPERTYBROWSERUTILS\_H}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ QTPROPERTYBROWSERUTILS\_H}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtCore/QMap>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtGui/QIcon>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QtCore/QStringList>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }QMouseEvent;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }QCheckBox;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }QLineEdit;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCursorDatabase}{QtCursorDatabase}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classQtCursorDatabase}{QtCursorDatabase}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ QStringList\ cursorShapeNames()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ QMap<int,\ QIcon>\ cursorShapeIcons()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ QString\ cursorToShapeName(\textcolor{keyword}{const}\ QCursor\ \&cursor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ QIcon\ cursorToShapeIcon(\textcolor{keyword}{const}\ QCursor\ \&cursor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ cursorToValue(\textcolor{keyword}{const}\ QCursor\ \&cursor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ QT\_NO\_CURSOR}}
+\DoxyCodeLine{00041\ \ \ \ \ QCursor\ valueToCursor(\textcolor{keywordtype}{int}\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classQtCursorDatabase}{QtCursorDatabase}}\ *instance();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ appendCursor(Qt::CursorShape\ shape,\ \textcolor{keyword}{const}\ QString\ \&name,\ \textcolor{keyword}{const}\ QIcon\ \&icon);}
+\DoxyCodeLine{00048\ \ \ \ \ QStringList\ m\_cursorNames;}
+\DoxyCodeLine{00049\ \ \ \ \ QMap<int,\ QIcon>\ m\_cursorIcons;}
+\DoxyCodeLine{00050\ \ \ \ \ QMap<int,\ Qt::CursorShape>\ m\_valueToCursorShape;}
+\DoxyCodeLine{00051\ \ \ \ \ QMap<Qt::CursorShape,\ int>\ m\_cursorShapeToValue;}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtPropertyBrowserUtils}{QtPropertyBrowserUtils}}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ QPixmap\ brushValuePixmap(\textcolor{keyword}{const}\ QBrush\ \&b);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ QIcon\ brushValueIcon(\textcolor{keyword}{const}\ QBrush\ \&b);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ QString\ colorValueText(\textcolor{keyword}{const}\ QColor\ \&c);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ QPixmap\ fontValuePixmap(\textcolor{keyword}{const}\ QFont\ \&f);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ QIcon\ fontValueIcon(\textcolor{keyword}{const}\ QFont\ \&f);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ QString\ fontValueText(\textcolor{keyword}{const}\ QFont\ \&f);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ QString\ dateFormat();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ QString\ timeFormat();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ QString\ dateTimeFormat();}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtBoolEdit}{QtBoolEdit}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00070\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classQtBoolEdit}{QtBoolEdit}}(QWidget\ *parent\ =\ 0);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ Qt::CheckState\ checkState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ setCheckState(Qt::CheckState\ state);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ isChecked()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ setChecked(\textcolor{keywordtype}{bool}\ c);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ blockCheckBoxSignals(\textcolor{keywordtype}{bool}\ block);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ Q\_SIGNALS:}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ toggled(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ mousePressEvent(QMouseEvent\ *\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ QCheckBox\ *m\_checkBox;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_textVisible;}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

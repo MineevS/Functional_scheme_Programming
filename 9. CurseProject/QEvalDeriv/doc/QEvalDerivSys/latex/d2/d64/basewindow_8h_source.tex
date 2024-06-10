@@ -1,0 +1,81 @@
+\doxysection{basewindow.\+h}
+\hypertarget{basewindow_8h_source}{}\label{basewindow_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/basewindow/basewindow.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/basewindow/basewindow.h}}
+\mbox{\hyperlink{basewindow_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ BASEWINDOW\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BASEWINDOW\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QButtonGroup>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QPlainTextEdit>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QTextEdit>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}expression\_builder.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{qexprwidget_8h}{qexprwidget.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{QTelnet_8h}{QTelnet.h}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifdef\ Q\_OS\_LINUX}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <libguile.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseWindow}{BaseWindow}};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseWindow}{BaseWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classBaseWindow}{BaseWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classBaseWindow}{\string~BaseWindow}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ QLineEdit\ *result;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}*\ register\_functions(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#ifdef\ Q\_OS\_LINUX}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ SCM\ print(SCM\ msg);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ SCM\ deriv(SCM\ msg);}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ setFontSize(\textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ getFontSize();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ setFontStyle(QString\ style\_name);}
+\DoxyCodeLine{00054\ \ \ \ \ QString\ getFontStyle();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ addTextTelnet(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *msg,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00058\ signals:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ errorMessage(\textcolor{keyword}{const}\ QString\&);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \_q\_font\_size\_changed(\textcolor{keywordtype}{int}\ );}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \_q\_font\_name\_changed(\textcolor{keyword}{const}\ QString\&\ );}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \_q\_align\_changed(\textcolor{keywordtype}{int}\ );}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \_q\_text\_changed(\textcolor{keyword}{const}\ QString\&\ );}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \_q\_builder\_flag\_changed(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_btConnect\_clicked();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_teOutput\_textChanged();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ Ui::BaseWindow\ *ui;}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classQExprWidget}{QExprWidget}}*\ m\_expr\_widget;}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{classQExprWidget}{QExprWidget}}*\ m\_expr\_widget\_deriv;}
+\DoxyCodeLine{00077\ \ \ \ \ std::unique\_ptr<MathExpressions::AbstractExpression>\ m\_expression;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ QButtonGroup\ *m\_aling\_buttons;}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classQTelnet}{QTelnet}}\ *telnet;}
+\DoxyCodeLine{00081\ \ \ \ \ QString\ input;}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BASEWINDOW\_H}}
+
+\end{DoxyCode}

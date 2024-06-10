@@ -1,0 +1,69 @@
+\doxysection{bracketed\+\_\+expression.\+h}
+\hypertarget{bracketed__expression_8h_source}{}\label{bracketed__expression_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/bracketed\_expression.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/bracketed\_expression.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BRACKETEDEXPRESSION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BRACKETEDEXPRESSION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}chain\_expression.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }MathExpressions\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }MATH\_EXPRESSIONS\_EXPORT\ \mbox{\hyperlink{classMathExpressions_1_1BracketedExpression}{BracketedExpression}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMathExpressions_1_1ChainExpression}{ChainExpression}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{enum}\ BracketStyle\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ None,}
+\DoxyCodeLine{00013\ \ \ \ \ Round,\ \ \ \ \ \textcolor{comment}{//\ (\ )}}
+\DoxyCodeLine{00014\ \ \ \ \ Square,\ \ \ \ \textcolor{comment}{//\ [\ ]}}
+\DoxyCodeLine{00015\ \ \ \ \ Figure,\ \ \ \ \textcolor{comment}{//\ \{\ \}}}
+\DoxyCodeLine{00016\ \ \ \ \ Module\ \ \ \ \ \textcolor{comment}{//\ |\ |}}
+\DoxyCodeLine{00017\ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{classMathExpressions_1_1BracketedExpression}{BracketedExpression}}();}
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classMathExpressions_1_1BracketedExpression}{BracketedExpression}}(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expression,\ BracketStyle\ bracket\_style\ =\ Round);}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{classMathExpressions_1_1BracketedExpression}{BracketedExpression}}(\mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expression,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BracketStyle\ left\_style,\ BracketStyle\ rigth\_style);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{inline}\ BracketStyle\ leftBracket()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_left\_bracket;\ \}}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{inline}\ BracketStyle\ rightBracket()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_right\_bracket;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ setLeftBracket(BracketStyle\ style);}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ setRightBracket(BracketStyle\ style);}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ removeBrackets();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//\ AbstractExpression\ interface}}
+\DoxyCodeLine{00032\ \ \ MultiplicationFlags\ multiplicationFlags()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//\ AbstractExpression\ interface}}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{void}\ paint(QPainter*\ painter,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ calcWidth()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{int}\ calcAscent()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{int}\ calcDescent()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{int}\ calcCapDY()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ calcCapDX(\textcolor{keywordtype}{int}\&\ dxLeft,\ \textcolor{keywordtype}{int}\&\ dxRight)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{comment}{//\ BracketedExpression\ interfase}}
+\DoxyCodeLine{00044\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ isBracketed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ BracketStyle\ m\_left\_bracket;}
+\DoxyCodeLine{00048\ \ \ BracketStyle\ m\_right\_bracket;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{enum}\ BracketPosition\{}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{global_8h_a2731368253dd8f2359a976ddac5bc7aba945d5e233cf7d6240f6b783b36a374ff}{Left}},}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{global_8h_a2731368253dd8f2359a976ddac5bc7aba92b09c7c48c520c3c55e497875da437c}{Right}}}
+\DoxyCodeLine{00053\ \ \ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{const}\ QChar\&\ bracketChar(BracketPosition\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ QFont\ bracketFont(\textcolor{keyword}{const}\ QChar\&\ bracket)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ drawBracket(QPainter*\ painter,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\&\ dx,\ BracketPosition\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \}\ \textcolor{comment}{//\ namespace\ MathExpressions}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BRACKETEDEXPRESSION\_H}}
+
+\end{DoxyCode}

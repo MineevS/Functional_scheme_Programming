@@ -1,0 +1,12 @@
+<map id="QtSizePolicyPropertyManagerPrivate" name="QtSizePolicyPropertyManagerPrivate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,823,326,1137"/>
+<area shape="rect" id="Node000002" href="$dc/d3e/classQtIntPropertyManager.html" title=" " alt="" coords="5,435,199,760"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,759,130,798,133,806,127,808,125,799,115,761"/>
+<area shape="rect" id="Node000003" href="$d4/d42/classQtAbstractPropertyManager.html" title=" " alt="" coords="100,120,331,385"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,399,158,435,153,434,165,398"/>
+<area shape="rect" id="Node000005" href="$d3/d39/classQtEnumPropertyManager.html" title=" " alt="" coords="223,455,437,740"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="266,398,285,453,280,455,261,399"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="182,5,249,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="218,85,218,120,213,120,213,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="310,741,295,799,293,808,287,806,290,798,305,739"/>
+</map>

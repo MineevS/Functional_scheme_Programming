@@ -1,0 +1,199 @@
+\doxysection{Шаблон класса Qt\+Abstract\+Editor\+Factory\texorpdfstring{$<$}{<} Property\+Manager \texorpdfstring{$>$}{>}}
+\hypertarget{classQtAbstractEditorFactory}{}\label{classQtAbstractEditorFactory}\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+
+
+Граф наследования\+:Qt\+Abstract\+Editor\+Factory\texorpdfstring{$<$}{<} Property\+Manager \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{de/d81/classQtAbstractEditorFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Qt\+Abstract\+Editor\+Factory\texorpdfstring{$<$}{<} Property\+Manager \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{d3/d1a/classQtAbstractEditorFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQtAbstractEditorFactory_a29dfd27e250debd4e8f2b42c2ae64db2}{Qt\+Abstract\+Editor\+Factory}} (QObject \texorpdfstring{$\ast$}{*}parent)
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}{create\+Editor}} (\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}property, QWidget \texorpdfstring{$\ast$}{*}parent) override
+\item 
+void \mbox{\hyperlink{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c}{add\+Property\+Manager}} (Property\+Manager \texorpdfstring{$\ast$}{*}manager)
+\item 
+void \mbox{\hyperlink{classQtAbstractEditorFactory_a287d46dfa42baa38c8d2d34afc697432}{remove\+Property\+Manager}} (Property\+Manager \texorpdfstring{$\ast$}{*}manager)
+\item 
+QSet$<$ Property\+Manager \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}{property\+Managers}} () const
+\item 
+Property\+Manager \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactory_a8bd19d2e1488aef12477861227de8903}{property\+Manager}} (\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}property) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classQtAbstractEditorFactory_acc1d86b1041a3ff043e8aef756316081}{connect\+Property\+Manager}} (Property\+Manager \texorpdfstring{$\ast$}{*}manager)=0
+\item 
+virtual QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactory_a28b47d69e6ce7ee3410c1ba44b23ff18}{create\+Editor}} (Property\+Manager \texorpdfstring{$\ast$}{*}manager, \mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}property, QWidget \texorpdfstring{$\ast$}{*}parent)=0
+\item 
+virtual void \mbox{\hyperlink{classQtAbstractEditorFactory_a39ea7ae0ca4bc7a56b5483f0a16f94ae}{disconnect\+Property\+Manager}} (Property\+Manager \texorpdfstring{$\ast$}{*}manager)=0
+\item 
+void \mbox{\hyperlink{classQtAbstractEditorFactory_ad966bde3aa9d1be81472f1d381be900c}{manager\+Destroyed}} (QObject \texorpdfstring{$\ast$}{*}manager) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены унаследованные от \mbox{\hyperlink{classQtAbstractEditorFactoryBase}{Qt\+Abstract\+Editor\+Factory\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQtAbstractEditorFactoryBase_af75f911c4f773b7fc9adcff15a0b3ed3}{Qt\+Abstract\+Editor\+Factory\+Base}} (QObject \texorpdfstring{$\ast$}{*}parent=0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classQtAbstractEditorFactory_a7ea1ae1a657ba63969d78ace734b2c3a}\label{classQtAbstractEditorFactory_a7ea1ae1a657ba63969d78ace734b2c3a} 
+class {\bfseries Qt\+Abstract\+Property\+Editor}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Дополнительные унаследованные члены}
+\doxysubsection*{Защищенные слоты унаследованные от \mbox{\hyperlink{classQtAbstractEditorFactoryBase}{Qt\+Abstract\+Editor\+Factory\+Base}}}
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classQtAbstractEditorFactory_a29dfd27e250debd4e8f2b42c2ae64db2}\label{classQtAbstractEditorFactory_a29dfd27e250debd4e8f2b42c2ae64db2} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!QtAbstractEditorFactory@{QtAbstractEditorFactory}}
+\index{QtAbstractEditorFactory@{QtAbstractEditorFactory}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{QtAbstractEditorFactory()}{QtAbstractEditorFactory()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+\mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\mbox{\hyperlink{classQtAbstractEditorFactory}{\+::\+Qt\+Abstract\+Editor\+Factory}} (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Creates an editor factory with the given {\itshape parent}.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c}{add\+Property\+Manager()} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Методы}
+\Hypertarget{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c}\label{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!addPropertyManager@{addPropertyManager}}
+\index{addPropertyManager@{addPropertyManager}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{addPropertyManager()}{addPropertyManager()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+void \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::add\+Property\+Manager (\begin{DoxyParamCaption}\item[{Property\+Manager \texorpdfstring{$\ast$}{*}}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the given {\itshape manager} to this factory\textquotesingle{}s set of managers, making this factory produce editing widgets for properties created by the given manager.
+
+The Property\+Manager type is a template argument class, and represents the chosen \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}{property\+Managers()}, \doxylink{classQtAbstractEditorFactory_a287d46dfa42baa38c8d2d34afc697432}{remove\+Property\+Manager()} 
+\end{DoxySeeAlso}
+\Hypertarget{classQtAbstractEditorFactory_acc1d86b1041a3ff043e8aef756316081}\label{classQtAbstractEditorFactory_acc1d86b1041a3ff043e8aef756316081} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!connectPropertyManager@{connectPropertyManager}}
+\index{connectPropertyManager@{connectPropertyManager}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{connectPropertyManager()}{connectPropertyManager()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+void \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::connect\+Property\+Manager (\begin{DoxyParamCaption}\item[{Property\+Manager \texorpdfstring{$\ast$}{*}}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Connects this factory to the given {\itshape manager\textquotesingle{}s} signals. The Property\+Manager type is a template argument class, and represents the chosen \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+This function is used internally by the \doxylink{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c}{add\+Property\+Manager()} function, and makes it possible to update an editing widget when the associated property\textquotesingle{}s data changes. This is typically done in custom slots responding to the signals emitted by the property\textquotesingle{}s manager, e.\+g. \doxylink{classQtIntPropertyManager_a524990cc950be2174854c0150f906776}{Qt\+Int\+Property\+Manager\+::value\+Changed()} and \doxylink{classQtIntPropertyManager_a2e89b90fb975144bad068d9eee7c2095}{Qt\+Int\+Property\+Manager\+::range\+Changed()}.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}{property\+Managers()}, \doxylink{classQtAbstractEditorFactory_a39ea7ae0ca4bc7a56b5483f0a16f94ae}{disconnect\+Property\+Manager()} 
+\end{DoxySeeAlso}
+\Hypertarget{classQtAbstractEditorFactory_a28b47d69e6ce7ee3410c1ba44b23ff18}\label{classQtAbstractEditorFactory_a28b47d69e6ce7ee3410c1ba44b23ff18} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!createEditor@{createEditor}}
+\index{createEditor@{createEditor}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{createEditor()}{createEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::create\+Editor (\begin{DoxyParamCaption}\item[{Property\+Manager \texorpdfstring{$\ast$}{*}}]{manager,  }\item[{\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}}]{property,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Creates an editing widget with the given {\itshape parent} for the specified {\itshape property} created by the given {\itshape manager}. The Property\+Manager type is a template argument class, and represents the chosen \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+This function must be implemented in derived classes\+: It is recommended to store a pointer to the widget and map it to the given {\itshape property}, since the widget must be updated whenever the associated property\textquotesingle{}s data changes. This is typically done in custom slots responding to the signals emitted by the property\textquotesingle{}s manager, e.\+g. \doxylink{classQtIntPropertyManager_a524990cc950be2174854c0150f906776}{Qt\+Int\+Property\+Manager\+::value\+Changed()} and \doxylink{classQtIntPropertyManager_a2e89b90fb975144bad068d9eee7c2095}{Qt\+Int\+Property\+Manager\+::range\+Changed()}.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_acc1d86b1041a3ff043e8aef756316081}{connect\+Property\+Manager()} 
+\end{DoxySeeAlso}
+\Hypertarget{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33}\label{classQtAbstractEditorFactory_a443b13049409d2294016e83e23d18f33} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!createEditor@{createEditor}}
+\index{createEditor@{createEditor}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{createEditor()}{createEditor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::create\+Editor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}}]{property,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates an editing widget (with the given {\itshape parent}) for the given {\itshape property}. 
+
+Замещает \mbox{\hyperlink{classQtAbstractEditorFactoryBase_aecea70732c941a1d992a61179389e9a2}{Qt\+Abstract\+Editor\+Factory\+Base}}.
+
+\Hypertarget{classQtAbstractEditorFactory_a39ea7ae0ca4bc7a56b5483f0a16f94ae}\label{classQtAbstractEditorFactory_a39ea7ae0ca4bc7a56b5483f0a16f94ae} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!disconnectPropertyManager@{disconnectPropertyManager}}
+\index{disconnectPropertyManager@{disconnectPropertyManager}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{disconnectPropertyManager()}{disconnectPropertyManager()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+void \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::disconnect\+Property\+Manager (\begin{DoxyParamCaption}\item[{Property\+Manager \texorpdfstring{$\ast$}{*}}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Disconnects this factory from the given {\itshape manager\textquotesingle{}s} signals. The Property\+Manager type is a template argument class, and represents the chosen \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+This function is used internally by the \doxylink{classQtAbstractEditorFactory_a287d46dfa42baa38c8d2d34afc697432}{remove\+Property\+Manager()} function.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}{property\+Managers()}, \doxylink{classQtAbstractEditorFactory_acc1d86b1041a3ff043e8aef756316081}{connect\+Property\+Manager()} 
+\end{DoxySeeAlso}
+\Hypertarget{classQtAbstractEditorFactory_ad966bde3aa9d1be81472f1d381be900c}\label{classQtAbstractEditorFactory_ad966bde3aa9d1be81472f1d381be900c} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!managerDestroyed@{managerDestroyed}}
+\index{managerDestroyed@{managerDestroyed}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{managerDestroyed()}{managerDestroyed()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+void \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::manager\+Destroyed (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Замещает \mbox{\hyperlink{classQtAbstractEditorFactoryBase}{Qt\+Abstract\+Editor\+Factory\+Base}}.
+
+\Hypertarget{classQtAbstractEditorFactory_a8bd19d2e1488aef12477861227de8903}\label{classQtAbstractEditorFactory_a8bd19d2e1488aef12477861227de8903} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!propertyManager@{propertyManager}}
+\index{propertyManager@{propertyManager}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{propertyManager()}{propertyManager()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+Property\+Manager \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::property\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQtProperty}{Qt\+Property}} \texorpdfstring{$\ast$}{*}}]{property }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the property manager for the given {\itshape property}, or 0 if the given {\itshape property} doesn\textquotesingle{}t belong to any of this factory\textquotesingle{}s registered managers.
+
+The Property\+Manager type is a template argument class, and represents the chosen \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}{property\+Managers()} 
+\end{DoxySeeAlso}
+\Hypertarget{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}\label{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!propertyManagers@{propertyManagers}}
+\index{propertyManagers@{propertyManagers}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{propertyManagers()}{propertyManagers()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+QSet$<$ Property\+Manager \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::property\+Managers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the factory\textquotesingle{}s set of associated managers. The Property\+Manager type is a template argument class, and represents the chosen \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c}{add\+Property\+Manager()}, \doxylink{classQtAbstractEditorFactory_a287d46dfa42baa38c8d2d34afc697432}{remove\+Property\+Manager()} 
+\end{DoxySeeAlso}
+\Hypertarget{classQtAbstractEditorFactory_a287d46dfa42baa38c8d2d34afc697432}\label{classQtAbstractEditorFactory_a287d46dfa42baa38c8d2d34afc697432} 
+\index{QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}!removePropertyManager@{removePropertyManager}}
+\index{removePropertyManager@{removePropertyManager}!QtAbstractEditorFactory$<$ PropertyManager $>$@{QtAbstractEditorFactory$<$ PropertyManager $>$}}
+\doxysubsubsection{\texorpdfstring{removePropertyManager()}{removePropertyManager()}}
+{\footnotesize\ttfamily template$<$class Property\+Manager $>$ \\
+void \mbox{\hyperlink{classQtAbstractEditorFactory}{Qt\+Abstract\+Editor\+Factory}}$<$ Property\+Manager $>$\+::remove\+Property\+Manager (\begin{DoxyParamCaption}\item[{Property\+Manager \texorpdfstring{$\ast$}{*}}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the given {\itshape manager} from this factory\textquotesingle{}s set of managers. The Property\+Manager type is a template argument class, and may be any \doxylink{classQtAbstractPropertyManager}{Qt\+Abstract\+Property\+Manager} subclass.
+
+\begin{DoxySeeAlso}{См. также}
+\doxylink{classQtAbstractEditorFactory_acc3cbd244244e9e9373232b58f68dcf4}{property\+Managers()}, \doxylink{classQtAbstractEditorFactory_af32e5e5341a42399841c97c0e82f1f5c}{add\+Property\+Manager()} 
+\end{DoxySeeAlso}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QProperty\+Browser/inc/qtpropertybrowser.\+h\item 
+/home/msa/\+Documents/\+QPROJECTS/\+QEval\+Deriv/\+QEval\+Deriv\+Sys/frontend/components/widgets/\+QProperty\+Browser/src/qtpropertybrowser.\+cpp\end{DoxyCompactItemize}

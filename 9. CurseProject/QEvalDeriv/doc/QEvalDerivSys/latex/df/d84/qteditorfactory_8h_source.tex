@@ -1,0 +1,388 @@
+\doxysection{qteditorfactory.\+h}
+\hypertarget{qteditorfactory_8h_source}{}\label{qteditorfactory_8h_source}\index{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qteditorfactory.h@{/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QPropertyBrowser/inc/qteditorfactory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ (C)\ 2016\ The\ Qt\ Company\ Ltd.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ LicenseRef-\/Qt-\/Commercial\ OR\ LGPL-\/3.0-\/only\ OR\ GPL-\/2.0-\/only\ OR\ GPL-\/3.0-\/only}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ QTEDITORFACTORY\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ QTEDITORFACTORY\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}qtpropertymanager.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }QRegularExpression;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSpinBoxFactoryPrivate}{QtSpinBoxFactoryPrivate}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSpinBoxFactory}{QtSpinBoxFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtIntPropertyManager>}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classQtSpinBoxFactory}{QtSpinBoxFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classQtSpinBoxFactory_a2036e0ce2d5e23784e8d0692bfda7a9a}{\string~QtSpinBoxFactory}}();}
+\DoxyCodeLine{00021\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ QScopedPointer<QtSpinBoxFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtSpinBoxFactory}{QtSpinBoxFactory}})}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtSpinBoxFactory}{QtSpinBoxFactory}})}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSliderFactoryPrivate}{QtSliderFactoryPrivate}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtSliderFactory}{QtSliderFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtIntPropertyManager>}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classQtSliderFactory}{QtSliderFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classQtSliderFactory_a35138a585847eaea0a96095207b50cb9}{\string~QtSliderFactory}}();}
+\DoxyCodeLine{00044\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ QScopedPointer<QtSliderFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00051\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtSliderFactory}{QtSliderFactory}})}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00055\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtSliderFactory}{QtSliderFactory}})}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtScrollBarFactoryPrivate}{QtScrollBarFactoryPrivate}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtScrollBarFactory}{QtScrollBarFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtIntPropertyManager>}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{classQtScrollBarFactory}{QtScrollBarFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classQtScrollBarFactory_a60ac1b61f69ef80d85558e594e6b28bb}{\string~QtScrollBarFactory}}();}
+\DoxyCodeLine{00067\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtIntPropertyManager}{QtIntPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ QScopedPointer<QtScrollBarFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00074\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtScrollBarFactory}{QtScrollBarFactory}})}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00078\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtScrollBarFactory}{QtScrollBarFactory}})}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCheckBoxFactoryPrivate}{QtCheckBoxFactoryPrivate}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCheckBoxFactory}{QtCheckBoxFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtBoolPropertyManager>}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classQtCheckBoxFactory}{QtCheckBoxFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{classQtCheckBoxFactory_a08a9cb2c58343b65ff4def5546915db9}{\string~QtCheckBoxFactory}}();}
+\DoxyCodeLine{00090\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtBoolPropertyManager}{QtBoolPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00096\ \ \ \ \ QScopedPointer<QtCheckBoxFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00097\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtCheckBoxFactory}{QtCheckBoxFactory}})}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00101\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtCheckBoxFactory}{QtCheckBoxFactory}})}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDoubleSpinBoxFactoryPrivate}{QtDoubleSpinBoxFactoryPrivate}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDoubleSpinBoxFactory}{QtDoubleSpinBoxFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtDoublePropertyManager>}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00110\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{classQtDoubleSpinBoxFactory}{QtDoubleSpinBoxFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{classQtDoubleSpinBoxFactory_a542d539a52e2938fa559b28b27ba7cbb}{\string~QtDoubleSpinBoxFactory}}();}
+\DoxyCodeLine{00113\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00115\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtDoublePropertyManager}{QtDoublePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00118\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ QScopedPointer<QtDoubleSpinBoxFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00120\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtDoubleSpinBoxFactory}{QtDoubleSpinBoxFactory}})}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00124\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtDoubleSpinBoxFactory}{QtDoubleSpinBoxFactory}})}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtLineEditFactoryPrivate}{QtLineEditFactoryPrivate}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtLineEditFactory}{QtLineEditFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtStringPropertyManager>}
+\DoxyCodeLine{00131\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00133\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{classQtLineEditFactory}{QtLineEditFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{classQtLineEditFactory_a2f01eadc39c5d5aee57b3909a371f2a7}{\string~QtLineEditFactory}}();}
+\DoxyCodeLine{00136\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00138\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00141\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00142\ \ \ \ \ QScopedPointer<QtLineEditFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00143\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtLineEditFactory}{QtLineEditFactory}})}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00147\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtLineEditFactory}{QtLineEditFactory}})}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDateEditFactoryPrivate}{QtDateEditFactoryPrivate}};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDateEditFactory}{QtDateEditFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtDatePropertyManager>}
+\DoxyCodeLine{00154\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00156\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{classQtDateEditFactory}{QtDateEditFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{classQtDateEditFactory_ac3e12422dd4cc02dcf68f2d34a08bb2f}{\string~QtDateEditFactory}}();}
+\DoxyCodeLine{00159\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00161\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtDatePropertyManager}{QtDatePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00164\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00165\ \ \ \ \ QScopedPointer<QtDateEditFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00166\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtDateEditFactory}{QtDateEditFactory}})}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00170\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtDateEditFactory}{QtDateEditFactory}})}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtTimeEditFactoryPrivate}{QtTimeEditFactoryPrivate}};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtTimeEditFactory}{QtTimeEditFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtTimePropertyManager>}
+\DoxyCodeLine{00177\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00179\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{classQtTimeEditFactory}{QtTimeEditFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{classQtTimeEditFactory_a31949ea86991f35a2ed47c29d1d116af}{\string~QtTimeEditFactory}}();}
+\DoxyCodeLine{00182\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00184\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtTimePropertyManager}{QtTimePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00187\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00188\ \ \ \ \ QScopedPointer<QtTimeEditFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00189\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtTimeEditFactory}{QtTimeEditFactory}})}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00193\ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtTimeEditFactory}{QtTimeEditFactory}})}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00195\ \};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDateTimeEditFactoryPrivate}{QtDateTimeEditFactoryPrivate}};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtDateTimeEditFactory}{QtDateTimeEditFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtDateTimePropertyManager>}
+\DoxyCodeLine{00200\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00202\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{classQtDateTimeEditFactory}{QtDateTimeEditFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{classQtDateTimeEditFactory_a540af42c9701d5194be55fe10f2481b5}{\string~QtDateTimeEditFactory}}();}
+\DoxyCodeLine{00205\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00207\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtDateTimePropertyManager}{QtDateTimePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00210\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00211\ \ \ \ \ QScopedPointer<QtDateTimeEditFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00212\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtDateTimeEditFactory}{QtDateTimeEditFactory}})}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00216\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtDateTimeEditFactory}{QtDateTimeEditFactory}})}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00218\ \};}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtKeySequenceEditorFactoryPrivate}{QtKeySequenceEditorFactoryPrivate}};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtKeySequenceEditorFactory}{QtKeySequenceEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtKeySequencePropertyManager>}
+\DoxyCodeLine{00223\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00225\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{classQtKeySequenceEditorFactory}{QtKeySequenceEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{classQtKeySequenceEditorFactory_a3ac5703645a379862fb3829046bfa12c}{\string~QtKeySequenceEditorFactory}}();}
+\DoxyCodeLine{00228\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00230\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtKeySequencePropertyManager}{QtKeySequencePropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00233\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00234\ \ \ \ \ QScopedPointer<QtKeySequenceEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00235\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtKeySequenceEditorFactory}{QtKeySequenceEditorFactory}})}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00239\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtKeySequenceEditorFactory}{QtKeySequenceEditorFactory}})}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00241\ \};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCharEditorFactoryPrivate}{QtCharEditorFactoryPrivate}};}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCharEditorFactory}{QtCharEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtCharPropertyManager>}
+\DoxyCodeLine{00246\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00248\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{classQtCharEditorFactory}{QtCharEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00250\ \ \ \ \ \mbox{\hyperlink{classQtCharEditorFactory_abaa4153416c5be1f3849abcd5961a08e}{\string~QtCharEditorFactory}}();}
+\DoxyCodeLine{00251\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00253\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtCharPropertyManager}{QtCharPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00256\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00257\ \ \ \ \ QScopedPointer<QtCharEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00258\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtCharEditorFactory}{QtCharEditorFactory}})}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00262\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtCharEditorFactory}{QtCharEditorFactory}})}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00264\ \};}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtEnumEditorFactoryPrivate}{QtEnumEditorFactoryPrivate}};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtEnumEditorFactory}{QtEnumEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtEnumPropertyManager>}
+\DoxyCodeLine{00269\ \{}
+\DoxyCodeLine{00270\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00271\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00272\ \ \ \ \ \mbox{\hyperlink{classQtEnumEditorFactory}{QtEnumEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00273\ \ \ \ \ \mbox{\hyperlink{classQtEnumEditorFactory_a2f8d1238b9626f8bf95740e9399aabfb}{\string~QtEnumEditorFactory}}();}
+\DoxyCodeLine{00274\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00276\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtEnumPropertyManager}{QtEnumPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00279\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00280\ \ \ \ \ QScopedPointer<QtEnumEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00281\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtEnumEditorFactory}{QtEnumEditorFactory}})}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00284\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtEnumEditorFactory}{QtEnumEditorFactory}})}
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00286\ \};}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCursorEditorFactoryPrivate}{QtCursorEditorFactoryPrivate}};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtCursorEditorFactory}{QtCursorEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtCursorPropertyManager>}
+\DoxyCodeLine{00291\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00293\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00294\ \ \ \ \ \mbox{\hyperlink{classQtCursorEditorFactory}{QtCursorEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00295\ \ \ \ \ \mbox{\hyperlink{classQtCursorEditorFactory_a9ad332f48a4e5c7b561ce3e775c07271}{\string~QtCursorEditorFactory}}();}
+\DoxyCodeLine{00296\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00298\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtCursorPropertyManager}{QtCursorPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00301\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00302\ \ \ \ \ QScopedPointer<QtCursorEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00303\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtCursorEditorFactory}{QtCursorEditorFactory}})}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00307\ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtCursorEditorFactory}{QtCursorEditorFactory}})}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00309\ \};}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtColorEditorFactoryPrivate}{QtColorEditorFactoryPrivate}};}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtColorEditorFactory}{QtColorEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtColorPropertyManager>}
+\DoxyCodeLine{00314\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00316\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00317\ \ \ \ \ \mbox{\hyperlink{classQtColorEditorFactory}{QtColorEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00318\ \ \ \ \ \mbox{\hyperlink{classQtColorEditorFactory_afee867ea2f5b34a4e0fa56e5beb60db2}{\string~QtColorEditorFactory}}();}
+\DoxyCodeLine{00319\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00321\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtColorPropertyManager}{QtColorPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00324\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00325\ \ \ \ \ QScopedPointer<QtColorEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00326\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtColorEditorFactory}{QtColorEditorFactory}})}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtColorEditorFactory}{QtColorEditorFactory}})}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00332\ \};}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtFontEditorFactoryPrivate}{QtFontEditorFactoryPrivate}};}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtFontEditorFactory}{QtFontEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtFontPropertyManager>}
+\DoxyCodeLine{00337\ \{}
+\DoxyCodeLine{00338\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00339\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00340\ \ \ \ \ \mbox{\hyperlink{classQtFontEditorFactory}{QtFontEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{classQtFontEditorFactory_a4df23c36ac4e556da056d9e05248a1c3}{\string~QtFontEditorFactory}}();}
+\DoxyCodeLine{00342\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00344\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtFontPropertyManager}{QtFontPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00347\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00348\ \ \ \ \ QScopedPointer<QtFontEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00349\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtFontEditorFactory}{QtFontEditorFactory}})}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtFontEditorFactory}{QtFontEditorFactory}})}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00355\ \};}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtLabelEditorFactoryPrivate}{QtLabelEditorFactoryPrivate}};}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQtLabelEditorFactory}{QtLabelEditorFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classQtAbstractEditorFactory}{QtAbstractEditorFactory}}<QtStringPropertyManager>}
+\DoxyCodeLine{00360\ \{}
+\DoxyCodeLine{00361\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00362\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00363\ \ \ \ \ \mbox{\hyperlink{classQtLabelEditorFactory}{QtLabelEditorFactory}}(QObject\ *parent\ =\ 0);}
+\DoxyCodeLine{00364\ \ \ \ \ \mbox{\hyperlink{classQtLabelEditorFactory_a3ff260f7c94a235357e6fe83e5003247}{\string~QtLabelEditorFactory}}();}
+\DoxyCodeLine{00365\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPropertyManager(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00367\ \ \ \ \ QWidget\ *createEditor(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ *manager,\ \mbox{\hyperlink{classQtProperty}{QtProperty}}\ *property,}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{void}\ disconnectPropertyManager(\mbox{\hyperlink{classQtStringPropertyManager}{QtStringPropertyManager}}\ *manager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00370\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00371\ \ \ \ \ QScopedPointer<QtLabelEditorFactoryPrivate>\ d\_ptr;}
+\DoxyCodeLine{00372\ \ \ \ \ Q\_DECLARE\_PRIVATE(\mbox{\hyperlink{classQtLabelEditorFactory}{QtLabelEditorFactory}})}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#if\ QT\_VERSION\ >=\ 0x051300}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ Q\_DISABLE\_COPY\_MOVE(\mbox{\hyperlink{classQtLabelEditorFactory}{QtLabelEditorFactory}})}
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00378\ \};}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,147 @@
+\chapter{README}
+\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README}{}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README}\index{README@{README}}
+
+
+ \hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md0}{}\doxysection{\texorpdfstring{Math\+Expressions}{MathExpressions}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md0}
+{\bfseries{Math\+Expressions}} небольшая C++ библиотека для отрисовки математических формул с использованием фрэймворка Qt. Изначально она была написана на Pascal(\+Delphi 5) Григорьевым Антоном и называлась \href{https://github.com/Aleksandr185/ExprDraw}{\texttt{ {\bfseries{Expr\+Draw}}}}.
+
+Библиотека содержит классы, позволяющие отображать любые математические формулы. Базовым классом для всех классов библиотеки является {\bfseries{Abstract\+Expression}}. Для отображения выражения необходимо построить дерево выражения, узлами и листьями которого являются экземпляры класса {\bfseries{Abstract\+Expression}}. Так, например, для отображения простой дроби используется класс {\bfseries{Fraction\+Expression}}, имеющий две ветви\+: для числителя и знаменателя. Сами ветви также могут быть составными. Класс {\bfseries{Abstract\+Expression}} сообщает свои геометрические размеры, координаты надстрочных и подстрочных символов, шрифт и цвет выражения, а также содержит указатель на своего родителя и на следующее выражение в цепочке. Геометрические размеры могут быть расчитаны только после установки шрифта и указателя на {\bfseries{QPaint\+Device}}. При установки шрифта или цвета, эти параметры передаются всем узлам далее по цепочке. Если цвет для узла не задан, используется цвет родителя, если родителя нет используется чёрный цвет.
+
+Отображение выражения осуществляется с помощью функции {\bfseries{draw}}. В качестве параметров ей передаются координаты вывода выражения и флаги выравнивания относительно этих координат.
+
+Выражения можно формировать программно или использовать класс {\bfseries{Expression\+Builder}}. Функция {\bfseries{Expression\+Builder\+::exec}} в качестве аргумента принимает строку, которая содержит описание математического выражения. Если в процессе построения выражения возникает ошибка, функция вернет частично построенное выражение, а с помощью {\bfseries{Expression\+Builder\+::last\+Error}} можно узнать описание ошибки. Функция {\bfseries{Expression\+Builder\+::exec}} никогда не возвращает нулевой указатель. Полная справка по синтаксису выражений для {\bfseries{Expression\+Builder}} находится проекте {\bfseries{demo}}.
+
+Функции {\bfseries{Abstract\+Expression\+::multiplication\+Flags()}}, {\bfseries{Abstract\+Expression\+::is\+Arg\+Need\+Brackets()}}, {\bfseries{Abstract\+Expression\+::is\+Need\+Brackets()}} используются только классом {\bfseries{Expression\+Builder}}.
+
+{\bfseries{Abstract\+Expression\+::multiplication\+Flags()}} возвращает комбинацию флагов {\bfseries{Multiplication\+Flag}}, которые используются при перемножении символом \textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{}. Данные флаги показывают\+:
+\begin{DoxyItemize}
+\item {\bfseries{Multiplication\+Flag\+::\+Left}} -\/ выражение может быть умножено без знака слева;
+\item {\bfseries{Multiplication\+Flag\+::\+Right}} -\/ выражение может быть умножено без знака справа;
+\item {\bfseries{Multiplication\+Flag\+::\+Negative}} -\/ выражение является отрицательным;
+\item {\bfseries{Multiplication\+Flag\+::\+Number}} -\/ выражение является числом;
+\item {\bfseries{Multiplication\+Flag\+::\+Brackets}} -\/ выражение содержит любые скобки;
+\item {\bfseries{Multiplication\+Flag\+::\+Round\+Brackets}} -\/ выражение содержит круглые скобки.
+\end{DoxyItemize}
+
+{\bfseries{Abstract\+Expression\+::is\+Arg\+Need\+Brackets()}} возвращает {\bfseries{true}}, если при использовании данного выражения в качестве имени функции (см. класс {\bfseries{Common\+Function\+Expression}}) аргумент должен заключаться в скобки.
+
+{\bfseries{Abstract\+Expression\+::is\+Need\+Brackets()}} возвращает {\bfseries{true}}, если появление данного выражения в цепочке выражений вызывает необходимость заключения данной цепочки в скобки при умножении её на другое выражене.\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md1}{}\doxysubsection{\texorpdfstring{Примеры программного формирования выражений.}{Примеры программного формирования выражений.}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md1}
+\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md2}{}\doxyparagraph{\texorpdfstring{Пример 1\+:}{Пример 1:}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md2}
+Выражение\+:
+
+ 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \textcolor{keyword}{using\ namespace\ }MathExpressions;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1VariableExpression}{VariableExpression}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{\ expr-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1SignExpression}{SignExpression}}(SignExpression::SignType::Plus));}
+\DoxyCodeLine{\ expr-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1VariableExpression}{VariableExpression}}(\textcolor{charliteral}{'b'}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ fraction\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1FractionExpression}{FractionExpression}}(\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1VariableExpression}{VariableExpression}}(\textcolor{charliteral}{'c'}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1VariableExpression}{VariableExpression}}(\textcolor{charliteral}{'d'}));}
+\DoxyCodeLine{\ fraction-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1SignExpression}{SignExpression}}(SignExpression::SignType::Plus));}
+\DoxyCodeLine{\ fraction-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1NumberExpression}{NumberExpression}}(1));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ brackets\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1BracketedExpression}{BracketedExpression}}(fraction,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BracketedExpression::BracketStyle::Round);}
+\DoxyCodeLine{\ expr-\/>addNext(brackets);}
+\DoxyCodeLine{\ expr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1ChainExpression}{ChainExpression}}(expr);}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md3}{}\doxyparagraph{\texorpdfstring{Пример 2\+:}{Пример 2:}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md3}
+Выражение\+:
+
+ 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ radical\_expr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1VariableExpression}{VariableExpression}}(\textcolor{charliteral}{'x'});}
+\DoxyCodeLine{\ radical\_expr-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1SignExpression}{SignExpression}}(SignExpression::SignType::Minus));}
+\DoxyCodeLine{\ radical\_expr-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1NumberExpression}{NumberExpression}}(1));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ root\_expr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1RootExpression}{RootExpression}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1ChainExpression}{ChainExpression}}(radical\_expr),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1NumberExpression}{NumberExpression}}(3));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1AbstractExpression}{ExpressionPtr}}\ expr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1VariableExpression}{VariableExpression}}(\textcolor{charliteral}{'y'});}
+\DoxyCodeLine{\ expr-\/>addNext(\textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1SignExpression}{SignExpression}}(SignExpression::SignType::Equals));}
+\DoxyCodeLine{\ expr-\/>addNext(root\_expr);}
+\DoxyCodeLine{\ expr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMathExpressions_1_1ChainExpression}{ChainExpression}}(expr);}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md4}{}\doxysubsection{\texorpdfstring{Примеры формирования выражений с помощью класс Expression\+Builder.}{Примеры формирования выражений с помощью класс ExpressionBuilder.}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md4}
+\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md5}{}\doxyparagraph{\texorpdfstring{Пример 1\+:}{Пример 1:}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md5}
+Выражение\+:
+
+ 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1ExpressionBuilder}{ExpressionBuilder}}\ builder;}
+\DoxyCodeLine{\ ExpressionUniquePtr\ expr\ =\ builder.exec(\textcolor{stringliteral}{"{}a+b*(c/d+1)"{}});}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md6}{}\doxyparagraph{\texorpdfstring{Пример 2\+:}{Пример 2:}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md6}
+Выражение\+:
+
+ 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMathExpressions_1_1ExpressionBuilder}{ExpressionBuilder}}\ builder;}
+\DoxyCodeLine{\ ExpressionUniquePtr\ expr\ =\ builder.exec(\textcolor{stringliteral}{"{}y=root(3,\ x-\/1)"{}});}
+
+\end{DoxyCode}
+ \hypertarget{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md7}{}\doxysubsection{\texorpdfstring{Иерархия классов}{Иерархия классов}}\label{md__2home_2msa_2Documents_2QPROJECTS_2QEvalDeriv_2QEvalDerivSys_2frontend_2components_2widgets_2QMathExpr_2README_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{AbstractExpression}
+\DoxyCodeLine{|-\/AbstractParentExpression}
+\DoxyCodeLine{|\ |-\/AbstractBigParentExpression}
+\DoxyCodeLine{|\ |\ |-\/FractionExpression}
+\DoxyCodeLine{|\ |\ |-\/RootExpression}
+\DoxyCodeLine{|\ |\ |-\/AtValueExpression}
+\DoxyCodeLine{|\ |\ |-\/CommonFunctionExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/FunctionExpression}
+\DoxyCodeLine{|\ |-\/ChainExpression}
+\DoxyCodeLine{|\ |\ |-\/BracketedExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/RoundBracketedExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/ArgumentExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/BaseExpression}
+\DoxyCodeLine{|\ |-\/AbstractTwinParentExpression}
+\DoxyCodeLine{|\ |\ |-\/IndexExpression}
+\DoxyCodeLine{|\ |\ |-\/GroupExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/SummaExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/ProductExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/CirculationExpression}
+\DoxyCodeLine{|\ |\ \ \ |-\/IntegralExpression}
+\DoxyCodeLine{|\ |-\/LimitExpression}
+\DoxyCodeLine{|\ |-\/CapExpression}
+\DoxyCodeLine{|\ |-\/StandExpression}
+\DoxyCodeLine{|\ |-\/MatrixExpression}
+\DoxyCodeLine{|\ |-\/CaseExpression}
+\DoxyCodeLine{|\ |-\/FrameExpression}
+\DoxyCodeLine{|-\/SimpleExpression}
+\DoxyCodeLine{|\ |-\/VariableExpression}
+\DoxyCodeLine{|\ |-\/CustomTextExpression}
+\DoxyCodeLine{|\ |-\/FunctionNameExpression}
+\DoxyCodeLine{|\ |-\/AsterixExpression}
+\DoxyCodeLine{|-\/NumberExpression}
+\DoxyCodeLine{|\ |-\/ExtendedNumberExpresssion}
+\DoxyCodeLine{|-\/CharacterExpression}
+\DoxyCodeLine{|\ |-\/PlanckExpression}
+\DoxyCodeLine{|\ |-\/SignExpression}
+\DoxyCodeLine{|\ |-\/CommaExpression}
+\DoxyCodeLine{|\ |-\/LambdaExpression}
+\DoxyCodeLine{|-\/SpaceExpression}
+\DoxyCodeLine{|-\/StrokesExpression}
+\DoxyCodeLine{|-\/EmptyExpression}
+\DoxyCodeLine{|-\/NullExpression}
+
+\end{DoxyCode}
+ 

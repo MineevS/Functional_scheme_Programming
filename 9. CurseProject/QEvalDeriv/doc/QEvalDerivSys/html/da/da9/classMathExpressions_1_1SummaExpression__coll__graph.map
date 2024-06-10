@@ -1,0 +1,11 @@
+<map id="MathExpressions::SummaExpression" name="MathExpressions::SummaExpression">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,1743,260,1808"/>
+<area shape="rect" id="Node000002" href="$d3/d3d/classMathExpressions_1_1GroupExpression.html" title=" " alt="" coords="11,1349,254,1695"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,1708,135,1743,130,1743,130,1708"/>
+<area shape="rect" id="Node000003" href="$d4/d48/classMathExpressions_1_1AbstractTwinParentExpression.html" title=" " alt="" coords="10,941,255,1301"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,1316,135,1349,130,1349,130,1316"/>
+<area shape="rect" id="Node000004" href="$df/df8/classMathExpressions_1_1AbstractParentExpression.html" title=" " alt="" coords="25,613,241,893"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="135,907,135,941,130,941,130,907"/>
+<area shape="rect" id="Node000005" href="$d2/d9e/classMathExpressions_1_1AbstractExpression.html" title=" " alt="" coords="39,5,226,565"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="135,579,135,613,130,613,130,579"/>
+</map>

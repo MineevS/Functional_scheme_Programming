@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>QEvalDerivSys: Класс MathExpressions::AbstractExpression</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">QEvalDerivSys<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Система вычисления производных</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MathExpressions</b></li><li class="navelem"><a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">AbstractExpression</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-static-methods">Защищенные статические члены</a> &#124;
+<a href="../../dc/de6/classMathExpressions_1_1AbstractExpression-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс MathExpressions::AbstractExpression<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:MathExpressions::AbstractExpression:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3e/classMathExpressions_1_1AbstractExpression__inherit__graph.png" border="0" usemap="#aMathExpressions_1_1AbstractExpression_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMathExpressions_1_1AbstractExpression_inherit__map" id="aMathExpressions_1_1AbstractExpression_inherit__map">
+<area shape="rect" title=" " alt="" coords="4306,5,4493,565"/>
+<area shape="rect" href="../../df/df8/classMathExpressions_1_1AbstractParentExpression.html" title=" " alt="" coords="1881,646,2097,926"/>
+<area shape="poly" title=" " alt="" coords="4293,311,2097,765,2096,760,4292,306"/>
+<area shape="rect" href="../../d9/d99/classMathExpressions_1_1CharacterExpression.html" title=" " alt="" coords="3653,656,3849,916"/>
+<area shape="poly" title=" " alt="" coords="4295,337,4198,387,4087,451,3974,528,3920,570,3869,615,3832,658,3828,654,3865,611,3916,566,3971,523,4084,446,4195,382,4292,332"/>
+<area shape="rect" href="../../d5/de2/classMathExpressions_1_1EmptyExpression.html" title=" " alt="" coords="3880,733,4127,839"/>
+<area shape="poly" title=" " alt="" coords="4299,415,4140,615,4046,735,4041,732,4136,612,4295,412"/>
+<area shape="rect" href="../../d5/db4/classMathExpressions_1_1NullExpression.html" title=" " alt="" coords="4151,743,4381,829"/>
+<area shape="poly" title=" " alt="" coords="4324,579,4280,744,4275,742,4319,578"/>
+<area shape="rect" href="../../d9/d99/classMathExpressions_1_1NumberExpression.html" title=" " alt="" coords="4406,613,4662,959"/>
+<area shape="poly" title=" " alt="" coords="4481,578,4490,612,4485,613,4476,579"/>
+<area shape="rect" href="../../d0/dc8/classMathExpressions_1_1SimpleExpression.html" title=" " alt="" coords="4687,693,4936,879"/>
+<area shape="poly" title=" " alt="" coords="4504,405,4676,612,4741,692,4737,695,4672,615,4500,409"/>
+<area shape="rect" href="../../dc/dbd/classMathExpressions_1_1SpaceExpression.html" title=" " alt="" coords="4961,713,5203,859"/>
+<area shape="poly" title=" " alt="" coords="4506,333,4605,383,4720,448,4838,525,4949,611,4997,660,5037,711,5033,715,4993,663,4946,615,4835,529,4717,452,4603,388,4504,337"/>
+<area shape="rect" href="../../dd/d5a/classMathExpressions_1_1StrokesExpression.html" title=" " alt="" coords="5227,696,5409,876"/>
+<area shape="poly" title=" " alt="" coords="4507,304,4659,341,4749,369,4845,403,4943,443,5039,491,5132,547,5217,611,5253,650,5281,695,5277,697,5249,654,5214,615,5129,552,5037,496,4940,448,4843,408,4747,374,4657,347,4506,309"/>
+<area shape="rect" href="../../d1/d40/classMathExpressions_1_1AbstractBigParentExpression.html" title=" " alt="" coords="457,1119,694,1399"/>
+<area shape="poly" title=" " alt="" coords="1867,800,1682,821,1447,860,1319,888,1190,921,1062,962,939,1009,874,1041,810,1079,696,1159,693,1155,807,1074,871,1036,937,1004,1060,957,1188,916,1318,883,1446,855,1681,816,1867,794"/>
+<area shape="rect" href="../../d4/d48/classMathExpressions_1_1AbstractTwinParentExpression.html" title=" " alt="" coords="950,1079,1195,1439"/>
+<area shape="poly" title=" " alt="" coords="1867,795,1721,812,1637,827,1548,849,1458,876,1370,912,1286,955,1209,1009,1175,1042,1147,1080,1143,1077,1171,1038,1206,1005,1283,951,1368,907,1457,871,1547,843,1636,822,1721,807,1866,790"/>
+<area shape="rect" href="../../dd/d24/classMathExpressions_1_1CapExpression.html" title=" " alt="" coords="1219,1097,1449,1422"/>
+<area shape="poly" title=" " alt="" coords="1868,815,1772,842,1664,883,1610,908,1558,937,1508,971,1463,1009,1426,1050,1396,1098,1392,1095,1422,1047,1459,1005,1505,967,1555,933,1608,903,1662,878,1770,837,1866,809"/>
+<area shape="rect" href="../../de/d16/classMathExpressions_1_1CaseExpression.html" title=" " alt="" coords="1473,1197,1709,1322"/>
+<area shape="poly" title=" " alt="" coords="1871,870,1794,934,1757,970,1723,1008,1690,1055,1661,1105,1617,1198,1612,1195,1656,1102,1685,1052,1719,1005,1753,967,1790,930,1868,866"/>
+<area shape="rect" href="../../d9/d95/classMathExpressions_1_1ChainExpression.html" title=" " alt="" coords="1733,1147,1975,1372"/>
+<area shape="poly" title=" " alt="" coords="1948,940,1889,1147,1883,1146,1943,938"/>
+<area shape="rect" href="../../d0/d09/classMathExpressions_1_1FrameExpression.html" title=" " alt="" coords="1999,1007,2245,1512"/>
+<area shape="poly" title=" " alt="" coords="2034,939,2053,1006,2048,1007,2029,940"/>
+<area shape="rect" href="../../d2/dd8/classMathExpressions_1_1LimitExpression.html" title=" " alt="" coords="2269,1157,2506,1362"/>
+<area shape="poly" title=" " alt="" coords="2110,866,2187,930,2225,967,2259,1005,2309,1079,2348,1155,2344,1158,2304,1082,2255,1008,2221,970,2183,934,2106,870"/>
+<area shape="rect" href="../../dc/d8d/classMathExpressions_1_1MatrixExpression.html" title=" " alt="" coords="2529,1157,2776,1362"/>
+<area shape="poly" title=" " alt="" coords="2111,810,2207,838,2315,879,2369,904,2423,934,2473,967,2520,1005,2551,1038,2578,1076,2619,1155,2615,1157,2574,1079,2547,1042,2516,1009,2470,971,2420,938,2367,909,2313,883,2206,843,2109,815"/>
+<area shape="rect" href="../../df/dd1/classMathExpressions_1_1StandExpression.html" title=" " alt="" coords="2800,1177,3041,1342"/>
+<area shape="poly" title=" " alt="" coords="2110,789,2260,805,2347,820,2438,841,2531,869,2622,905,2709,950,2789,1005,2826,1042,2857,1086,2881,1132,2899,1176,2894,1178,2876,1134,2852,1088,2822,1045,2786,1009,2706,954,2620,910,2529,874,2437,846,2346,825,2259,810,2110,794"/>
+<area shape="rect" href="../../dd/d1f/classMathExpressions_1_1AtValueExpression.html" title=" " alt="" coords="5,1653,188,1893"/>
+<area shape="poly" title=" " alt="" coords="447,1345,385,1389,320,1441,258,1499,201,1562,171,1606,145,1654,141,1651,166,1603,197,1558,254,1495,317,1437,382,1385,443,1340"/>
+<area shape="rect" href="../../db/d83/classMathExpressions_1_1CommonFunctionExpression.html" title=" " alt="" coords="212,1653,459,1893"/>
+<area shape="poly" title=" " alt="" coords="507,1413,394,1654,389,1651,502,1411"/>
+<area shape="rect" href="../../d7/db9/classMathExpressions_1_1FractionExpression.html" title=" " alt="" coords="483,1643,668,1903"/>
+<area shape="poly" title=" " alt="" coords="578,1413,578,1643,573,1643,573,1413"/>
+<area shape="rect" href="../../d8/dbc/classMathExpressions_1_1RootExpression.html" title=" " alt="" coords="693,1670,927,1875"/>
+<area shape="poly" title=" " alt="" coords="647,1411,766,1669,761,1671,642,1413"/>
+<area shape="rect" href="../../da/da3/classMathExpressions_1_1FunctionExpression.html" title=" " alt="" coords="241,2063,429,2143"/>
+<area shape="poly" title=" " alt="" coords="338,1906,338,2063,333,2063,333,1906"/>
+<area shape="rect" href="../../d3/d3d/classMathExpressions_1_1GroupExpression.html" title=" " alt="" coords="951,1600,1194,1945"/>
+<area shape="poly" title=" " alt="" coords="1075,1453,1075,1600,1070,1600,1070,1453"/>
+<area shape="rect" href="../../d6/dc3/classMathExpressions_1_1IndexExpression.html" title=" " alt="" coords="1218,1560,1458,1985"/>
+<area shape="poly" title=" " alt="" coords="1174,1450,1230,1559,1226,1561,1169,1453"/>
+<area shape="rect" href="../../d2/df8/classMathExpressions_1_1CirculationExpression.html" title=" " alt="" coords="570,2053,773,2153"/>
+<area shape="poly" title=" " alt="" coords="973,1958,941,1987,901,2010,866,2017,829,2022,786,2036,747,2056,745,2051,784,2031,828,2017,865,2012,899,2005,938,1983,970,1954"/>
+<area shape="rect" href="../../d9/d45/classMathExpressions_1_1IntegralExpression.html" title=" " alt="" coords="797,2043,980,2163"/>
+<area shape="poly" title=" " alt="" coords="972,1959,924,2045,919,2042,967,1956"/>
+<area shape="rect" href="../../d4/d18/classMathExpressions_1_1ProductExpression.html" title=" " alt="" coords="1004,2063,1187,2143"/>
+<area shape="poly" title=" " alt="" coords="1088,1959,1095,2063,1090,2063,1083,1959"/>
+<area shape="rect" href="../../dd/da4/classMathExpressions_1_1SummaExpression.html" title=" " alt="" coords="1211,2071,1465,2136"/>
+<area shape="poly" title=" " alt="" coords="1185,1955,1208,1984,1253,2030,1298,2068,1295,2073,1249,2034,1204,1987,1181,1958"/>
+<area shape="rect" href="../../d9/dad/classMathExpressions_1_1BracketedExpression.html" title=" " alt="" coords="1755,1583,1953,1963"/>
+<area shape="poly" title=" " alt="" coords="1857,1386,1857,1582,1851,1582,1851,1386"/>
+<area shape="rect" href="../../d7/d81/classMathExpressions_1_1ArgumentExpression.html" title=" " alt="" coords="1514,2033,1711,2173"/>
+<area shape="poly" title=" " alt="" coords="1748,1922,1666,2035,1661,2031,1744,1919"/>
+<area shape="rect" href="../../d5/dd0/classMathExpressions_1_1BaseExpression.html" title=" " alt="" coords="1736,2061,1972,2146"/>
+<area shape="poly" title=" " alt="" coords="1857,1977,1857,2060,1851,2060,1851,1977"/>
+<area shape="rect" href="../../d5/d9b/classMathExpressions_1_1RoundBracketedExpression.html" title=" " alt="" coords="1996,2053,2235,2153"/>
+<area shape="poly" title=" " alt="" coords="1964,1908,2078,2051,2074,2055,1960,1911"/>
+<area shape="rect" href="../../da/d15/classMathExpressions_1_1CommaExpression.html" title=" " alt="" coords="3065,1207,3320,1312"/>
+<area shape="poly" title=" " alt="" coords="3642,827,3568,859,3487,899,3407,949,3335,1009,3294,1056,3260,1109,3233,1161,3213,1208,3209,1206,3229,1159,3256,1106,3290,1053,3331,1005,3404,945,3484,895,3565,854,3640,822"/>
+<area shape="rect" href="../../d8/dac/classMathExpressions_1_1LambdaExpression.html" title=" " alt="" coords="3345,1217,3601,1302"/>
+<area shape="poly" title=" " alt="" coords="3663,929,3615,1008,3497,1218,3493,1215,3610,1005,3659,927"/>
+<area shape="rect" href="../../dd/db1/classMathExpressions_1_1NablaExpression.html" title=" " alt="" coords="3625,1227,3867,1292"/>
+<area shape="poly" title=" " alt="" coords="3752,930,3749,1226,3744,1226,3747,930"/>
+<area shape="rect" href="../../da/d5a/classMathExpressions_1_1PlanckExpression.html" title=" " alt="" coords="3892,1197,4139,1322"/>
+<area shape="poly" title=" " alt="" coords="3837,926,3882,1005,3985,1195,3980,1198,3877,1008,3832,929"/>
+<area shape="rect" href="../../d6/d09/classMathExpressions_1_1SignExpression.html" title=" " alt="" coords="4163,1177,4395,1342"/>
+<area shape="poly" title=" " alt="" coords="3831,924,3869,956,3907,975,3942,982,3977,982,4010,978,4044,974,4078,974,4114,983,4152,1005,4190,1041,4220,1084,4244,1130,4261,1175,4256,1177,4239,1133,4216,1087,4186,1044,4148,1009,4112,988,4077,980,4044,979,4011,983,3977,987,3942,987,3905,980,3866,961,3828,928"/>
+<area shape="rect" href="../../df/d8b/classMathExpressions_1_1ExtendedNumberExpresssion.html" title=" " alt="" coords="4419,1139,4649,1379"/>
+<area shape="poly" title=" " alt="" coords="4537,973,4537,1139,4531,1139,4531,973"/>
+<area shape="rect" href="../../d6/d06/classMathExpressions_1_1AsterixExpression.html" title=" " alt="" coords="4673,1209,4851,1309"/>
+<area shape="poly" title=" " alt="" coords="4803,893,4770,1209,4764,1209,4798,893"/>
+<area shape="rect" href="../../df/d2b/classMathExpressions_1_1CustomTextExpression.html" title=" " alt="" coords="4875,1199,5086,1319"/>
+<area shape="poly" title=" " alt="" coords="4852,891,4962,1198,4957,1200,4847,893"/>
+<area shape="rect" href="../../d7/d57/classMathExpressions_1_1FunctionNameExpression.html" title=" " alt="" coords="5111,1209,5315,1309"/>
+<area shape="poly" title=" " alt="" coords="4879,888,4912,925,4950,956,4970,968,4989,974,5026,977,5061,983,5080,991,5100,1005,5121,1027,5140,1052,5170,1106,5192,1161,5205,1209,5200,1210,5187,1162,5166,1108,5136,1055,5117,1030,5096,1009,5078,995,5060,988,5025,983,4988,979,4968,973,4947,961,4909,929,4875,891"/>
+<area shape="rect" href="../../d8/d1e/classMathExpressions_1_1VariableExpression.html" title=" " alt="" coords="5339,1169,5526,1349"/>
+<area shape="poly" title=" " alt="" coords="4875,888,4909,926,4950,956,5003,978,5051,984,5098,981,5142,973,5187,966,5232,965,5279,976,5304,988,5329,1005,5363,1039,5389,1080,5408,1125,5421,1168,5416,1170,5403,1127,5385,1083,5359,1042,5326,1009,5301,992,5277,981,5232,970,5187,971,5143,978,5098,986,5051,989,5001,983,4947,961,4906,930,4871,892"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса MathExpressions::AbstractExpression:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d53/classMathExpressions_1_1AbstractExpression__coll__graph.png" border="0" usemap="#aMathExpressions_1_1AbstractExpression_coll__map" alt="Collaboration graph"/></div>
+<map name="aMathExpressions_1_1AbstractExpression_coll__map" id="aMathExpressions_1_1AbstractExpression_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,192,565"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a56320c7c2f1082b82b37c991c59ac320" id="r_a56320c7c2f1082b82b37c991c59ac320"><td class="memItemLeft" align="right" valign="top"><a id="a56320c7c2f1082b82b37c991c59ac320" name="a56320c7c2f1082b82b37c991c59ac320"></a>
+QPaintDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>paintDevice</b> () const</td></tr>
+<tr class="separator:a56320c7c2f1082b82b37c991c59ac320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9416bf3ed375d7ce9f11dfcdd1aa6705" id="r_a9416bf3ed375d7ce9f11dfcdd1aa6705"><td class="memItemLeft" align="right" valign="top"><a id="a9416bf3ed375d7ce9f11dfcdd1aa6705" name="a9416bf3ed375d7ce9f11dfcdd1aa6705"></a>
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> () const</td></tr>
+<tr class="separator:a9416bf3ed375d7ce9f11dfcdd1aa6705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2213c78acea4779394255b984e20811d" id="r_a2213c78acea4779394255b984e20811d"><td class="memItemLeft" align="right" valign="top"><a id="a2213c78acea4779394255b984e20811d" name="a2213c78acea4779394255b984e20811d"></a>
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> () const</td></tr>
+<tr class="separator:a2213c78acea4779394255b984e20811d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f8b540a61a9a7fed90c329b6188e65" id="r_a97f8b540a61a9a7fed90c329b6188e65"><td class="memItemLeft" align="right" valign="top"><a id="a97f8b540a61a9a7fed90c329b6188e65" name="a97f8b540a61a9a7fed90c329b6188e65"></a>
+virtual QFont&#160;</td><td class="memItemRight" valign="bottom"><b>font</b> () const</td></tr>
+<tr class="separator:a97f8b540a61a9a7fed90c329b6188e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d13a47a78ae721b897de69f17f06e18" id="r_a7d13a47a78ae721b897de69f17f06e18"><td class="memItemLeft" align="right" valign="top"><a id="a7d13a47a78ae721b897de69f17f06e18" name="a7d13a47a78ae721b897de69f17f06e18"></a>
+virtual QPen&#160;</td><td class="memItemRight" valign="bottom"><b>pen</b> () const</td></tr>
+<tr class="separator:a7d13a47a78ae721b897de69f17f06e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787fd1f572aa5f510d2f1606935e9f45" id="r_a787fd1f572aa5f510d2f1606935e9f45"><td class="memItemLeft" align="right" valign="top"><a id="a787fd1f572aa5f510d2f1606935e9f45" name="a787fd1f572aa5f510d2f1606935e9f45"></a>
+virtual QBrush&#160;</td><td class="memItemRight" valign="bottom"><b>brush</b> () const</td></tr>
+<tr class="separator:a787fd1f572aa5f510d2f1606935e9f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4bbd51b0a5c07ebbec82c9ef1387de" id="r_ada4bbd51b0a5c07ebbec82c9ef1387de"><td class="memItemLeft" align="right" valign="top"><a id="ada4bbd51b0a5c07ebbec82c9ef1387de" name="ada4bbd51b0a5c07ebbec82c9ef1387de"></a>
+QColor&#160;</td><td class="memItemRight" valign="bottom"><b>color</b> () const</td></tr>
+<tr class="separator:ada4bbd51b0a5c07ebbec82c9ef1387de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4411ca121c4dfd9f414364fb4d94fa1f" id="r_a4411ca121c4dfd9f414364fb4d94fa1f"><td class="memItemLeft" align="right" valign="top"><a id="a4411ca121c4dfd9f414364fb4d94fa1f" name="a4411ca121c4dfd9f414364fb4d94fa1f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasNext</b> () const</td></tr>
+<tr class="separator:a4411ca121c4dfd9f414364fb4d94fa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca95baa621363e3ffb430fea87294d04" id="r_aca95baa621363e3ffb430fea87294d04"><td class="memItemLeft" align="right" valign="top"><a id="aca95baa621363e3ffb430fea87294d04" name="aca95baa621363e3ffb430fea87294d04"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasParent</b> () const</td></tr>
+<tr class="separator:aca95baa621363e3ffb430fea87294d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbc2b3aab9059d2ac7d36679896f74b" id="r_adcbc2b3aab9059d2ac7d36679896f74b"><td class="memItemLeft" align="right" valign="top"><a id="adcbc2b3aab9059d2ac7d36679896f74b" name="adcbc2b3aab9059d2ac7d36679896f74b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> () const</td></tr>
+<tr class="separator:adcbc2b3aab9059d2ac7d36679896f74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174e3ff3a419bc73c87f05ec1a0e03ba" id="r_a174e3ff3a419bc73c87f05ec1a0e03ba"><td class="memItemLeft" align="right" valign="top"><a id="a174e3ff3a419bc73c87f05ec1a0e03ba" name="a174e3ff3a419bc73c87f05ec1a0e03ba"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> () const</td></tr>
+<tr class="separator:a174e3ff3a419bc73c87f05ec1a0e03ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f0fc7df5ca2c3196ef81ee667e71a6" id="r_ab9f0fc7df5ca2c3196ef81ee667e71a6"><td class="memItemLeft" align="right" valign="top"><a id="ab9f0fc7df5ca2c3196ef81ee667e71a6" name="ab9f0fc7df5ca2c3196ef81ee667e71a6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ascent</b> () const</td></tr>
+<tr class="separator:ab9f0fc7df5ca2c3196ef81ee667e71a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d61f1ce0213da87cf8e06ae02621560" id="r_a6d61f1ce0213da87cf8e06ae02621560"><td class="memItemLeft" align="right" valign="top"><a id="a6d61f1ce0213da87cf8e06ae02621560" name="a6d61f1ce0213da87cf8e06ae02621560"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>descent</b> () const</td></tr>
+<tr class="separator:a6d61f1ce0213da87cf8e06ae02621560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8061b390402437e25753a23f7302c4e" id="r_af8061b390402437e25753a23f7302c4e"><td class="memItemLeft" align="right" valign="top"><a id="af8061b390402437e25753a23f7302c4e" name="af8061b390402437e25753a23f7302c4e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>superscriptX</b> () const</td></tr>
+<tr class="separator:af8061b390402437e25753a23f7302c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1dda5dca29b1636d7044960843df32f" id="r_ad1dda5dca29b1636d7044960843df32f"><td class="memItemLeft" align="right" valign="top"><a id="ad1dda5dca29b1636d7044960843df32f" name="ad1dda5dca29b1636d7044960843df32f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>superscriptY</b> () const</td></tr>
+<tr class="separator:ad1dda5dca29b1636d7044960843df32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078f545fd7303840eac005d00112887e" id="r_a078f545fd7303840eac005d00112887e"><td class="memItemLeft" align="right" valign="top"><a id="a078f545fd7303840eac005d00112887e" name="a078f545fd7303840eac005d00112887e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>subscriptX</b> () const</td></tr>
+<tr class="separator:a078f545fd7303840eac005d00112887e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f914a5e4cb16f9659ab68b414efa365" id="r_a0f914a5e4cb16f9659ab68b414efa365"><td class="memItemLeft" align="right" valign="top"><a id="a0f914a5e4cb16f9659ab68b414efa365" name="a0f914a5e4cb16f9659ab68b414efa365"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>subscriptY</b> () const</td></tr>
+<tr class="separator:a0f914a5e4cb16f9659ab68b414efa365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89f9afc12b9e736081420089db2a90f" id="r_ac89f9afc12b9e736081420089db2a90f"><td class="memItemLeft" align="right" valign="top"><a id="ac89f9afc12b9e736081420089db2a90f" name="ac89f9afc12b9e736081420089db2a90f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capDXLeft</b> () const</td></tr>
+<tr class="separator:ac89f9afc12b9e736081420089db2a90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94241ba18f8df1d0d3974a08f0615736" id="r_a94241ba18f8df1d0d3974a08f0615736"><td class="memItemLeft" align="right" valign="top"><a id="a94241ba18f8df1d0d3974a08f0615736" name="a94241ba18f8df1d0d3974a08f0615736"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capDXRight</b> () const</td></tr>
+<tr class="separator:a94241ba18f8df1d0d3974a08f0615736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13742477ba910c776bfea9f2c21c6f3" id="r_aa13742477ba910c776bfea9f2c21c6f3"><td class="memItemLeft" align="right" valign="top"><a id="aa13742477ba910c776bfea9f2c21c6f3" name="aa13742477ba910c776bfea9f2c21c6f3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capDY</b> () const</td></tr>
+<tr class="separator:aa13742477ba910c776bfea9f2c21c6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3765670faa002353f784eb188719ccf8" id="r_a3765670faa002353f784eb188719ccf8"><td class="memItemLeft" align="right" valign="top"><a id="a3765670faa002353f784eb188719ccf8" name="a3765670faa002353f784eb188719ccf8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (int x, int y, Qt::Alignment alignment) const</td></tr>
+<tr class="separator:a3765670faa002353f784eb188719ccf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71de16a61a82ea8fc625a8f9ca31bfee" id="r_a71de16a61a82ea8fc625a8f9ca31bfee"><td class="memItemLeft" align="right" valign="top"><a id="a71de16a61a82ea8fc625a8f9ca31bfee" name="a71de16a61a82ea8fc625a8f9ca31bfee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (QPainter *painter, int x, int y, Qt::Alignment alignment) const</td></tr>
+<tr class="separator:a71de16a61a82ea8fc625a8f9ca31bfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30b000cf22128fe6a6dfda9bba79c60" id="r_ad30b000cf22128fe6a6dfda9bba79c60"><td class="memItemLeft" align="right" valign="top"><a id="ad30b000cf22128fe6a6dfda9bba79c60" name="ad30b000cf22128fe6a6dfda9bba79c60"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPaintDevice</b> (QPaintDevice *paintDevice)</td></tr>
+<tr class="separator:ad30b000cf22128fe6a6dfda9bba79c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec893627d49d126b2f9768f4e018a8e9" id="r_aec893627d49d126b2f9768f4e018a8e9"><td class="memItemLeft" align="right" valign="top"><a id="aec893627d49d126b2f9768f4e018a8e9" name="aec893627d49d126b2f9768f4e018a8e9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNext</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> next)</td></tr>
+<tr class="separator:aec893627d49d126b2f9768f4e018a8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9085736d287b911d70a7ba0eed2c9c4e" id="r_a9085736d287b911d70a7ba0eed2c9c4e"><td class="memItemLeft" align="right" valign="top"><a id="a9085736d287b911d70a7ba0eed2c9c4e" name="a9085736d287b911d70a7ba0eed2c9c4e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFont</b> (const QFont &amp;font)</td></tr>
+<tr class="separator:a9085736d287b911d70a7ba0eed2c9c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87006f89983db1ecbbcee882d773a5b5" id="r_a87006f89983db1ecbbcee882d773a5b5"><td class="memItemLeft" align="right" valign="top"><a id="a87006f89983db1ecbbcee882d773a5b5" name="a87006f89983db1ecbbcee882d773a5b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (const QColor &amp;color)</td></tr>
+<tr class="separator:a87006f89983db1ecbbcee882d773a5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db8bf798a8176c5be458cd63fbd48a5" id="r_a2db8bf798a8176c5be458cd63fbd48a5"><td class="memItemLeft" align="right" valign="top"><a id="a2db8bf798a8176c5be458cd63fbd48a5" name="a2db8bf798a8176c5be458cd63fbd48a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addNext</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> next)</td></tr>
+<tr class="separator:a2db8bf798a8176c5be458cd63fbd48a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cad47d2bb38fc5f68a94d957aeb49d1" id="r_a1cad47d2bb38fc5f68a94d957aeb49d1"><td class="memItemLeft" align="right" valign="top"><a id="a1cad47d2bb38fc5f68a94d957aeb49d1" name="a1cad47d2bb38fc5f68a94d957aeb49d1"></a>
+virtual MultiplicationFlags&#160;</td><td class="memItemRight" valign="bottom"><b>multiplicationFlags</b> () const</td></tr>
+<tr class="separator:a1cad47d2bb38fc5f68a94d957aeb49d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ae06de86d20874838e9add70c6e85f" id="r_a43ae06de86d20874838e9add70c6e85f"><td class="memItemLeft" align="right" valign="top"><a id="a43ae06de86d20874838e9add70c6e85f" name="a43ae06de86d20874838e9add70c6e85f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isArgNeedBrackets</b> () const</td></tr>
+<tr class="separator:a43ae06de86d20874838e9add70c6e85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac33ae3497a962ae22e3e7e65985f734" id="r_aac33ae3497a962ae22e3e7e65985f734"><td class="memItemLeft" align="right" valign="top"><a id="aac33ae3497a962ae22e3e7e65985f734" name="aac33ae3497a962ae22e3e7e65985f734"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNeedBrackets</b> () const</td></tr>
+<tr class="separator:aac33ae3497a962ae22e3e7e65985f734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3812508fe328f135c65b77c0a8107b89" id="r_a3812508fe328f135c65b77c0a8107b89"><td class="memItemLeft" align="right" valign="top"><a id="a3812508fe328f135c65b77c0a8107b89" name="a3812508fe328f135c65b77c0a8107b89"></a>
+<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cutOff</b> ()</td></tr>
+<tr class="separator:a3812508fe328f135c65b77c0a8107b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:aa309826e7eeb6b5438d5806dff1b5e8f" id="r_aa309826e7eeb6b5438d5806dff1b5e8f"><td class="memItemLeft" align="right" valign="top"><a id="aa309826e7eeb6b5438d5806dff1b5e8f" name="aa309826e7eeb6b5438d5806dff1b5e8f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>fontChanged</b> ()</td></tr>
+<tr class="separator:aa309826e7eeb6b5438d5806dff1b5e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e391cbd5c167ce9b0c0264a8448800" id="r_a53e391cbd5c167ce9b0c0264a8448800"><td class="memItemLeft" align="right" valign="top"><a id="a53e391cbd5c167ce9b0c0264a8448800" name="a53e391cbd5c167ce9b0c0264a8448800"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>colorChanged</b> ()</td></tr>
+<tr class="separator:a53e391cbd5c167ce9b0c0264a8448800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e68d25cc48935158a50bf9afad59ae" id="r_a72e68d25cc48935158a50bf9afad59ae"><td class="memItemLeft" align="right" valign="top"><a id="a72e68d25cc48935158a50bf9afad59ae" name="a72e68d25cc48935158a50bf9afad59ae"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>paintDeviceChanged</b> ()</td></tr>
+<tr class="separator:a72e68d25cc48935158a50bf9afad59ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ea3d53b8fb4ff3a6c144946a8118e0" id="r_a80ea3d53b8fb4ff3a6c144946a8118e0"><td class="memItemLeft" align="right" valign="top"><a id="a80ea3d53b8fb4ff3a6c144946a8118e0" name="a80ea3d53b8fb4ff3a6c144946a8118e0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> (QPainter *painter, int x, int y) const =0</td></tr>
+<tr class="separator:a80ea3d53b8fb4ff3a6c144946a8118e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5cf519e8ada5ae44cb393895796058a" id="r_af5cf519e8ada5ae44cb393895796058a"><td class="memItemLeft" align="right" valign="top"><a id="af5cf519e8ada5ae44cb393895796058a" name="af5cf519e8ada5ae44cb393895796058a"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcWidth</b> () const</td></tr>
+<tr class="separator:af5cf519e8ada5ae44cb393895796058a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436f6fec7c4dffd0ed40a2672a3a1f8e" id="r_a436f6fec7c4dffd0ed40a2672a3a1f8e"><td class="memItemLeft" align="right" valign="top"><a id="a436f6fec7c4dffd0ed40a2672a3a1f8e" name="a436f6fec7c4dffd0ed40a2672a3a1f8e"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcHeight</b> () const</td></tr>
+<tr class="separator:a436f6fec7c4dffd0ed40a2672a3a1f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8c3cd41cd870414b3214398fb786ad" id="r_a1e8c3cd41cd870414b3214398fb786ad"><td class="memItemLeft" align="right" valign="top"><a id="a1e8c3cd41cd870414b3214398fb786ad" name="a1e8c3cd41cd870414b3214398fb786ad"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcAscent</b> () const</td></tr>
+<tr class="separator:a1e8c3cd41cd870414b3214398fb786ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500ecd1339b7729ce027305923eed4eb" id="r_a500ecd1339b7729ce027305923eed4eb"><td class="memItemLeft" align="right" valign="top"><a id="a500ecd1339b7729ce027305923eed4eb" name="a500ecd1339b7729ce027305923eed4eb"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcDescent</b> () const</td></tr>
+<tr class="separator:a500ecd1339b7729ce027305923eed4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329aeb8290a92d4081cf523e6efed5aa" id="r_a329aeb8290a92d4081cf523e6efed5aa"><td class="memItemLeft" align="right" valign="top"><a id="a329aeb8290a92d4081cf523e6efed5aa" name="a329aeb8290a92d4081cf523e6efed5aa"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSuperscriptX</b> () const</td></tr>
+<tr class="separator:a329aeb8290a92d4081cf523e6efed5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe630a0db17c097316509138f3d6667" id="r_abbe630a0db17c097316509138f3d6667"><td class="memItemLeft" align="right" valign="top"><a id="abbe630a0db17c097316509138f3d6667" name="abbe630a0db17c097316509138f3d6667"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSuperscriptY</b> () const</td></tr>
+<tr class="separator:abbe630a0db17c097316509138f3d6667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bf19a5c5370558498a34283cd510ae" id="r_a12bf19a5c5370558498a34283cd510ae"><td class="memItemLeft" align="right" valign="top"><a id="a12bf19a5c5370558498a34283cd510ae" name="a12bf19a5c5370558498a34283cd510ae"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSubscriptX</b> () const</td></tr>
+<tr class="separator:a12bf19a5c5370558498a34283cd510ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb004c2d87966e042627c1b1456bff53" id="r_aeb004c2d87966e042627c1b1456bff53"><td class="memItemLeft" align="right" valign="top"><a id="aeb004c2d87966e042627c1b1456bff53" name="aeb004c2d87966e042627c1b1456bff53"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcSubscriptY</b> () const</td></tr>
+<tr class="separator:aeb004c2d87966e042627c1b1456bff53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045bb8bc6bb7b815fa9908ed15dda5b3" id="r_a045bb8bc6bb7b815fa9908ed15dda5b3"><td class="memItemLeft" align="right" valign="top"><a id="a045bb8bc6bb7b815fa9908ed15dda5b3" name="a045bb8bc6bb7b815fa9908ed15dda5b3"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>calcCapDY</b> () const</td></tr>
+<tr class="separator:a045bb8bc6bb7b815fa9908ed15dda5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e4cfe54c02622d10adfa1e7051a13d" id="r_a53e4cfe54c02622d10adfa1e7051a13d"><td class="memItemLeft" align="right" valign="top"><a id="a53e4cfe54c02622d10adfa1e7051a13d" name="a53e4cfe54c02622d10adfa1e7051a13d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>calcCapDX</b> (int &amp;dxLeft, int &amp;dxRight) const</td></tr>
+<tr class="separator:a53e4cfe54c02622d10adfa1e7051a13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8571a1d66480d7aba857551ddbb0f78c" id="r_a8571a1d66480d7aba857551ddbb0f78c"><td class="memItemLeft" align="right" valign="top"><a id="a8571a1d66480d7aba857551ddbb0f78c" name="a8571a1d66480d7aba857551ddbb0f78c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>convertCoords</b> (int &amp;x, int &amp;y, Qt::Alignment alignment) const</td></tr>
+<tr class="separator:a8571a1d66480d7aba857551ddbb0f78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6601f6499ac7c603375a54a3e9aaadf3" id="r_a6601f6499ac7c603375a54a3e9aaadf3"><td class="memItemLeft" align="right" valign="top"><a id="a6601f6499ac7c603375a54a3e9aaadf3" name="a6601f6499ac7c603375a54a3e9aaadf3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlag</b> (<a class="el" href="../../d2/d49/global_8h.html#a9a1f4b211843aa1687d2e22ae291db81">CalculateFlag</a> flag, bool on=true) const</td></tr>
+<tr class="separator:a6601f6499ac7c603375a54a3e9aaadf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c3469419ce0d95463ea1de9aa4afaa" id="r_ab4c3469419ce0d95463ea1de9aa4afaa"><td class="memItemLeft" align="right" valign="top"><a id="ab4c3469419ce0d95463ea1de9aa4afaa" name="ab4c3469419ce0d95463ea1de9aa4afaa"></a>
+const <a class="el" href="../../d6/d80/classMathExpressions_1_1LineWidth.html">LineWidth</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>lineWidth</b> () const</td></tr>
+<tr class="separator:ab4c3469419ce0d95463ea1de9aa4afaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2a8b21fc4fc875f7b2ed6dc6de6024" id="r_a7b2a8b21fc4fc875f7b2ed6dc6de6024"><td class="memItemLeft" align="right" valign="top"><a id="a7b2a8b21fc4fc875f7b2ed6dc6de6024" name="a7b2a8b21fc4fc875f7b2ed6dc6de6024"></a>
+const <a class="el" href="../../d7/d0c/classMathExpressions_1_1CapMultiplier.html">CapMultiplier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>capMultiplier</b> () const</td></tr>
+<tr class="separator:a7b2a8b21fc4fc875f7b2ed6dc6de6024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa433e797490046d6b7705eed7c8c1397" id="r_aa433e797490046d6b7705eed7c8c1397"><td class="memItemLeft" align="right" valign="top"><a id="aa433e797490046d6b7705eed7c8c1397" name="aa433e797490046d6b7705eed7c8c1397"></a>
+const CalculateFlags &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> () const</td></tr>
+<tr class="separator:aa433e797490046d6b7705eed7c8c1397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Защищенные статические члены</h2></td></tr>
+<tr class="memitem:a3e7e841e5b76926aa28a34b1c494f82d" id="r_a3e7e841e5b76926aa28a34b1c494f82d"><td class="memItemLeft" align="right" valign="top"><a id="a3e7e841e5b76926aa28a34b1c494f82d" name="a3e7e841e5b76926aa28a34b1c494f82d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>assignFont</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression, const QFont &amp;font, const <a class="el" href="../../d6/d80/classMathExpressions_1_1LineWidth.html">LineWidth</a> &amp;line_width, const <a class="el" href="../../d7/d0c/classMathExpressions_1_1CapMultiplier.html">CapMultiplier</a> &amp;cap_multiplier)</td></tr>
+<tr class="separator:a3e7e841e5b76926aa28a34b1c494f82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fdbafd0db31c36dd3812b91f292ea64" id="r_a8fdbafd0db31c36dd3812b91f292ea64"><td class="memItemLeft" align="right" valign="top"><a id="a8fdbafd0db31c36dd3812b91f292ea64" name="a8fdbafd0db31c36dd3812b91f292ea64"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>assignParent</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression, <a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> parent)</td></tr>
+<tr class="separator:a8fdbafd0db31c36dd3812b91f292ea64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8483738df29774f33b3cb088e362108" id="r_ad8483738df29774f33b3cb088e362108"><td class="memItemLeft" align="right" valign="top"><a id="ad8483738df29774f33b3cb088e362108" name="ad8483738df29774f33b3cb088e362108"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>assignPaintDevice</b> (<a class="el" href="../../d2/d9e/classMathExpressions_1_1AbstractExpression.html">ExpressionPtr</a> expression, QPaintDevice *paintDevice, const <a class="el" href="../../d6/d80/classMathExpressions_1_1LineWidth.html">LineWidth</a> &amp;line_width, const <a class="el" href="../../d7/d0c/classMathExpressions_1_1CapMultiplier.html">CapMultiplier</a> &amp;cap_multiplier)</td></tr>
+<tr class="separator:ad8483738df29774f33b3cb088e362108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/inc/<a class="el" href="../../df/d86/abstract__expression_8h_source.html">abstract_expression.h</a></li>
+<li>/home/msa/Documents/QPROJECTS/QEvalDeriv/QEvalDerivSys/frontend/components/widgets/QMathExpr/src/src/<b>abstract_expression.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
