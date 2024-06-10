@@ -1,9 +1,0 @@
-<map id="MathExpressions::FractionExpression" name="MathExpressions::FractionExpression">
-<area shape="rect" id="Node000001" title=" " alt="" coords="31,1269,217,1529"/>
-<area shape="rect" id="Node000002" href="$d1/d40/classMathExpressions_1_1AbstractBigParentExpression.html" title=" " alt="" coords="5,941,243,1221"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,1235,127,1269,121,1269,121,1235"/>
-<area shape="rect" id="Node000003" href="$df/df8/classMathExpressions_1_1AbstractParentExpression.html" title=" " alt="" coords="16,613,232,893"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,907,127,941,121,941,121,907"/>
-<area shape="rect" id="Node000004" href="$d2/d9e/classMathExpressions_1_1AbstractExpression.html" title=" " alt="" coords="31,5,217,565"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,579,127,613,121,613,121,579"/>
-</map>

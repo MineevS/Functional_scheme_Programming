@@ -1,7 +1,0 @@
-<map id="MathExpressions::PlanckExpression" name="MathExpressions::PlanckExpression">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,921,252,1047"/>
-<area shape="rect" id="Node000002" href="$d9/d99/classMathExpressions_1_1CharacterExpression.html" title=" " alt="" coords="31,613,227,873"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,887,131,921,126,921,126,887"/>
-<area shape="rect" id="Node000003" href="$d2/d9e/classMathExpressions_1_1AbstractExpression.html" title=" " alt="" coords="35,5,222,565"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,580,131,613,126,613,126,580"/>
-</map>
