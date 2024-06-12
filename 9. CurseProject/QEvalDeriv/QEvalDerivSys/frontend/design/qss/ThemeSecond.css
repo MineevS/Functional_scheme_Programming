@@ -7,6 +7,14 @@ QDockWidget {
 	background-color: #abffd9;
 	color: #000000;
 }
+QGroupBox {
+	background-color: #986a44;
+	border-color: #241f31;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 1;
+	color: #33d17a;
+}
 QLabel {
 	background-color: ;
 	color: #ffffff;
@@ -42,16 +50,12 @@ QSliderButton {
 }
 QLabel#labelClassA {
 	background-color: #abffd9;
-	color: #000000;
+	color: #e01b24;
 }
 QLabel#labelClassB {
-	background-color: #d5cec8;
-	color: #000000;
+	background-color: #986a44;
+	color: #c0bfbc;
 }
 QLabel#labelClassC {
 	color: #005500;
-}
-*#widgetElem {
-	background-color: white;
-	border-radius: 10px;
 }
