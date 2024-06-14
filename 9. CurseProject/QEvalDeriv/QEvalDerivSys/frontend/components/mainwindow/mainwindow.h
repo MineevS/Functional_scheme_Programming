@@ -50,6 +50,16 @@ public:
         return guile_actuve;
 #endif
     }
+	
+	bool disconnectGuile(){
+        scm_c_eval_string("(stop-server-and-clients!)");
+        guile_actuve = false;
+        return guile_actuve;
+    }
+	
+	bool getStatusGuileConnect(){
+        return guile_actuve;
+    }
 
     bool existGuileFile(const QString file){
         return QFile::exists(file);

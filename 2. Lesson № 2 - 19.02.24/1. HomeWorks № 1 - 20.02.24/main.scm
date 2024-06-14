@@ -1,6 +1,6 @@
 ; @data 20.02.24
 ; @author mineeff20@yandex.ru
-; @brief ...
+; @brief Вывод таблицы результатов значений тригонометрических функций от градусной меры
 
 (use-modules 
 	(ice-9 format)

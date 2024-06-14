@@ -53,6 +53,14 @@ public:
     void setFontStyle(QString style_name);
     QString getFontStyle();
 
+    QTelnet* getTelnet(){
+        return telnet;
+    }
+
+    bool getStatusConnectTelnet(){
+        return telnet->isConnected();
+    }
+
 public slots:
     void addTextTelnet(const char *msg, int count);
 signals:
